@@ -1,0 +1,265 @@
+/*-- scss:defaults --*/
+
+// Fonts (Canelón-style pairing: characterful serif + clean humanist sans)
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Commissioner:wght@300;400;500;600&family=Fira+Mono:wght@400;500&display=swap');
+
+// Palette
+$body-bg: #FDFCFB;          // warm off-white
+$body-color: #2B2B2B;       // near-black
+$accent: #75285C;           // deep berry (easy to swap — one variable)
+$accent-soft: #A34D86;
+$muted: #6B6560;
+$hairline: #E7E2DD;
+
+$link-color: $accent;
+$link-decoration: none;
+
+$font-family-sans-serif: "Commissioner", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-family-monospace: "Fira Mono", SFMono-Regular, Menlo, monospace;
+$headings-font-family: "Petrona", Georgia, serif;
+$headings-font-weight: 600;
+$headings-color: #1F1D1B;
+
+$font-size-root: 17px;
+$line-height-base: 1.65;
+
+// Navbar
+$navbar-bg: $body-bg;
+$navbar-fg: $body-color;
+$navbar-hl: $accent;
+
+// Code
+$code-bg: #F5F2EF;
+$code-color: #7A3A62;
+
+/*-- scss:rules --*/
+
+// ---------- Layout: narrow, centered, airy ----------
+.quarto-container, main.content {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body:not(.floating) main.content {
+  padding-top: 2rem;
+}
+
+// ---------- Navbar: quiet text links, centered ----------
+.navbar {
+  border-bottom: 1px solid $hairline;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+
+  .navbar-brand {
+    font-family: "Petrona", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: $muted !important;
+    transition: color 0.15s ease;
+
+    &:hover, &.active {
+      color: $accent !important;
+    }
+  }
+}
+
+// ---------- Typography ----------
+h1, h2, h3 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.9rem;
+}
+
+h1.title {
+  font-size: 2.1rem;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+a {
+  border-bottom: 1px solid rgba($accent, 0.25);
+  transition: border-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    color: $accent-soft;
+    border-bottom-color: $accent-soft;
+  }
+}
+
+.navbar a, .page-footer a, a.quarto-grid-link, .about-links a, h1 a, h2 a, h3 a {
+  border-bottom: none;
+}
+
+// Hairline separator utility
+hr {
+  border: none;
+  border-top: 1px solid $hairline;
+  margin: 2.5rem auto;
+  width: 100%;
+  opacity: 1;
+}
+
+// ---------- Landing page hero ----------
+.hero {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+
+  img.headshot {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.6rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .role {
+    font-size: 1.05rem;
+    color: $muted;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero-bio {
+    max-width: 34rem;
+    margin: 0 auto 1.6rem auto;
+    text-align: center;
+    font-size: 1.02rem;
+  }
+
+  .social-row p {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  .social-row {
+    a {
+      color: $muted;
+      border-bottom: none;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+
+.hero-links {
+  text-align: center;
+  color: $muted;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+// ---------- Footer ----------
+.nav-footer {
+  border-top: 1px solid $hairline;
+  padding-top: 1.4rem;
+  padding-bottom: 1.6rem;
+  margin-top: 3.5rem;
+  font-size: 0.88rem;
+  color: $muted;
+
+  a {
+    color: $muted;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+// ---------- Blog listing: dates + titles, no cards ----------
+div.quarto-post {
+  border-bottom: 1px solid $hairline;
+  padding: 1.1rem 0;
+  margin-bottom: 0;
+
+  .thumbnail { display: none; }
+
+  .body h3.listing-title, .body .listing-title {
+    font-family: "Petrona", Georgia, serif;
+    font-size: 1.2rem;
+    margin: 0 0 0.2rem 0;
+  }
+
+  .metadata {
+    font-size: 0.85rem;
+    color: $muted;
+  }
+}
+
+// ---------- Software / entry lists ----------
+.entry {
+  margin-bottom: 2rem;
+
+  .entry-title {
+    font-family: "Petrona", Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+
+  .entry-meta {
+    font-size: 0.85rem;
+    color: $muted;
+    margin-bottom: 0.35rem;
+  }
+}
+
+// ---------- CV embed ----------
+.cv-frame {
+  width: 100%;
+  height: 78vh;
+  border: 1px solid $hairline;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid $accent;
+  border-radius: 3px;
+  color: $accent;
+  font-size: 0.92rem;
+  margin-right: 0.6rem;
+
+  &:hover {
+    background: $accent;
+    color: #fff;
+    border-bottom-color: $accent;
+  }
+}
+
+// ---------- Misc ----------
+.quarto-title-meta { display: none; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  .hero img.headshot { width: 136px; height: 136px; }
+}

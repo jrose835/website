@@ -1,0 +1,12 @@
+---
+title: "CV & Resume"
+---
+
+<!-- NOTE: both PDFs below are placeholders (resume May 2025, CV Sep 2023) — swap in updated versions in assets/ -->
+
+Two flavors, depending on what you're here for:
+
+<a class="btn-cv" href="assets/resume.pdf" target="_blank">Download resume (1 page)</a>
+<a class="btn-cv" href="assets/cv.pdf" target="_blank">Download full CV</a>
+
+<iframe class="cv-frame" src="assets/resume.pdf" title="Jim Rose's resume"></iframe>

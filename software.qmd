@@ -1,0 +1,36 @@
+---
+title: "Software"
+---
+
+Open-source tools I've built for spatial transcriptomics and single-cell analysis. Everything lives on [GitHub](https://github.com/jrose835).
+
+::: {.entry}
+[CRISP]{.entry-title}
+<div class="entry-meta">R package · segmentation quality assessment</div>
+Assesses cell segmentation quality in spatial transcriptomics data by identifying cells that co-express mutually exclusive marker genes. Produces negative-coexpression segmentation purity metrics and supports Xenium, Seurat, and SpatialExperiment objects. <!-- DRAFT: repo not yet public — add link when released -->
+*Public release coming with the accompanying manuscript.*
+:::
+
+::: {.entry}
+[Xen_Segmentation_NextFlow](https://github.com/jrose835/Xen_Segmentation_NextFlow){.entry-title}
+<div class="entry-meta">Nextflow pipeline · Python</div>
+A custom Nextflow pipeline for generating alternative cell segmentations (nuclear expansion, Baysor, and others) for 10x Xenium in situ data.
+:::
+
+::: {.entry}
+[Xen_Seurat_Pipeline](https://github.com/jrose835/Xen_Seurat_Pipeline){.entry-title}
+<div class="entry-meta">R pipeline · Seurat</div>
+Processes 10x Xenium spatial single-cell data with Seurat: QC, normalization, integration, clustering, and annotation in a reproducible workflow.
+:::
+
+::: {.entry}
+[Xen_TMA_pipeline](https://github.com/jrose835/Xen_TMA_pipeline){.entry-title}
+<div class="entry-meta">Python pipeline</div>
+A processing pipeline for tissue microarrays run on the Xenium platform — splits multi-punch arrays into per-sample datasets for downstream analysis.
+:::
+
+::: {.entry}
+[pyMFI](https://github.com/jrose835/pyMFI){.entry-title}
+<div class="entry-meta">Python</div>
+Calculates per-cell mean fluorescence intensity (MFI) from imaging data.
+:::

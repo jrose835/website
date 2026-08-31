@@ -1,0 +1,16 @@
+---
+title: "Hello again, internet"
+description: "A fresh site, and what I'm working on these days."
+date: 2026-08-31
+---
+
+<!-- DRAFT: starter post — edit or replace before publishing -->
+
+Welcome to the new site. The old one dated from early grad school and had started to feel like someone else's homepage, so I rebuilt it from scratch — still [Quarto](https://quarto.org), now with a hand-rolled theme.
+
+A few things I'm deep in at the moment:
+
+- **Segmentation benchmarking.** Comparing cell segmentation algorithms for Xenium data across a multi-organ mouse atlas, and building [CRISP](../../software.qmd) to measure segmentation purity without ground truth.
+- **Spatial pipelines.** Nextflow and Seurat workflows that take Xenium runs from raw output to annotated cells reproducibly.
+
+I plan to use this blog for short, practical posts — the kind of thing I wish had existed when I was googling the same error message for the third time. If that sounds useful, check back soon.

@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Jim Rose"
+  site-url: "https://jrose835.github.io/website"
+  description: "Jim Rose — computational biologist working on spatial transcriptomics and single-cell genomics."
+  favicon: assets/headshot.png
+  navbar:
+    background: "#FDFCFB"
+    foreground: "#2B2B2B"
+    search: false
+    right:
+      - href: about.qmd
+        text: about
+      - href: research.qmd
+        text: research
+      - href: teaching.qmd
+        text: teaching
+      - href: software.qmd
+        text: software
+      - href: blog.qmd
+        text: blog
+      - href: cv.qmd
+        text: cv
+  page-footer:
+    center: |
+      © 2026 Jim Rose · Built with [Quarto](https://quarto.org)
+      <br>
+      [{{< fa brands github >}}](https://github.com/jrose835) &nbsp;
+      [{{< fa brands linkedin >}}](https://www.linkedin.com/in/james-r-rose-85b70023/) &nbsp;
+      [{{< fa graduation-cap >}}](https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en) &nbsp;
+      [{{< fa envelope >}}](mailto:jrose835@gmail.com)
+
+format:
+  html:
+    theme: [litera, custom.scss]
+    toc: false
+    link-external-newwindow: true
+    anchor-sections: false
+
+execute:
+  freeze: auto

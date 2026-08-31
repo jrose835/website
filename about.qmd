@@ -1,0 +1,29 @@
+---
+title: "About"
+---
+
+<!-- DRAFT: facts below (current position, focus areas) need Jim's review before publishing -->
+
+I'm a computational biologist finishing my PhD in Genetics & Molecular Biology at Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and I've spent my graduate work turning large, messy sequencing datasets into answers about how the immune system is regulated.
+
+These days most of my work is in **spatial transcriptomics**: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also work broadly across single-cell and bulk genomics — RNA-seq, ATAC-seq, and the statistics that hold them together.
+
+## What I work on
+
+- **Spatial transcriptomics** — end-to-end Xenium analysis: alternative segmentation, QC, tissue microarray processing, and downstream spatial statistics
+- **Method development** — [CRISP](software.qmd), an R package for assessing cell segmentation quality using co-expression of mutually exclusive markers
+- **Single-cell and bulk genomics** — RNA-seq, ATAC-seq, integration, and gene regulatory network analysis
+- **Reproducible pipelines** — Nextflow and R-based workflows designed so the next person (often future me) can rerun them
+- **Data visualization** — all things ggplot2, with occasional forays into Observable and D3
+
+## Teaching
+
+I'm passionate about teaching coding to biologists. For several years I've helped teach IBS 519 at Emory, an introduction to R, statistics, and reproducible analysis for incoming graduate students — more on the [teaching page](teaching.qmd).
+
+## Outside the terminal
+
+Blues and jazz guitar, science fiction, tabletop games, and craft beer.
+
+---
+
+Want the formal version? [Resume and CV are here](cv.qmd).

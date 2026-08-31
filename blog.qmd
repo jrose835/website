@@ -1,0 +1,12 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+  categories: false
+  feed: true
+---
+
+Occasional notes on computational biology, spatial data, R, and whatever I'm currently debugging.

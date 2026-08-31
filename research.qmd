@@ -1,0 +1,30 @@
+---
+title: "Research"
+---
+
+My research develops computational methods and analysis frameworks for spatial transcriptomics, with a focus on making imaging-based single-cell measurements trustworthy before they're interpreted.
+
+## Cell segmentation quality in spatial transcriptomics
+
+Imaging-based spatial platforms like 10x Xenium assign millions of transcripts to individual cells — but every downstream conclusion depends on how well cell boundaries were drawn. I develop **CRISP** (Co-expression Rejection In Segmentation Purity), an R package that flags cells co-expressing mutually exclusive marker genes to quantify segmentation errors without ground-truth annotation.
+
+Using CRISP, I'm benchmarking segmentation algorithms — including the 10x segmentation kit, Baysor, Proseg, and Segger — across a multi-organ mouse tissue atlas, asking which methods hold up in which tissue contexts.
+
+<!-- DRAFT: add manuscript citation/preprint link when available -->
+*Manuscript in preparation.*
+
+## Xenium analysis pipelines
+
+Alongside the benchmarking work, I've built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the [software page](software.qmd).
+
+## Earlier work: epigenetics of immune memory
+
+During my PhD I studied how transcriptomic and epigenomic states define human memory T cell subsets, using integrated RNA-seq and ATAC-seq. We identified chromatin regions whose accessibility before and after activation (*poised accessible regions*) distinguishes memory subsets and their activation potential.
+
+## Publications
+
+<!-- DRAFT: confirm/complete this list from Google Scholar before publishing -->
+
+- **Rose, J.R.**, Akdogan-Ozdilek, B., Rahmberg, A.R., *et al.* Distinct transcriptomic and epigenomic modalities underpin human memory T cell subsets and their activation potential. *Communications Biology* **6**, 363 (2023). [Read the paper](https://rdcu.be/dlpaI)
+
+See my [Google Scholar profile](https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en) for the full list.
