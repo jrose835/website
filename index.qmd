@@ -23,5 +23,5 @@ Hi, I'm Jim. I'm a computational biologist at Emory University working at the in
 :::
 
 ::: {.hero-links}
-[more about me](about.qmd) · [my research](research.qmd) · [software I've built](software.qmd)
+[more about me](about.qmd) [my research](research.qmd) [software I've built](software.qmd)
 :::

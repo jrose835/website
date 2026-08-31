@@ -1,13 +1,15 @@
 /*-- scss:defaults --*/
 
 // Fonts (Canelón-style pairing: characterful serif + clean humanist sans)
-@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Commissioner:wght@300;400;500;600&family=Fira+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Commissioner:wght@300;400;500;600&family=Fira+Mono:wght@400;500&display=swap');
 
 // Palette
 $body-bg: #FDFCFB;          // warm off-white
 $body-color: #2B2B2B;       // near-black
 $accent: #75285C;           // deep berry (easy to swap — one variable)
 $accent-soft: #A34D86;
+$plum-dark: #2E1526;        // footer band
+$plum-tint: #F7EFF4;        // pale accent wash
 $muted: #6B6560;
 $hairline: #E7E2DD;
 
@@ -18,7 +20,7 @@ $font-family-sans-serif: "Commissioner", -apple-system, "Segoe UI", Helvetica, A
 $font-family-monospace: "Fira Mono", SFMono-Regular, Menlo, monospace;
 $headings-font-family: "Petrona", Georgia, serif;
 $headings-font-weight: 600;
-$headings-color: #1F1D1B;
+$headings-color: #33202C;
 
 $font-size-root: 17px;
 $line-height-base: 1.65;
@@ -34,9 +36,9 @@ $code-color: #7A3A62;
 
 /*-- scss:rules --*/
 
-// ---------- Layout: narrow, centered, airy ----------
+// ---------- Layout: wider on desktop, still airy ----------
 .quarto-container, main.content {
-  max-width: 760px;
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -45,17 +47,18 @@ body:not(.floating) main.content {
   padding-top: 2rem;
 }
 
-// ---------- Navbar: quiet text links, centered ----------
+// ---------- Navbar: quiet text links with animated underline ----------
 .navbar {
   border-bottom: 1px solid $hairline;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   .navbar-brand {
     font-family: "Petrona", Georgia, serif;
-    font-weight: 600;
-    font-size: 1.15rem;
+    font-weight: 700;
+    font-size: 1.25rem;
     letter-spacing: 0.01em;
+    color: $accent !important;
   }
 
   .nav-link {
@@ -63,33 +66,61 @@ body:not(.floating) main.content {
     font-weight: 400;
     letter-spacing: 0.03em;
     color: $muted !important;
+    position: relative;
     transition: color 0.15s ease;
+
+    span.menu-text {
+      background-image: linear-gradient($accent, $accent);
+      background-size: 0% 1.5px;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      transition: background-size 0.25s ease;
+      padding-bottom: 3px;
+    }
 
     &:hover, &.active {
       color: $accent !important;
+
+      span.menu-text {
+        background-size: 100% 1.5px;
+      }
     }
   }
 }
 
 // ---------- Typography ----------
 h1, h2, h3 {
-  margin-top: 2.2rem;
+  margin-top: 2.4rem;
   margin-bottom: 0.9rem;
 }
 
+// Page titles get a small accent flourish underneath
 h1.title {
-  font-size: 2.1rem;
+  font-size: 2.3rem;
   margin-top: 0.5rem;
+  padding-bottom: 0.9rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3.2rem;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, $accent, $accent-soft);
+  }
 }
 
 h2 {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   border-bottom: none;
   padding-bottom: 0;
 }
 
 h3 {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
 }
 
 a {
@@ -102,15 +133,15 @@ a {
   }
 }
 
-.navbar a, .page-footer a, a.quarto-grid-link, .about-links a, h1 a, h2 a, h3 a {
+.navbar a, .nav-footer a, a.quarto-grid-link, .about-links a, h1 a, h2 a, h3 a,
+div.quarto-post a {
   border-bottom: none;
 }
 
-// Hairline separator utility
 hr {
   border: none;
   border-top: 1px solid $hairline;
-  margin: 2.5rem auto;
+  margin: 2.8rem auto;
   width: 100%;
   opacity: 1;
 }
@@ -118,41 +149,45 @@ hr {
 // ---------- Landing page hero ----------
 .hero {
   text-align: center;
-  padding: 3rem 0 1rem 0;
+  padding: 3.2rem 0 1rem 0;
 
   img.headshot {
-    width: 168px;
-    height: 168px;
+    width: 176px;
+    height: 176px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
   }
 
   h1 {
-    font-size: 2.6rem;
-    font-weight: 600;
-    margin: 0 0 0.4rem 0;
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: $accent;
   }
 
   .role {
-    font-size: 1.05rem;
+    font-family: "Petrona", Georgia, serif;
+    font-style: italic;
+    font-size: 1.12rem;
     color: $muted;
-    letter-spacing: 0.04em;
-    margin-bottom: 1.4rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem;
   }
 
   .hero-bio {
-    max-width: 34rem;
-    margin: 0 auto 1.6rem auto;
+    max-width: 38rem;
+    margin: 0 auto 1.8rem auto;
     text-align: center;
-    font-size: 1.02rem;
+    font-size: 1.05rem;
   }
 
   .social-row p {
     display: flex;
     justify-content: center;
-    gap: 1.4rem;
-    font-size: 1.35rem;
+    gap: 1.5rem;
+    font-size: 1.4rem;
     margin: 0;
   }
 
@@ -160,6 +195,7 @@ hr {
     a {
       color: $muted;
       border-bottom: none;
+      transition: color 0.15s ease, transform 0.15s ease;
 
       &:hover {
         color: $accent;
@@ -170,41 +206,73 @@ hr {
 
 .hero-links {
   text-align: center;
-  color: $muted;
   font-size: 0.95rem;
-  margin-top: 0.5rem;
-}
+  margin-top: 1.2rem;
 
-// ---------- Footer ----------
-.nav-footer {
-  border-top: 1px solid $hairline;
-  padding-top: 1.4rem;
-  padding-bottom: 1.6rem;
-  margin-top: 3.5rem;
-  font-size: 0.88rem;
-  color: $muted;
+  p {
+    display: inline-flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   a {
+    border: 1px solid $hairline;
+    border-radius: 999px;
+    padding: 0.35rem 1rem;
     color: $muted;
+    transition: all 0.2s ease;
 
     &:hover {
+      border-color: $accent;
       color: $accent;
+      background: $plum-tint;
     }
+  }
+}
+
+// ---------- Footer: dark plum band ----------
+.nav-footer {
+  background: $plum-dark;
+  color: rgba(255, 255, 255, 0.75);
+  border-top: none;
+  padding: 2.2rem 1rem 2.4rem 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .fa-brands, .fa-solid, i {
+    font-size: 1.15rem;
   }
 }
 
 // ---------- Blog listing: dates + titles, no cards ----------
 div.quarto-post {
   border-bottom: 1px solid $hairline;
-  padding: 1.1rem 0;
+  padding: 1.2rem 0.6rem;
   margin-bottom: 0;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: $plum-tint;
+  }
 
   .thumbnail { display: none; }
 
   .body h3.listing-title, .body .listing-title {
     font-family: "Petrona", Georgia, serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin: 0 0 0.2rem 0;
+
+    a:hover { color: $accent; }
   }
 
   .metadata {
@@ -215,11 +283,20 @@ div.quarto-post {
 
 // ---------- Software / entry lists ----------
 .entry {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
+  padding: 0.4rem 0 0.4rem 1.1rem;
+  border-left: 3px solid rgba($accent, 0.30);
+  transition: border-color 0.2s ease, background 0.2s ease;
+  border-radius: 0 4px 4px 0;
+
+  &:hover {
+    border-left-color: $accent;
+    background: $plum-tint;
+  }
 
   .entry-title {
     font-family: "Petrona", Georgia, serif;
-    font-size: 1.2rem;
+    font-size: 1.22rem;
     font-weight: 600;
     margin-bottom: 0.15rem;
   }
@@ -236,30 +313,47 @@ div.quarto-post {
   width: 100%;
   height: 78vh;
   border: 1px solid $hairline;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-top: 1.5rem;
 }
 
 .btn-cv {
   display: inline-block;
-  padding: 0.45rem 1.1rem;
+  padding: 0.5rem 1.2rem;
   border: 1px solid $accent;
-  border-radius: 3px;
+  border-radius: 999px;
   color: $accent;
   font-size: 0.92rem;
+  font-weight: 500;
   margin-right: 0.6rem;
+  transition: all 0.2s ease;
 
-  &:hover {
+  &:first-of-type {
     background: $accent;
     color: #fff;
-    border-bottom-color: $accent;
+  }
+
+  &:hover {
+    background: $accent-soft;
+    border-color: $accent-soft;
+    color: #fff;
+    border-bottom-color: $accent-soft;
   }
 }
 
 // ---------- Misc ----------
 .quarto-title-meta { display: none; }
 
+blockquote {
+  border-left: 3px solid rgba($accent, 0.35);
+  padding-left: 1rem;
+  color: $muted;
+  font-family: "Petrona", Georgia, serif;
+  font-style: italic;
+}
+
 @media (max-width: 600px) {
-  .hero h1 { font-size: 2rem; }
-  .hero img.headshot { width: 136px; height: 136px; }
+  .hero h1 { font-size: 2.1rem; }
+  .hero img.headshot { width: 140px; height: 140px; }
+  h1.title { font-size: 1.9rem; }
 }

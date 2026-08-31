@@ -36,6 +36,10 @@ website:
 format:
   html:
     theme: [litera, custom.scss]
+    grid:
+      body-width: 920px
+      sidebar-width: 120px
+      margin-width: 120px
     toc: false
     link-external-newwindow: true
     anchor-sections: false
