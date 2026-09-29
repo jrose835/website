@@ -25,7 +25,7 @@ about:
 ---
 
 ::: {#hero-heading}
-Hi, I'm Jim. I'm a computational biologist at Emory University working at the intersection of genomics and immunology. I build methods and pipelines for spatial transcriptomics and single-cell data, and I care a lot about teaching biologists to code.
+Hi, I'm Jim. I'm a computational biologist working at the intersection of genomics, immunology, and mRNA therapeutics. I build methods and pipelines for spatial transcriptomics, AI-driven bioinformatics, and single-cell genomics.
 
 Learn more [about me →](about.qmd)
 
