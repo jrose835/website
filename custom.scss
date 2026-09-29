@@ -74,11 +74,11 @@ body:not(.floating) main.content {
       max-height: none;
       border: 1.5px solid #2B2B2B;
       border-radius: 50%;
-      transition: transform 0.15s ease;
+      transition: border-color 0.15s ease;
     }
 
     &:hover img {
-      transform: scale(1.08);
+      border-color: $accent;
     }
   }
 
