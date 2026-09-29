@@ -202,7 +202,7 @@ div.quarto-about-solana {
   }
 
   img.about-image {
-    border-radius: 18px;
+    border-radius: 50%;
     box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
   }
 
@@ -213,6 +213,10 @@ div.quarto-about-solana {
 }
 
 div.quarto-about-trestles {
+  // skinnier sidebar, wider text column (default is ~1:2)
+  grid-template-columns: minmax(0, 15em) minmax(0, 1fr) !important;
+  column-gap: 3.5rem;
+
   img.about-image {
     box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
   }

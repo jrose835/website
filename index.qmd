@@ -7,8 +7,8 @@ page-layout: full
 toc: false
 about:
   template: solana
-  image-width: 24em
-  image-shape: rounded
+  image-width: 22em
+  image-shape: round
   links:
     - icon: github
       href: https://github.com/jrose835
