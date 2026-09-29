@@ -5,7 +5,7 @@ page-layout: full
 toc: false
 about:
   template: trestles
-  image-width: 10em
+  image-width: 8.5em
   image-shape: round
   links:
     - icon: github
