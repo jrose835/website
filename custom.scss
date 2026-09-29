@@ -69,9 +69,11 @@ body:not(.floating) main.content {
     padding-bottom: 0;
 
     img {
-      height: 42px;
-      width: 42px;
+      height: 44px;
+      width: 44px;
       max-height: none;
+      border: 1.5px solid #2B2B2B;
+      border-radius: 50%;
       transition: transform 0.15s ease;
     }
 
