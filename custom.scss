@@ -69,16 +69,14 @@ body:not(.floating) main.content {
     padding-bottom: 0;
 
     img {
-      height: 40px;
-      width: 40px;
+      height: 42px;
+      width: 42px;
       max-height: none;
-      border-radius: 50%;
-      box-shadow: 0 0 0 1.5px rgba($accent, 0.35);
-      transition: box-shadow 0.15s ease;
+      transition: transform 0.15s ease;
     }
 
     &:hover img {
-      box-shadow: 0 0 0 2px $accent;
+      transform: scale(1.08);
     }
   }
 
