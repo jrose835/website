@@ -65,11 +65,21 @@ body:not(.floating) main.content {
   padding-bottom: 1rem;
 
   .navbar-brand {
-    font-family: "Petrona", Georgia, serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: 0.01em;
-    color: $accent !important;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    img {
+      height: 40px;
+      width: 40px;
+      max-height: none;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1.5px rgba($accent, 0.35);
+      transition: box-shadow 0.15s ease;
+    }
+
+    &:hover img {
+      box-shadow: 0 0 0 2px $accent;
+    }
   }
 
   .nav-link {

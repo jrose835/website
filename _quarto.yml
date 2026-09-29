@@ -11,6 +11,9 @@ website:
     background: "#FDFCFB"
     foreground: "#2B2B2B"
     search: false
+    title: false
+    logo: assets/hero.svg
+    logo-alt: "Home — stylized tissue illustration"
     right:
       - href: about.qmd
         text: about
