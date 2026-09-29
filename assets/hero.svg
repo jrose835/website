@@ -1,76 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Circular composite illustration: tissue cells with transcript dots, a UMAP-style scatter of three cell clusters, and a lipid nanoparticle carrying mRNA">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Circular microscope field of view showing tissue cells with multi-colored transcript dots and an mRNA strand">
   <defs>
     <clipPath id="fov"><circle cx="320" cy="320" r="312"/></clipPath>
   </defs>
   <circle cx="320" cy="320" r="312" fill="#F7EFF4"/>
   <g clip-path="url(#fov)">
-    <!-- tissue cells, upper left -->
     <g stroke="#C9A5BC" stroke-width="2.5" fill="#FFFFFF">
-      <ellipse cx="150" cy="150" rx="80" ry="60" transform="rotate(-12 150 150)"/>
-      <ellipse cx="320" cy="105" rx="65" ry="50" transform="rotate(10 320 105)"/>
-      <ellipse cx="105" cy="300" rx="62" ry="48" transform="rotate(12 105 300)"/>
-      <ellipse cx="255" cy="255" rx="70" ry="54" transform="rotate(-6 255 255)"/>
+      <ellipse cx="120" cy="150" rx="85" ry="62" transform="rotate(-12 120 150)"/>
+      <ellipse cx="330" cy="100" rx="70" ry="54" transform="rotate(8 330 100)"/>
+      <ellipse cx="520" cy="180" rx="80" ry="60" transform="rotate(-16 520 180)"/>
+      <ellipse cx="150" cy="340" rx="72" ry="56" transform="rotate(14 150 340)"/>
+      <ellipse cx="350" cy="300" rx="92" ry="70" transform="rotate(-6 350 300)"/>
+      <ellipse cx="548" cy="380" rx="64" ry="50" transform="rotate(10 548 380)"/>
+      <ellipse cx="210" cy="510" rx="80" ry="60" transform="rotate(-8 210 510)"/>
+      <ellipse cx="430" cy="495" rx="76" ry="58" transform="rotate(12 430 495)"/>
     </g>
     <g fill="#EAD9E4">
-      <ellipse cx="138" cy="146" rx="26" ry="19" transform="rotate(-12 138 146)"/>
-      <ellipse cx="326" cy="101" rx="21" ry="16" transform="rotate(10 326 101)"/>
-      <ellipse cx="98" cy="304" rx="20" ry="15" transform="rotate(12 98 304)"/>
-      <ellipse cx="261" cy="250" rx="23" ry="17" transform="rotate(-6 261 250)"/>
+      <ellipse cx="108" cy="146" rx="27" ry="20" transform="rotate(-12 108 146)"/>
+      <ellipse cx="336" cy="96" rx="22" ry="17" transform="rotate(8 336 96)"/>
+      <ellipse cx="528" cy="174" rx="26" ry="19" transform="rotate(-16 528 174)"/>
+      <ellipse cx="142" cy="344" rx="23" ry="17" transform="rotate(14 142 344)"/>
+      <ellipse cx="357" cy="294" rx="30" ry="23" transform="rotate(-6 357 294)"/>
+      <ellipse cx="553" cy="376" rx="20" ry="15" transform="rotate(10 553 376)"/>
+      <ellipse cx="202" cy="514" rx="25" ry="18" transform="rotate(-8 202 514)"/>
+      <ellipse cx="437" cy="491" rx="24" ry="18" transform="rotate(12 437 491)"/>
     </g>
     <g fill="#75285C">
-      <circle cx="184" cy="128" r="5"/><circle cx="166" cy="180" r="5"/><circle cx="102" cy="176" r="5"/>
-      <circle cx="298" cy="126" r="5"/><circle cx="356" cy="88" r="5"/>
-      <circle cx="88" cy="268" r="5"/><circle cx="136" cy="318" r="5"/>
-      <circle cx="230" cy="230" r="5"/><circle cx="286" cy="276" r="5"/>
+      <circle cx="158" cy="128" r="5"/><circle cx="140" cy="180" r="5"/><circle cx="72" cy="182" r="5"/>
+      <circle cx="308" cy="126" r="5"/><circle cx="370" cy="82" r="5"/>
+      <circle cx="482" cy="152" r="5"/><circle cx="560" cy="208" r="5"/>
+      <circle cx="128" cy="304" r="5"/><circle cx="186" cy="362" r="5"/>
+      <circle cx="308" cy="272" r="5"/><circle cx="392" cy="330" r="5"/><circle cx="416" cy="276" r="5"/>
+      <circle cx="522" cy="400" r="5"/><circle cx="584" cy="352" r="5"/>
+      <circle cx="172" cy="486" r="5"/><circle cx="254" cy="534" r="5"/>
+      <circle cx="402" cy="466" r="5"/><circle cx="466" cy="520" r="5"/>
     </g>
     <g fill="#4E8D8D">
-      <circle cx="122" cy="120" r="5"/><circle cx="340" cy="126" r="5"/><circle cx="288" cy="86" r="5"/>
-      <circle cx="126" cy="290" r="5"/><circle cx="238" cy="278" r="5"/><circle cx="282" cy="238" r="5"/>
+      <circle cx="96" cy="122" r="5"/><circle cx="352" cy="120" r="5"/><circle cx="296" cy="78" r="5"/>
+      <circle cx="494" cy="206" r="5"/><circle cx="544" cy="146" r="5"/>
+      <circle cx="172" cy="326" r="5"/><circle cx="330" cy="326" r="5"/><circle cx="384" cy="258" r="5"/>
+      <circle cx="572" cy="404" r="5"/>
+      <circle cx="228" cy="484" r="5"/><circle cx="186" cy="540" r="5"/>
+      <circle cx="448" cy="470" r="5"/><circle cx="266" cy="228" r="5"/>
     </g>
     <g fill="#B77E5E">
-      <circle cx="152" cy="160" r="5"/><circle cx="316" cy="108" r="5"/>
-      <circle cx="94" cy="322" r="5"/><circle cx="256" cy="252" r="5"/><circle cx="204" cy="196" r="5"/>
+      <circle cx="126" cy="158" r="5"/><circle cx="326" cy="104" r="5"/><circle cx="518" cy="184" r="5"/>
+      <circle cx="134" cy="366" r="5"/><circle cx="346" cy="296" r="5"/><circle cx="540" cy="368" r="5"/>
+      <circle cx="240" cy="516" r="5"/><circle cx="416" cy="512" r="5"/>
+      <circle cx="252" cy="164" r="5"/><circle cx="470" cy="392" r="5"/><circle cx="290" cy="416" r="5"/>
     </g>
-    <!-- UMAP-style scatter, right -->
-    <g fill="#75285C">
-      <circle cx="452" cy="158" r="4.5"/><circle cx="470" cy="150" r="4.5"/><circle cx="487" cy="162" r="4.5"/>
-      <circle cx="500" cy="178" r="4.5"/><circle cx="492" cy="196" r="4.5"/><circle cx="474" cy="204" r="4.5"/>
-      <circle cx="455" cy="192" r="4.5"/><circle cx="462" cy="175" r="4.5"/><circle cx="482" cy="182" r="4.5"/>
-      <circle cx="445" cy="176" r="4.5"/><circle cx="508" cy="192" r="4.5"/><circle cx="478" cy="168" r="4.5"/>
+    <g stroke="#75285C" stroke-width="3" stroke-linecap="round" opacity="0.5">
+      <path d="M172 578v16"/><path d="M228 578v16"/><path d="M284 578v16"/><path d="M340 578v16"/><path d="M396 578v16"/><path d="M452 578v16"/>
     </g>
-    <g fill="#4E8D8D">
-      <circle cx="488" cy="306" r="4.5"/><circle cx="505" cy="298" r="4.5"/><circle cx="522" cy="310" r="4.5"/>
-      <circle cx="532" cy="328" r="4.5"/><circle cx="524" cy="348" r="4.5"/><circle cx="506" cy="356" r="4.5"/>
-      <circle cx="487" cy="344" r="4.5"/><circle cx="494" cy="324" r="4.5"/><circle cx="514" cy="332" r="4.5"/>
-      <circle cx="479" cy="326" r="4.5"/><circle cx="538" cy="342" r="4.5"/>
-    </g>
-    <g fill="#B77E5E">
-      <circle cx="432" cy="418" r="4.5"/><circle cx="450" cy="408" r="4.5"/><circle cx="468" cy="420" r="4.5"/>
-      <circle cx="478" cy="438" r="4.5"/><circle cx="468" cy="456" r="4.5"/><circle cx="450" cy="464" r="4.5"/>
-      <circle cx="432" cy="452" r="4.5"/><circle cx="440" cy="432" r="4.5"/><circle cx="460" cy="440" r="4.5"/>
-      <circle cx="424" cy="436" r="4.5"/>
-    </g>
-    <g fill="#C9A5BC">
-      <circle cx="466" cy="252" r="4"/><circle cx="500" cy="246" r="4"/><circle cx="478" cy="382" r="4"/>
-      <circle cx="530" cy="390" r="4"/><circle cx="410" cy="360" r="4"/>
-    </g>
-    <!-- lipid nanoparticle with mRNA cargo, lower left -->
-    <circle cx="215" cy="470" r="62" fill="#FFFFFF"/>
-    <g fill="#EAD9E4" stroke="#C9A5BC" stroke-width="2">
-      <circle cx="295" cy="470" r="7"/><circle cx="290" cy="497" r="7"/><circle cx="276" cy="521" r="7"/>
-      <circle cx="255" cy="539" r="7"/><circle cx="229" cy="549" r="7"/><circle cx="201" cy="549" r="7"/>
-      <circle cx="175" cy="539" r="7"/><circle cx="154" cy="521" r="7"/><circle cx="140" cy="497" r="7"/>
-      <circle cx="135" cy="470" r="7"/><circle cx="140" cy="443" r="7"/><circle cx="154" cy="419" r="7"/>
-      <circle cx="175" cy="401" r="7"/><circle cx="201" cy="391" r="7"/><circle cx="229" cy="391" r="7"/>
-      <circle cx="255" cy="401" r="7"/><circle cx="276" cy="419" r="7"/><circle cx="290" cy="443" r="7"/>
-    </g>
-    <path d="M170 470q11-12 22 0t22 0t22 0t22 0" stroke="#75285C" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-    <g stroke="#75285C" stroke-width="2.5" stroke-linecap="round" opacity="0.5">
-      <path d="M181 464v-10"/><path d="M203 464v-10"/><path d="M225 464v-10"/><path d="M247 464v-10"/>
-    </g>
-    <g fill="#75285C">
-      <circle cx="188" cy="494" r="4"/><circle cx="228" cy="498" r="4"/><circle cx="246" cy="486" r="4"/>
-    </g>
+    <path d="M144 586q28-26 56 0t56 0t56 0t56 0t56 0t56 0" stroke="#75285C" stroke-width="4" fill="none" stroke-linecap="round"/>
   </g>
   <circle cx="320" cy="320" r="311" fill="none" stroke="#C9A5BC" stroke-width="2"/>
 </svg>

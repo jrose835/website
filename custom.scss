@@ -213,9 +213,29 @@ div.quarto-about-solana {
 }
 
 div.quarto-about-trestles {
-  // skinnier sidebar, wider text column (default is ~1:2)
-  grid-template-columns: minmax(0, 11em) minmax(0, 1fr) !important;
+  // skinnier sidebar, wider text column (default is ~1:2).
+  // Trestles is flex below the lg breakpoint and grid above it — cover both.
+  grid-template-columns: minmax(0, 12em) minmax(0, 1fr) !important;
   column-gap: 3rem;
+
+  .about-entity {
+    flex: 0 0 auto !important;
+    width: 12em !important;
+    max-width: 12em !important;
+  }
+
+  .about-contents {
+    flex: 1 1 0 !important;
+    max-width: none !important;
+  }
+
+  // stacked layout on small screens: let the sidebar be full-width again
+  @media (max-width: 767px) {
+    .about-entity {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
 
   img.about-image {
     box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
