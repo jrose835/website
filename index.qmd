@@ -1,11 +1,13 @@
 ---
 title: "Jim Rose"
 subtitle: "computational biology · spatial transcriptomics · single-cell genomics"
-image: assets/headshot.png
+image: assets/hero.svg
+image-alt: "Stylized tissue section: cell outlines with multi-colored transcript dots and an mRNA strand"
+page-layout: full
 toc: false
 about:
   template: solana
-  image-width: 20em
+  image-width: 24em
   image-shape: rounded
   links:
     - icon: github

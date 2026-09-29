@@ -37,10 +37,21 @@ $code-color: #7A3A62;
 /*-- scss:rules --*/
 
 // ---------- Layout: wider on desktop, still airy ----------
-.quarto-container, main.content {
+.quarto-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main.content {
   max-width: 920px;
   margin-left: auto;
   margin-right: auto;
+
+  // about-template pages opt into the full width (page-layout: full)
+  &.page-full {
+    max-width: 1200px;
+  }
 }
 
 body:not(.floating) main.content {

@@ -1,6 +1,7 @@
 ---
 title: "About"
 image: assets/headshot.png
+page-layout: full
 toc: false
 about:
   template: trestles
