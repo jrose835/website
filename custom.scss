@@ -146,88 +146,68 @@ hr {
   opacity: 1;
 }
 
-// ---------- Landing page hero ----------
-.hero {
-  text-align: center;
-  padding: 3.2rem 0 1rem 0;
+// ---------- About templates: solana landing, trestles about ----------
+div.quarto-about-solana, div.quarto-about-trestles {
+  padding-top: 1.5rem;
 
-  img.headshot {
-    width: 176px;
-    height: 176px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1.8rem;
-    box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
-  }
-
-  h1 {
-    font-size: 2.9rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem 0;
+  h1.title {
     color: $accent;
   }
 
-  .role {
+  .subtitle {
     font-family: "Petrona", Georgia, serif;
     font-style: italic;
     font-size: 1.12rem;
     color: $muted;
-    letter-spacing: 0.03em;
-    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+    margin-top: 0.5rem;
   }
 
-  .hero-bio {
-    max-width: 38rem;
-    margin: 0 auto 1.8rem auto;
-    text-align: center;
-    font-size: 1.05rem;
-  }
-
-  .social-row p {
+  .about-links {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 1.4rem;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 0.9em 0 !important;
     margin: 0;
-  }
 
-  .social-row {
-    a {
+    .about-link {
+      border: none !important;
+      padding: 0 !important;
       color: $muted;
-      border-bottom: none;
-      transition: color 0.15s ease, transform 0.15s ease;
+      font-size: 1.35rem;
+      transition: color 0.15s ease;
 
       &:hover {
         color: $accent;
+        background: none;
       }
     }
   }
 }
 
-.hero-links {
-  text-align: center;
-  font-size: 0.95rem;
-  margin-top: 1.2rem;
-
-  p {
-    display: inline-flex;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    justify-content: center;
+div.quarto-about-solana {
+  h1.title {
+    font-size: 2.7rem;
   }
 
-  a {
-    border: 1px solid $hairline;
-    border-radius: 999px;
-    padding: 0.35rem 1rem;
-    color: $muted;
-    transition: all 0.2s ease;
+  img.about-image {
+    border-radius: 18px;
+    box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
+  }
 
-    &:hover {
-      border-color: $accent;
-      color: $accent;
-      background: $plum-tint;
-    }
+  #hero-heading p {
+    font-size: 1.05rem;
+    max-width: 36rem;
+  }
+}
+
+div.quarto-about-trestles {
+  img.about-image {
+    box-shadow: 0 0 0 5px $body-bg, 0 0 0 7px rgba($accent, 0.35);
+  }
+
+  .about-entity .about-links {
+    justify-content: center;
   }
 }
 

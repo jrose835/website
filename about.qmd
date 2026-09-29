@@ -1,5 +1,24 @@
 ---
 title: "About"
+image: assets/headshot.png
+toc: false
+about:
+  template: trestles
+  image-width: 13em
+  image-shape: round
+  links:
+    - icon: github
+      href: https://github.com/jrose835
+      aria-label: GitHub
+    - icon: linkedin
+      href: https://www.linkedin.com/in/james-r-rose-85b70023/
+      aria-label: LinkedIn
+    - icon: mortarboard-fill
+      href: https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en
+      aria-label: Google Scholar
+    - icon: envelope
+      href: mailto:jrose835@gmail.com
+      aria-label: Email
 ---
 
 <!-- DRAFT: facts below (current position, focus areas) need Jim's review before publishing -->

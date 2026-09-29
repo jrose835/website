@@ -1,27 +1,31 @@
 ---
-pagetitle: "Jim Rose"
+title: "Jim Rose"
+subtitle: "computational biology · spatial transcriptomics · single-cell genomics"
+image: assets/headshot.png
 toc: false
+about:
+  template: solana
+  image-width: 20em
+  image-shape: rounded
+  links:
+    - icon: github
+      href: https://github.com/jrose835
+      aria-label: GitHub
+    - icon: linkedin
+      href: https://www.linkedin.com/in/james-r-rose-85b70023/
+      aria-label: LinkedIn
+    - icon: mortarboard-fill
+      href: https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en
+      aria-label: Google Scholar
+    - icon: envelope
+      href: mailto:jrose835@gmail.com
+      aria-label: Email
 ---
 
-::: {.hero}
-![](assets/headshot.png){.headshot fig-alt="Headshot of Jim Rose"}
-
-# Jim Rose
-
-[computational biology · spatial transcriptomics · single-cell genomics]{.role}
-
-::: {.hero-bio}
+::: {#hero-heading}
 Hi, I'm Jim. I'm a computational biologist at Emory University working at the intersection of genomics and immunology. I build methods and pipelines for spatial transcriptomics and single-cell data, and I care a lot about teaching biologists to code.
-:::
 
-::: {.social-row}
-[{{< fa brands github >}}](https://github.com/jrose835 "GitHub")
-[{{< fa brands linkedin >}}](https://www.linkedin.com/in/james-r-rose-85b70023/ "LinkedIn")
-[{{< fa graduation-cap >}}](https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en "Google Scholar")
-[{{< fa envelope >}}](mailto:jrose835@gmail.com "Email")
-:::
-:::
+Learn more [about me →](about.qmd)
 
-::: {.hero-links}
-[more about me](about.qmd) [my research](research.qmd) [software I've built](software.qmd)
+Browse [my research](research.qmd) and the [software I've built](software.qmd), or read the occasional post on the [blog](blog.qmd). My resume and CV are [here](cv.qmd).
 :::
