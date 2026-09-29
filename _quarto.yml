@@ -19,8 +19,6 @@ website:
         text: about
       - href: research.qmd
         text: research
-      - href: teaching.qmd
-        text: teaching
       - href: software.qmd
         text: software
       - href: blog.qmd

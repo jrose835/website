@@ -38,7 +38,7 @@ These days most of my work is in **spatial transcriptomics**: building analysis 
 
 ## Teaching
 
-I'm passionate about teaching coding to biologists. For several years I've helped teach IBS 519 at Emory, an introduction to R, statistics, and reproducible analysis for incoming graduate students — more on the [teaching page](teaching.qmd).
+I'm passionate about teaching coding to biologists. For several years I've helped teach IBS 519 at Emory, an introduction to R, statistics, and reproducible analysis for incoming graduate students — my session materials are on [GitHub](https://github.com/jrose835/IBS519_TAsessions).
 
 ## Outside the terminal
 
