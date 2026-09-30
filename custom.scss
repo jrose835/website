@@ -89,11 +89,7 @@ body:not(.floating) main.content {
     color: $muted !important;
     position: relative;
     transition: color 0.15s ease;
-    text-align: center;
-    line-height: 1.25;
-
     span.menu-text {
-      display: inline-block;
       background-image: linear-gradient($accent, $accent);
       background-size: 0% 1.5px;
       background-repeat: no-repeat;
