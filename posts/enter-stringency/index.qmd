@@ -5,7 +5,7 @@ date: 2026-09-29
 image: ../../assets/software/stringency-belay.png
 ---
 
-One thing that I have been a little bit excited about recently is a new tool I'm calling [stringency](https://github.com/santangelo-lab/stringency). This is basically a belay device and top rope safety harness system for scientists using AI to automate their data analysis. I'm building it to help my lab members run the correct bioinformatic analysis on new data, where *correct* here implies that whatever the AI does is grounded in sound, commonly accepted analysis techniques and results in completely reproducible/traceable work, no matter who is running it.
+One thing that I have been a little bit excited about recently is a new tool I'm calling [stringency](https://github.com/santangelo-lab/stringency). It's basically a belay device and top rope safety harness system for scientists using AI to automate their data analysis. I'm building it to help my lab members run the correct bioinformatic analysis on new data, where *correct* here implies that whatever the AI does is grounded in sound, commonly accepted analysis techniques and results in completely reproducible/traceable work, no matter who is running it.
 
 ## Lab biologists should run the analysis
 
