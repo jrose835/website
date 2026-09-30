@@ -20,9 +20,9 @@ website:
       - href: research.qmd
         text: research
       - href: software.qmd
-        text: software
+        text: writing for computers (software)
       - href: blog.qmd
-        text: blog
+        text: writing for humans (blog)
       - href: cv.qmd
         text: cv
   page-footer:
