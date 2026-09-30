@@ -333,6 +333,55 @@ div.quarto-post {
   }
 }
 
+// ---------- Research page: category sections + publication cards ----------
+.research-area {
+  border-top: 1px solid $hairline;
+  margin-top: 2.6rem;
+  padding-top: 2rem;
+
+  h2 {
+    margin-top: 0;
+    padding-bottom: 0.8rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 2.4rem;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, $accent, $accent-soft);
+    }
+  }
+}
+
+.pub {
+  background: $plum-tint;
+  border-left: 3px solid $accent;
+  border-radius: 0 6px 6px 0;
+  padding: 0.9rem 1.2rem;
+  margin: 1.4rem 0;
+  font-size: 0.93rem;
+  line-height: 1.55;
+
+  p {
+    margin: 0;
+  }
+
+  .pub-tag {
+    display: block;
+    font-family: "Commissioner", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 0.35rem;
+  }
+}
+
 // ---------- CV embed ----------
 .cv-frame {
   width: 100%;

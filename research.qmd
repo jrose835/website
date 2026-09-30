@@ -2,29 +2,62 @@
 title: "Research"
 ---
 
-My research develops computational methods and analysis frameworks for spatial transcriptomics, with a focus on making imaging-based single-cell measurements trustworthy before they're interpreted.
+My research spans computational method development for spatial transcriptomics, the genomics and epigenomics of immune regulation, and tools for making AI-driven bioinformatics trustworthy.
 
-## Cell segmentation quality in spatial transcriptomics
+::: {.research-area}
+## Spatial Transcriptomics
 
-Imaging-based spatial platforms like 10x Xenium assign millions of transcripts to individual cells — but every downstream conclusion depends on how well cell boundaries were drawn. I develop **CRISP** (Co-expression Rejection In Segmentation Purity), an R package that flags cells co-expressing mutually exclusive marker genes to quantify segmentation errors without ground-truth annotation.
+### Cell segmentation quality
 
-Using CRISP, I'm benchmarking segmentation algorithms — including the 10x segmentation kit, Baysor, Proseg, and Segger — across a multi-organ mouse tissue atlas, asking which methods hold up in which tissue contexts.
+Imaging-based spatial platforms like 10x Xenium assign millions of transcripts to individual cells — but every downstream conclusion depends on how well cell boundaries were drawn. I develop **CRISP** (Co-expression Rejection In Segmentation Purity), an open-source tool in R and Python that flags cells co-expressing mutually exclusive marker genes to quantify segmentation errors without ground-truth annotation.
 
-<!-- DRAFT: add manuscript citation/preprint link when available -->
-*Manuscript in preparation.*
+Using CRISP, we benchmarked five segmentation algorithms — including the 10x segmentation kit, Baysor, Proseg, and Segger — across ten mouse organs with a 5,006-gene Xenium panel, revealing a tissue-dependent tradeoff between transcript capture and cell purity.
 
-## Xenium analysis pipelines
+::: {.pub}
+[Preprint]{.pub-tag}
+
+**Rose, J.R.**, Rose, E.S., Assumpcao, J.A.F., Pathak, H., Peck, H.E., Sasser, L.E., Patel, C.J., Vanover, D. & Santangelo, P.J. CRISP enables comparisons of image-based spatial transcriptomic segmentation quality across ten organs. *bioRxiv* (2026). [doi:10.64898/2026.04.16.718947](https://www.biorxiv.org/content/10.64898/2026.04.16.718947v1)
+:::
+
+### Xenium analysis pipelines
 
 Alongside the benchmarking work, I've built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the [software page](software.qmd).
+:::
 
-## Earlier work: epigenetics of immune memory
+::: {.research-area}
+## Genomics & Epigenomics
 
-During my PhD I studied how transcriptomic and epigenomic states define human memory T cell subsets, using integrated RNA-seq and ATAC-seq. We identified chromatin regions whose accessibility before and after activation (*poised accessible regions*) distinguishes memory subsets and their activation potential.
+During my PhD I used integrated RNA-seq and ATAC-seq to ask how transcriptional and epigenetic states encode immune cell identity — and what happens when that regulation goes wrong.
 
-## Publications
+### Epigenetics of immune memory
 
-<!-- DRAFT: confirm/complete this list from Google Scholar before publishing -->
+I studied how transcriptomic and epigenomic states define human memory T cell subsets. We identified chromatin regions whose accessibility before and after activation (*poised accessible regions*) distinguishes memory subsets and their activation potential.
 
-- **Rose, J.R.**, Akdogan-Ozdilek, B., Rahmberg, A.R., *et al.* Distinct transcriptomic and epigenomic modalities underpin human memory T cell subsets and their activation potential. *Communications Biology* **6**, 363 (2023). [Read the paper](https://rdcu.be/dlpaI)
+::: {.pub}
+[Published]{.pub-tag}
 
-See my [Google Scholar profile](https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en) for the full list.
+**Rose, J.R.**, Akdogan-Ozdilek, B., Rahmberg, A.R., *et al.* Distinct transcriptomic and epigenomic modalities underpin human memory T cell subsets and their activation potential. *Communications Biology* **6**, 363 (2023). [Read the paper](https://rdcu.be/dlpaI)
+:::
+
+### Autoimmunity
+
+I also investigated the dysregulation of B cells in lupus. We found that disease activity is reflected in the transcriptome — and written into the epigenome — of otherwise resting, naïve B cells in individuals with the disease.
+
+::: {.pub}
+[Accepted — J. Clin. Invest.]{.pub-tag}
+
+**Rose, J.R.**, *et al.* Systemic lupus erythematosus signatures in resting naïve B cells differ by disease activity. *Journal of Clinical Investigation* (in press).
+:::
+:::
+
+::: {.research-area}
+## AI Bioinformatics Tools
+
+AI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I work on **Stringency**, a framework that adds pre-execution admissibility checks, append-only provenance, and human-in-the-loop holds to LLM-driven bioinformatics pipelines, so agent-run analyses stay reproducible and auditable.
+
+[Stringency on GitHub →](https://github.com/santangelo-lab/stringency)
+:::
+
+---
+
+For the full publication list, see my [Google Scholar profile](https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en).
