@@ -293,9 +293,13 @@ div.quarto-post {
 
   .body h3.listing-title, .body .listing-title {
     font-family: "Petrona", Georgia, serif;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin: 0 0 0.2rem 0;
+    margin: 0 0 0.25rem 0;
+
+    a {
+      color: #1F1D1B;
+    }
 
     a:hover { color: $accent; }
   }
