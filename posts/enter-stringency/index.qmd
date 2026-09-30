@@ -1,25 +1,31 @@
 ---
-title: "Enter Stringency"
-description: "A belay device and top-rope safety system for scientists using AI to automate their data analysis."
+title: "All scientists can run analysis pipelines now"
+description: "AI can do your bioinformatics now, and biologists are exactly the right people to drive it. But an agent that can't show its work has no place in science. On stringency, the belay system I'm building for AI-run analysis."
 date: 2026-09-29
 image: ../../assets/software/stringency-belay.png
-draft: true
 ---
 
-One thing that I have been a little bit excited about recently is a new tool I'm calling [stringency](https://github.com/santangelo-lab/stringency). This is basically a belay device and top rope safety harness system for scientists using AI to automate their data analysis. I'm building it to help my lab members run the correct bioinformatic analysis on new data, where *correct* implies that whatever the AI does is grounded in sound, commonly accepted analysis techniques and completely reproducible/traceable.
+One thing that I have been a little bit excited about recently is a new tool I'm calling [stringency](https://github.com/santangelo-lab/stringency). This is basically a belay device and top rope safety harness system for scientists using AI to automate their data analysis. I'm building it to help my lab members run the correct bioinformatic analysis on new data, where *correct* implies that whatever the AI does is grounded in sound, commonly accepted analysis techniques and no matter who is running it results in completely reproducible/traceable work.
 
 ![](../../assets/software/stringency-belay.png){fig-alt="Illustration of a belayer holding the rope for an AI agent climbing a data-analysis wall" width="60%" fig-align="center"}
 
 ## Biologists are the right people for this
 
-The fact is with today's leading AI models you can do most any bioinformatic work without knowing a single thing about writing code. This is not a bad thing! Biologists thinking deeply about their scientific questions and collecting data are probably the best suited to be using AI in this way. They have the deep domain knowledge that any generalist model will inevitably lack, and they can use it to cut through the professional-sounding noise that a model often produces when given an unfocused task or question. Scientists are trained to ask strong, focused, and verifiable questions. Coincidentally, this is exactly what an AI needs to be given in order to help produce helpful results in data analysis. What's more, scientists know their data best. Giving them the tools to successfully analyze a dataset from start to finish avoids the dilution or "thrown over the wall" problem that plagues current collaborations or outsourcing of this work to a separate team member or worse...a core service group.
+The fact is with today's leading AI models you can do most any bioinformatic work without knowing a single thing about writing code. This is not a bad thing! Biologists thinking deeply about their scientific questions and collecting data are probably the best suited to be using AI in this way. They have the deep domain knowledge that any generalist model will inevitably lack, and they can use it to cut through the professional-sounding noise that a model often produces when given an unfocused task or ill-formed question. Scientists are, in fact, trained to ask strong, focused, and verifiable questions. Coincidentally, this is exactly what an AI needs to be given in order to help produce helpful results in the process of data analysis. What's more, scientists know their data best. Giving them the tools to successfully analyze a dataset from start to finish avoids the dilution or "thrown over the wall" problem that plagues current collaborations or outsourcing of this work to separate team members or worse...a core service group.
 
 ## But AI alone is a poor fit for science
 
-However, AI models with their stochastic, overly-confident nature and their transient lifespan can be unpredictable and are by definition not reproducible, none of which is a good fit for scientific work. For example: perhaps an AI agent might approach a problem in an unusual or unconventional way when faced with an initial roadblock. Or maybe an agent successfully processes some data, but then the session ends and all provenance of how the outputs were generated is lost with the model's death. Or worse, what if the agent asserts something about your data driven entirely by a hallucination, and builds off of that for the next few hours. You look at the spreadsheet it generated at the end and the numbers are completely wrong, or maybe you can't even tell. At this point there is no way to answer the question: *how did you do this?* And without the knowledge of an experienced analyst it's also very hard to answer the question *why did you do it this way?*
+But AI models with their stochastic, overly-confident nature and their transient lifespan can be unpredictable.  They are by definition not reproducible which doesn't sit well with scientific work. Maybe your AI agent approaches a problem in an unusual or unconventional (aka untested) way when faced with an initial roadblock. Or maybe an agent successfully processes your data, but then the session ends and all provenance of how the outputs were generated is lost with the model's death. Or worse, what if the agent asserts something about your data driven entirely by a hallucination, and then builds off of that for the next few hours. You look at the spreadsheet it generated at the end and the numbers are completely wrong, or maybe you can't even tell. At this point there is no way to answer the question: *how did you do this?* And without the knowledge of an experienced analyst it's also very hard to answer the question *why did you do it this way?*
 
 Scientists need a way to leverage the automation, the strong logical thinking and the significant programming ability AI brings to the table. But it needs to be in a way that is guided and constrained so that even those with no coding or technical knowledge of the underlying analysis work can drive the work forward in a responsible way.
 
-**Enter stringency.**
+## The Commandments of Bioinformatic Agentic Pipelines
 
-<!-- TODO: pick up here — what stringency actually does, how the belay metaphor maps to admissibility checks / provenance / holds, maybe a walkthrough -->
+In the next few posts I'll be introducing what I call the **"Commandments of Bioinformatic Agentic Pipelines"**. These are simple rules for how to use AI and autonomous agents in research and data analysis in a way that hopefully minimizes the risks I outlined above to reproducibility and reliability.
+
+[Stringency](https://github.com/santangelo-lab/stringency) is the engine I'm building to enable AIs to keep to these principles. 
+
+Have you ever been rock climbing? Stringency is supposed to be a little like the belay system used in top rope climbing. In this case the agent is doing all the climbing. You're the one on the ground responsible for making sure it doesn't fall off and break anything. It's pretty hard to do that without a pulley and some rope. 
+
+We're all still learning how to use these new tools, so stick around to hear more. 
+
