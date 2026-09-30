@@ -35,9 +35,3 @@ Guardrails for AI agents that analyze biological data. Stringency checks that an
 [Xen_Seurat_Pipeline](https://github.com/jrose835/Xen_Seurat_Pipeline) — Seurat-based processing: QC, normalization, integration, clustering, and annotation in a reproducible workflow.
 :::
 :::
-
-::: {.entry}
-[pyMFI](https://github.com/jrose835/pyMFI){.entry-title}
-<div class="entry-meta">Python</div>
-Calculates per-cell mean fluorescence intensity (MFI) from imaging data.
-:::

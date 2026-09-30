@@ -9,4 +9,4 @@ listing:
   feed: true
 ---
 
-Occasional notes on computational biology, spatial data, R, and whatever I'm currently debugging.
+The part of this site where I write stuff for humans, written by a human.

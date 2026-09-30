@@ -22,7 +22,7 @@ about:
       aria-label: Email
 ---
 
-I'm a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — now through AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or **disregulated in the case of autoimmunity**.
+I'm a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and now AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or **disregulated in the case of autoimmunity**.
 
 Most of my work from the last few years is in **spatial transcriptomics**: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also do odds and ends supporting our group's work on delivery for mRNA-based therapuetics. This includes guide selection for Cas9 systems, single-cell, or bulk genomic datasets.
 
@@ -36,12 +36,11 @@ Now I run all of my groups computational functions. That means managing a few ov
 - **Reproducible pipelines** — Nextflow and R-based workflows designed so the next person (often future me) can rerun them
 - **AI-based bioinformatics** — learning how to use agents for data anlysis in responsible and reproducible ways (see [Stringency](https://github.com/santangelo-lab/stringency))
 
-## Outside the terminal
+## Outside the lab
 
-Girl Dad, science fiction, digital lore-keeper for [my DnD friend's campaign](https://jrose835.github.io/astrodia-wiki/)
+Girl Dad, science fiction, digital lore-keeper for my current [DnD campaign](https://jrose835.github.io/astrodia-wiki/)
 
-[Building community through gardening](https://www.friendsmulberryfields.org/) 
-
+You might find me building community through [gardening](https://www.friendsmulberryfields.org/) or fixing up my ebikes myself because the company I bought them from just sends parts and best wishes...
 
 Trying to figure out how live a good life...
 
