@@ -330,6 +330,21 @@ div.quarto-post {
     color: $muted;
     margin-bottom: 0.35rem;
   }
+
+  .sub-entry {
+    margin: 0.55rem 0 0 0.2rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid $hairline;
+    font-size: 0.97rem;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      font-weight: 500;
+    }
+  }
 }
 
 // ---------- Research page: category tabs + publication cards ----------
