@@ -1,6 +1,6 @@
 ---
 title: "All scientists can run analysis pipelines now"
-description: "AI can do your bioinformatics now, and biologists are exactly the right people to drive it. But an agent that can't show its work has no place in science. On stringency, the belay system I'm building for AI-run analysis."
+description: "Why biologists should drive AI-powered data analysis, why raw agents aren't fit for science, and the tool I'm building to bridge the gap."
 date: 2026-09-29
 image: ../../assets/software/stringency-belay.png
 ---
