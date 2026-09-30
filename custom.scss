@@ -333,27 +333,42 @@ div.quarto-post {
   }
 }
 
-// ---------- Research page: category sections + publication cards ----------
-.research-area {
-  border-top: 1px solid $hairline;
-  margin-top: 2.6rem;
-  padding-top: 2rem;
+// ---------- Research page: category tabs + publication cards ----------
+.panel-tabset {
+  margin-top: 1.6rem;
 
-  h2 {
-    margin-top: 0;
-    padding-bottom: 0.8rem;
-    position: relative;
+  .nav-tabs {
+    border-bottom: 1px solid $hairline;
+    gap: 0.4rem;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 2.4rem;
-      height: 3px;
-      border-radius: 2px;
-      background: linear-gradient(90deg, $accent, $accent-soft);
+    .nav-link {
+      font-family: "Petrona", Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: $muted;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 0.5rem 0.9rem;
+      margin-bottom: -1px;
+      transition: color 0.15s ease, border-color 0.15s ease;
+
+      &:hover {
+        color: $accent;
+        border-bottom-color: rgba($accent, 0.35);
+      }
+
+      &.active {
+        color: $accent;
+        background: transparent;
+        border-bottom: 3px solid $accent;
+      }
     }
+  }
+
+  .tab-content {
+    padding-top: 1.5rem;
+    border: none;
   }
 }
 

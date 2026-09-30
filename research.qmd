@@ -4,7 +4,8 @@ title: "Research"
 
 My research spans computational method development for spatial transcriptomics, the genomics and epigenomics of immune regulation, and tools for making AI-driven bioinformatics trustworthy.
 
-::: {.research-area}
+::: {.panel-tabset}
+
 ## Spatial Transcriptomics
 
 ### Cell segmentation quality
@@ -22,9 +23,7 @@ Using CRISP, we benchmarked five segmentation algorithms — including the 10x s
 ### Xenium analysis pipelines
 
 Alongside the benchmarking work, I've built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the [software page](software.qmd).
-:::
 
-::: {.research-area}
 ## Genomics & Epigenomics
 
 During my PhD I used integrated RNA-seq and ATAC-seq to ask how transcriptional and epigenetic states encode immune cell identity — and what happens when that regulation goes wrong.
@@ -48,14 +47,13 @@ I also investigated the dysregulation of B cells in lupus. We found that disease
 
 **Rose, J.R.**, *et al.* Systemic lupus erythematosus signatures in resting naïve B cells differ by disease activity. *Journal of Clinical Investigation* (in press).
 :::
-:::
 
-::: {.research-area}
 ## AI Bioinformatics Tools
 
 AI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I work on **Stringency**, a framework that adds pre-execution admissibility checks, append-only provenance, and human-in-the-loop holds to LLM-driven bioinformatics pipelines, so agent-run analyses stay reproducible and auditable.
 
 [Stringency on GitHub →](https://github.com/santangelo-lab/stringency)
+
 :::
 
 ---
