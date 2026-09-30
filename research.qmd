@@ -2,7 +2,7 @@
 title: "Research"
 ---
 
-My research spans computational method development for spatial transcriptomics, the genomics and epigenomics of immune regulation, and tools for making AI-driven bioinformatics trustworthy.
+My research spans computational method development for spatial transcriptomics, genomics and epigenomics of immune regulation, and tools for making AI agent-driven bioinformatics more accessible and trustworthy.
 
 ::: {.panel-tabset}
 
@@ -62,7 +62,7 @@ I also investigated the dysregulation of B cells in lupus. We found that disease
 
 ## AI Bioinformatics Tools
 
-AI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I work on **Stringency**, a framework that adds pre-execution admissibility checks, append-only provenance, and human-in-the-loop holds to LLM-driven bioinformatics pipelines, so agent-run analyses stay reproducible and auditable.
+AI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I work on **Stringency**, a framework that puts guardrails around agent-driven analysis: it checks that the analysis plan is statistically sound before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off. The goal is agent-run analyses that a reviewer — or your future self — can trust, reproduce, and audit.
 
 [Stringency on GitHub →](https://github.com/santangelo-lab/stringency)
 

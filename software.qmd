@@ -12,8 +12,8 @@ Assesses cell segmentation quality in spatial transcriptomics data by identifyin
 
 ::: {.entry}
 [Stringency](https://github.com/santangelo-lab/stringency){.entry-title}
-<div class="entry-meta">Python · governance for LLM-driven pipelines</div>
-Pre-execution admissibility checks, append-only provenance, and human-in-the-loop holds for LLM-driven bioinformatics pipelines — so agent-run analyses stay reproducible and auditable.
+<div class="entry-meta">Python · guardrails for AI-driven analysis</div>
+Guardrails for AI agents that analyze biological data. Stringency checks that an analysis plan is statistically sound before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off — so you can trust, reproduce, and audit what the agent did.
 :::
 
 ::: {.entry}
