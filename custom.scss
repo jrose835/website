@@ -308,6 +308,32 @@ div.quarto-post {
 // ---------- Software / entry lists ----------
 .entry {
   margin-bottom: 1.8rem;
+  overflow: auto; // contain floated figures
+
+  img.entry-figure {
+    float: right;
+    width: 240px;
+    max-width: 40%;
+    margin: 0.2rem 0 0.8rem 1.4rem;
+    padding: 6px;
+    background: #FFFFFF;
+    border: 1px solid $hairline;
+    border-radius: 8px;
+  }
+
+  img.entry-figure-tall {
+    width: 180px;
+  }
+
+  @media (max-width: 600px) {
+    img.entry-figure {
+      float: none;
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0.6rem 0;
+    }
+  }
   padding: 0.4rem 0 0.4rem 1.1rem;
   border-left: 3px solid rgba($accent, 0.30);
   transition: border-color 0.2s ease, background 0.2s ease;
