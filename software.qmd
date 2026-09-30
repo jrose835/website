@@ -2,13 +2,18 @@
 title: "Software"
 ---
 
-Open-source tools I've built for spatial transcriptomics and single-cell analysis. Everything lives on [GitHub](https://github.com/jrose835).
+Open-source tools I've built for spatial transcriptomics, single-cell analysis, and AI-driven bioinformatics — on [my GitHub](https://github.com/jrose835) and the [Santangelo Lab's](https://github.com/santangelo-lab).
 
 ::: {.entry}
-[CRISP]{.entry-title}
-<div class="entry-meta">R package · segmentation quality assessment</div>
-Assesses cell segmentation quality in spatial transcriptomics data by identifying cells that co-express mutually exclusive marker genes. Produces negative-coexpression segmentation purity metrics and supports Xenium, Seurat, and SpatialExperiment objects. <!-- DRAFT: repo not yet public — add link when released -->
-*Public release coming with the accompanying manuscript.*
+[CRISP](https://github.com/santangelo-lab/CRISP){.entry-title}
+<div class="entry-meta">R & Python · segmentation quality assessment</div>
+Assesses cell segmentation quality in spatial transcriptomics data by identifying cells that co-express mutually exclusive marker genes. Produces negative-coexpression segmentation purity metrics and supports Xenium, Seurat, and SpatialExperiment objects. Described in [our preprint](https://www.biorxiv.org/content/10.64898/2026.04.16.718947v1).
+:::
+
+::: {.entry}
+[Stringency](https://github.com/santangelo-lab/stringency){.entry-title}
+<div class="entry-meta">Python · governance for LLM-driven pipelines</div>
+Pre-execution admissibility checks, append-only provenance, and human-in-the-loop holds for LLM-driven bioinformatics pipelines — so agent-run analyses stay reproducible and auditable.
 :::
 
 ::: {.entry}
