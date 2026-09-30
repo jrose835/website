@@ -22,11 +22,11 @@ about:
       aria-label: Email
 ---
 
-I'm a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and now AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or **disregulated in the case of autoimmunity**.
+I'm a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and now AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or **dysregulated in the case of autoimmunity**.
 
-Most of my work from the last few years is in **spatial transcriptomics**: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also do odds and ends supporting our group's work on delivery for mRNA-based therapuetics. This includes guide selection for Cas9 systems, single-cell, or bulk genomic datasets.
+Most of my work from the last few years is in **spatial transcriptomics**: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also do odds and ends supporting our group's work on delivery for mRNA-based therapeutics. This includes guide selection for Cas9 systems, single-cell, or bulk genomic datasets.
 
-Now I run all of my groups computational functions. That means managing a few over-powered workstations, a team of over-eager AI agentic assistants, and developing Claude skills to enable our lab scientists to run their own pipelines to analyze their data directly. 
+Now I run all of my group's computational functions. That means managing a few over-powered workstations, a team of over-eager AI agentic assistants, and developing Claude skills to enable our lab scientists to run their own pipelines to analyze their data directly. 
 
 ## What I work on
 
@@ -34,7 +34,7 @@ Now I run all of my groups computational functions. That means managing a few ov
 - **Method development** — [CRISP](software.qmd), a software package for assessing cell segmentation quality using co-expression of mutually exclusive markers
 - **Single-cell and bulk genomics** — RNA-seq, ATAC-seq, integration, and gene regulatory network analysis
 - **Reproducible pipelines** — Nextflow and R-based workflows designed so the next person (often future me) can rerun them
-- **AI-based bioinformatics** — learning how to use agents for data anlysis in responsible and reproducible ways (see [Stringency](https://github.com/santangelo-lab/stringency))
+- **AI-based bioinformatics** — learning how to use agents for data analysis in responsible and reproducible ways (see [Stringency](https://github.com/santangelo-lab/stringency))
 
 ## Outside the lab
 
@@ -42,7 +42,7 @@ Girl Dad, science fiction, digital lore-keeper for my current [DnD campaign](htt
 
 You might find me building community through [gardening](https://www.friendsmulberryfields.org/) or fixing up my ebikes myself because the company I bought them from just sends parts and best wishes...
 
-Trying to figure out how live a good life...
+Trying to figure out how to live a good life...
 
 ---
 

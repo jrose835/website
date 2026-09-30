@@ -10,7 +10,7 @@ This blog is where I put whatever I'm thinking about at the moment that I might 
 
 A few things I'm deep in at the moment:
 
-- **AI agent tools for bioinformatics research** We all are or should be using AI to write our analysis code these days, but the inherent randomness of LLMs makes it hard to achieve our goals of reliability and reproducibillty in research. I'm trying to fix that with [stringency](https://github.com/santangelo-lab/stringency)...more to come soon!
+- **AI agent tools for bioinformatics research** We all are or should be using AI to write our analysis code these days, but the inherent randomness of LLMs makes it hard to achieve our goals of reliability and reproducibility in research. I'm trying to fix that with [stringency](https://github.com/santangelo-lab/stringency)...more to come soon!
 - **Segmentation benchmarking.** Comparing cell segmentation algorithms for Xenium data across a multi-organ mouse atlas, and building [CRISP](../../software.qmd) to measure segmentation purity without ground truth.
 - **Spatial pipelines.** Nextflow and Seurat workflows that take Xenium runs from raw output to annotated cells reproducibly.
 
