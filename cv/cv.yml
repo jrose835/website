@@ -468,8 +468,8 @@ skills:
   - id: sk-infra
     group: "Infrastructure"
     tags: [infra]
-    items: [AWS, Multi-GPU workstation administration,
-            RStudio Server, Workflow automation]
+    items: [AWS, Linux workstation and server administration,
+            Shared storage and backup, RStudio Server, Workflow automation]
   - id: sk-domain
     group: "Domain"
     tags: [domain]
