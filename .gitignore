@@ -6,3 +6,6 @@ _site/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Generated resume/CV output (assets/*.pdf are the published copies)
+cv/build/

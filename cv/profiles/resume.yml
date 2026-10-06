@@ -1,0 +1,39 @@
+# General-purpose resume: ~2 pages, not tailored to any role.
+# This is the one linked from the website as "resume".
+name: "General resume"
+summary: general
+themes: [berry, slate, classic, compact, web]
+
+sections:
+  - key: experience
+    title: "Experience"
+    include: [santangelo, boss, janssen, biogen]
+    highlights:
+      santangelo: [crisp, rosc-atlas, xenium-pipelines, crispra, stringency, agent-tooling, infra]
+      boss: [memory-t, sle, sle-atlas]
+      janssen: [j-lead, j-spc, j-bla]
+      biogen: [b-process, b-montecarlo]
+
+  - key: software
+    title: "Software"
+    include: [sw-crisp, sw-stringency, sw-xenium]
+
+  - key: publications
+    title: "Selected publications"
+    include: [crisp-preprint, jci-sle, advmat-polymer, commbio-memt, ji-irf4]
+
+  - key: skills
+    title: "Skills"
+    include: [sk-languages, sk-spatial, sk-genomics, sk-stats, sk-ai, sk-infra, sk-domain]
+
+  - key: education
+    title: "Education"
+    include: [phd, ms, bs]
+
+  - key: awards
+    title: "Awards"
+    include: [a-aai, a-inspirit, a-eberly, a-pbk]
+
+  - key: service
+    title: "Leadership & service"
+    include: [s-fmf]

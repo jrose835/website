@@ -1,0 +1,38 @@
+# Full academic CV: everything, including posters, talks, teaching, service.
+name: "Full CV"
+summary: academic
+themes: [classic, berry]
+
+sections:
+  - key: education
+    title: "Education"
+    include: [phd, ms, bs]
+
+  - key: experience
+    title: "Research & professional experience"
+    include: [santangelo, boss, janssen, biogen]
+    # no `highlights:` key = show every bullet in cv.yml
+
+  - key: publications
+    title: "Publications"
+
+  - key: posters
+    title: "Published abstracts & posters"
+
+  - key: talks
+    title: "Invited talks & oral presentations"
+
+  - key: software
+    title: "Software"
+
+  - key: teaching
+    title: "Teaching"
+
+  - key: awards
+    title: "Awards & honors"
+
+  - key: service
+    title: "Service & leadership"
+
+  - key: skills
+    title: "Technical skills"

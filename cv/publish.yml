@@ -1,0 +1,9 @@
+# Which built document becomes which file in assets/ (what the website serves).
+# Change a theme here and run:  python3 cv/build.py --publish
+publish:
+  - profile: resume
+    theme: berry
+    as: ../assets/resume.pdf
+  - profile: cv
+    theme: classic
+    as: ../assets/cv.pdf

@@ -1,0 +1,3 @@
+# Screen version of the berry theme, published as a commentable Artifact.
+# Emits a body fragment (no doctype/html/head/body) per the Artifact page contract.
+pdf: false

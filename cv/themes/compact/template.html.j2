@@ -1,0 +1,35 @@
+{% import "sections.html.j2" as S %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ basics.name }} — {{ profile.name }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>{{ css }}</style>
+</head>
+<body>
+<article class="page">
+
+  <header class="masthead">
+    <div class="mast-l">
+      <h1 class="name">{{ basics.name }}</h1>
+      <p class="tagline">{{ basics.tagline }}</p>
+    </div>
+    <ul class="mast-r">
+      <li><span class="k">e</span><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></li>
+      <li><span class="k">p</span>{{ basics.phone }}</li>
+      <li><span class="k">w</span><a href="{{ basics.website_url }}">{{ basics.website }}</a></li>
+      <li><span class="k">g</span><a href="{{ basics.github_url }}">{{ basics.github }}</a></li>
+    </ul>
+  </header>
+
+  {% if summary %}<p class="summary">{{ summary | md }}</p>{% endif %}
+
+  <main>
+    {% for sec in sections %}{{ S.section(sec) }}{% endfor %}
+  </main>
+
+</article>
+</body>
+</html>

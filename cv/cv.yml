@@ -1,0 +1,725 @@
+# =============================================================================
+# cv.yml — single source of truth for Jim Rose's resume and CV.
+#
+# Edit this file when something changes (new paper, new project, new skill).
+# Then rebuild:   python3 cv/build.py --all
+#
+# Every list item may carry:
+#   id:   stable short slug, used by profiles to include/exclude/reorder
+#   tags: free-form keywords, used by profiles to filter in bulk
+# Nothing else in the build depends on item order here; profiles control that.
+# =============================================================================
+
+basics:
+  name: "James R. Rose"
+  short_name: "Jim Rose"
+  credentials: "PhD"
+  title: "Computational Biologist"
+  tagline: "Spatial transcriptomics · single-cell genomics · AI-driven bioinformatics"
+  location: "Atlanta, GA"
+  email: "jrose835@gmail.com"
+  phone: "412-445-8323"
+  website: "jrose835.github.io/website"
+  website_url: "https://jrose835.github.io/website"
+  github: "github.com/jrose835"
+  github_url: "https://github.com/jrose835"
+  linkedin: "linkedin.com/in/james-r-rose"
+  linkedin_url: "https://www.linkedin.com/in/james-r-rose-85b70023/"
+  scholar: "Google Scholar"
+  scholar_url: "https://scholar.google.com/citations?user=G2WDGLUAAAAJ&hl=en"
+  orcid: ""              # add if you have one
+  # Headshot is optional; themes that support it will use it when present.
+  photo: "../assets/headshot.png"
+  # Rendered as a single line at the foot of the page, so the contact block
+  # at the top stays short.
+  footer_note: "Publications, software and project write-ups: jrose835.github.io/website"
+
+# -----------------------------------------------------------------------------
+# Summary variants. Profiles pick one by key. Add a new key when tailoring.
+# -----------------------------------------------------------------------------
+summaries:
+  general: >-
+    Computational biologist working at the intersection of genomics, immunology,
+    and mRNA therapeutics. I build methods and pipelines for spatial
+    transcriptomics, single-cell genomics, and AI-driven bioinformatics, and I
+    run the computational function for a research group, from infrastructure to
+    the analysis tooling lab scientists use themselves.
+
+  short: >-
+    Computational biologist (PhD). I develop methods and pipelines for spatial
+    transcriptomics, single-cell genomics, and AI-assisted analysis.
+
+  academic: >-
+    Computational biologist developing methods for image-based spatial
+    transcriptomics, with a background in the transcriptional and epigenetic
+    regulation of lymphocytes. My current work asks how far we can trust the
+    cell boundaries that every downstream spatial result rests on, and how to
+    make agent-run analysis reproducible.
+
+  industry: >-
+    Computational biologist (PhD) with eleven years across biotech R&D and
+    academic research. I analyze large multi-omic and imaging datasets, build
+    the reproducible pipelines that produce them, and have taken monoclonal
+    antibody products through GMP manufacturing and regulatory filing.
+
+# -----------------------------------------------------------------------------
+# Experience
+# -----------------------------------------------------------------------------
+experience:
+  - id: santangelo
+    role: "Assistant Scientist"
+    org: "Santangelo Lab, Department of Biomedical Engineering"
+    org_detail: "Emory University"
+    location: "Atlanta, GA"
+    start: "2024-09"
+    end: ""                     # empty = Present
+    tags: [current, computational, spatial, leadership]
+    summary: >-
+      Sole computational scientist for a ~25-person molecular engineering lab
+      developing mRNA and nucleic-acid therapeutics. I own the spatial
+      transcriptomics platform end to end, build the lab's analysis software and
+      infrastructure, and report to program sponsors including ARPA-H, DARPA,
+      and DTRA.
+    highlights:
+      - id: crisp
+        tags: [method, spatial, software, firstauthor]
+        text: >-
+          Developed **CRISP**, an open-source R and Python package that quantifies
+          cell segmentation quality in image-based spatial transcriptomics without
+          ground-truth annotation, by detecting cells that co-express mutually
+          exclusive marker genes.
+      - id: benchmark
+        tags: [method, spatial, benchmark]
+        text: >-
+          Benchmarked six segmentation approaches (10x multimodal segmentation
+          kit, Baysor, Proseg, Segger, Cellpose, nuclear expansion) across ten
+          mouse organs on a 5,006-gene Xenium panel. How much transcript capture
+          you give up for cell purity turns out to depend on the tissue.
+      - id: rosc-atlas
+        tags: [spatial, scale, delivery]
+        text: >-
+          Built a multi-tissue spatial atlas of lipid nanoparticle delivery
+          comparing injection routes across **2.8 million cells, 11 organs, and
+          104 tissue-microarray punches**. The two routes trigger different
+          immune responses and remodel splenic myeloid populations
+          differently.
+      - id: xenium-pipelines
+        tags: [pipeline, spatial, nextflow, software]
+        text: >-
+          Built the lab's Xenium toolchain, from raw 10x output to annotated
+          cells: a Nextflow pipeline for alternative segmentation following
+          nf-core conventions, Seurat workflows for QC through annotation, and a
+          Python tool that splits multi-punch tissue microarrays into per-sample
+          datasets.
+      - id: cloud
+        tags: [infrastructure, cloud, pipeline]
+        text: >-
+          Moved terabyte-scale segmentation onto 4 TB-memory AWS instances, for
+          runs no single workstation can hold. Chunking the work brought a
+          332-million-transcript tissue array down to a 72-hour run.
+      - id: delivery-mapping
+        tags: [spatial, delivery, collaboration, method]
+        text: >-
+          Map mRNA delivery tropism across tissues and species, including a custom
+          method that measures immunofluorescence intensity inside Xenium cell
+          boundaries to tie transcript delivery to protein production. This is the
+          spatial analysis behind a polymer lung-delivery manuscript under review
+          at *Advanced Materials*.
+      - id: panel-design
+        tags: [spatial, assay]
+        text: >-
+          Designed the lab's custom Xenium Prime add-on probe panel for mouse
+          airway, selecting 44 markers from a 203-candidate review of the
+          published airway literature.
+      - id: crispra
+        tags: [crispr, genomics, translational]
+        text: >-
+          Lead guide design for a CRISPR-activation therapeutic program. I scored
+          and ranked a 552-guide activity screen, then checked the candidates for
+          cross-species conservation and against gnomAD and *All of Us*
+          population variants.
+      - id: stringency
+        tags: [ai, software, reproducibility]
+        text: >-
+          Created **Stringency**, a safety system for AI-driven data analysis:
+          it validates the analysis plan against best practice before any code
+          runs, keeps a tamper-proof provenance log, and pauses at key decisions
+          until a person signs off.
+      - id: agent-tooling
+        tags: [ai, enablement, leadership]
+        text: >-
+          Run the lab's AI tooling. I procured and administer the team's
+          agent-assistant deployment, and wrote the skills that let bench
+          scientists run validated pipelines on their own data and look up lab
+          protocols without waiting on me.
+      - id: ngs-pipelines
+        tags: [pipeline, ngs, nextflow]
+        text: >-
+          Automated the group's NGS analysis as reproducible Nextflow workflows,
+          covering bulk and single-cell RNA-seq, NanoString, and targeted
+          amplicon panels for a dozen collaborators.
+      - id: infra
+        tags: [infrastructure, leadership]
+        text: >-
+          Administer the lab's compute: two analysis workstations with 134 cores
+          and 180+ TB of storage, shared network mounts, and automated backups.
+      - id: reporting
+        tags: [leadership, communication]
+        text: >-
+          Own the quarterly technical reporting and present results to program
+          sponsors and collaborating labs.
+      - id: mentoring
+        tags: [mentoring, leadership]
+        text: >-
+          Mentor junior lab members in R, Python, and reproducible analysis, and
+          teach the group to use new computational tools.
+
+  - id: boss
+    role: "PhD Graduate Researcher"
+    org: "Boss Lab, Genetics & Molecular Biology Program"
+    org_detail: "Emory University"
+    location: "Atlanta, GA"
+    start: "2019-08"
+    end: "2024-08"
+    tags: [phd, computational, immunology]
+    summary: >-
+      Thesis work on how transcriptional and epigenetic state encodes immune
+      cell identity, and how that regulation breaks in autoimmunity.
+    highlights:
+      - id: memory-t
+        tags: [epigenetics, firstauthor]
+        text: >-
+          Integrated RNA-seq and ATAC-seq across human memory T cell subsets to
+          identify *poised accessible regions*, chromatin whose accessibility
+          before and after activation separates the subsets and predicts how they
+          respond. Published in *Communications Biology*.
+      - id: sle
+        tags: [autoimmunity, clinical, firstauthor]
+        text: >-
+          Showed that lupus disease activity leaves a signature in both the
+          transcriptome and the epigenome of otherwise resting naïve B cells, in
+          a collaboration with Emory rheumatology. Accepted at the *Journal of
+          Clinical Investigation*.
+      - id: sle-atlas
+        tags: [singlecell, ml, integration]
+        text: >-
+          Compiled an [SLE single-cell B cell reference
+          atlas](https://github.com/jrose835/SLE_Bcell_RefAtlas) from public
+          datasets, then queried in-house samples against it and classified
+          disease endotypes with machine learning.
+      - id: phd-pipelines
+        tags: [pipeline, ngs]
+        text: >-
+          Designed and maintained the lab's bioinformatic pipelines for
+          next-generation sequencing: QC, alignment, peak calling, differential
+          testing, and gene regulatory network analysis.
+
+  - id: janssen
+    role: "Senior Associate Scientist, Biotherapeutics Development"
+    org: "Janssen R&D, Johnson & Johnson"
+    org_detail: ""
+    location: "Malvern, PA"
+    start: "2016-08"
+    end: "2019-06"
+    tags: [industry, leadership, gmp]
+    summary: ""
+    highlights:
+      - id: j-lead
+        tags: [leadership, industry]
+        text: >-
+          Led a team of development researchers on monoclonal antibody
+          manufacturing process development, new technology implementation, and
+          regulatory submissions for a therapeutic product worth $6B in annual
+          sales.
+      - id: j-spc
+        tags: [statistics, industry]
+        text: >-
+          Implemented statistical process control across international GMP
+          manufacturing facilities.
+      - id: j-bla
+        tags: [regulatory, industry]
+        text: "Authored sections of the BLA and other regulatory filings."
+
+  - id: biogen
+    role: "Engineer I, Cell Culture Technical Development"
+    org: "Biogen"
+    org_detail: ""
+    location: "Durham, NC"
+    start: "2013-06"
+    end: "2016-08"
+    tags: [industry, engineering]
+    summary: ""
+    highlights:
+      - id: b-process
+        tags: [industry]
+        text: >-
+          Developed mammalian cell culture processes for monoclonal antibody
+          production at large-scale manufacturing.
+      - id: b-pat
+        tags: [industry, analytics]
+        text: >-
+          Developed process analytics technology, including Raman spectroscopy for
+          remote metabolite monitoring.
+      - id: b-montecarlo
+        tags: [modeling, statistics]
+        text: >-
+          Pioneered the group's use of stochastic (Monte Carlo) simulation modeling
+          for manufacturing facility-fit analysis.
+
+# -----------------------------------------------------------------------------
+# Education
+# -----------------------------------------------------------------------------
+education:
+  - id: phd
+    degree: "PhD, Genetics & Molecular Biology"
+    org: "Emory University"
+    location: "Atlanta, GA"
+    start: "2019"
+    end: "2024"
+    tags: [degree]
+    detail: "Advisor: Jeremy M. Boss. Defended August 2024."
+    thesis: >-
+      Epigenetic gene regulation in B and T lymphocytes and its role in cellular
+      activation, differentiation, and autoimmune disease
+  - id: ms
+    degree: "MS, Biotechnology"
+    org: "The Pennsylvania State University"
+    location: "University Park, PA"
+    start: "2011"
+    end: "2013"
+    tags: [degree]
+    detail: "Integrated masters with BS degree"
+    thesis: "Modeling interfacial shear stress on mammalian cell culture systems"
+  - id: bs
+    degree: "BS, Biotechnology"
+    org: "The Pennsylvania State University"
+    location: "University Park, PA"
+    start: "2008"
+    end: "2013"
+    tags: [degree]
+    detail: ""
+    thesis: ""
+
+# -----------------------------------------------------------------------------
+# Publications
+#   status: published | inpress | preprint | review | prep
+#   Use **bold** around your own name; the renderer keeps it.
+# -----------------------------------------------------------------------------
+publications:
+  - id: crisp-preprint
+    status: preprint
+    year: 2026
+    tags: [spatial, firstauthor, method, selected]
+    authors: >-
+      **Rose, J.R.**, Rose, E.S., Assumpção, J.A.F., Pathak, H., Peck, H.E.,
+      Sasser, L.E., Patel, C.J., Vanover, D. & Santangelo, P.J.
+    title: >-
+      CRISP enables comparisons of image-based spatial transcriptomic segmentation
+      quality across ten organs
+    venue: "bioRxiv"
+    detail: "2026.04.16.718947"
+    url: "https://www.biorxiv.org/content/10.64898/2026.04.16.718947v1"
+    note: "Preprint"
+
+  - id: jci-sle
+    status: inpress
+    year: 2026
+    tags: [autoimmunity, firstauthor, selected]
+    authors: >-
+      **Rose, J.R.**, Ishii, Y., Hicks, S.L., Scharer, C.D., Jenks, S.A.,
+      Sanz, I. & Boss, J.M.
+    title: >-
+      Systemic lupus erythematosus signatures in resting naïve B cells differ by
+      disease activity
+    venue: "Journal of Clinical Investigation"
+    detail: ""
+    url: ""
+    note: "Accepted"
+
+  - id: advmat-polymer
+    status: review
+    year: 2026
+    tags: [spatial, delivery, selected]
+    authors: >-
+      Pramod Kumar, E.K., Jung, Y., Joo, J.Y., Rose, E.S., **Rose, J.R.**,
+      et al. & Santangelo, P.J.
+    title: >-
+      An engineered thio-amino polymer achieves potent, safe and broad cell type
+      delivery in the lung mapped by spatial transcriptomics
+    venue: "Advanced Materials"
+    detail: ""
+    url: ""
+    note: "Under review"
+
+  - id: commbio-memt
+    status: published
+    year: 2023
+    tags: [epigenetics, firstauthor, selected]
+    authors: >-
+      **Rose, J.R.**, Akdogan-Ozdilek, B., Rahmberg, A.R., Powell, M.D.,
+      Hicks, S.L., Scharer, C.D. & Boss, J.M.
+    title: >-
+      Distinct transcriptomic and epigenomic modalities underpin human memory T
+      cell subsets and their activation potential
+    venue: "Communications Biology"
+    detail: "6, 363"
+    url: "https://rdcu.be/dlpaI"
+    note: ""
+
+  - id: ji-irf4
+    status: published
+    year: 2021
+    tags: [immunology, coauthor, selected]
+    authors: >-
+      Patterson, D.G., Kania, A.K., Price, M.J., **Rose, J.R.**,
+      Scharer, C.D. & Boss, J.M.
+    title: >-
+      An IRF4–MYC–mTORC1 integrated pathway controls cell growth and the
+      proliferative capacity of activated B cells during B cell differentiation
+      in vivo
+    venue: "The Journal of Immunology"
+    detail: "207(7), 1798–1811"
+    url: ""
+    note: ""
+
+# -----------------------------------------------------------------------------
+# Software — shown as its own section on resume and CV
+# -----------------------------------------------------------------------------
+software:
+  - id: sw-crisp
+    name: "CRISP"
+    tags: [spatial, method, selected]
+    stack: "R · Python"
+    url: "https://github.com/santangelo-lab/CRISP"
+    text: >-
+      Segmentation quality assessment for spatial transcriptomics via
+      negative-coexpression purity metrics. Supports Xenium, Seurat, and
+      SpatialExperiment objects.
+  - id: sw-stringency
+    name: "Stringency"
+    tags: [ai, reproducibility, selected]
+    stack: "Python"
+    url: "https://github.com/santangelo-lab/stringency"
+    text: >-
+      A safety harness for running AI agent data analysis pipelines. Validates
+      the analysis plan before any code runs, keeps a tamper-proof provenance
+      log, and pauses at key decisions until a person signs off.
+  - id: sw-xenium
+    name: "Xenium analysis toolkit"
+    tags: [spatial, pipeline, selected]
+    stack: "Nextflow · R · Python"
+    url: "https://github.com/jrose835"
+    text: >-
+      Three pipelines covering raw Xenium output to annotated cells: alternative
+      segmentation (`Xen_Segmentation_NextFlow`), tissue microarray splitting
+      (`Xen_TMA_pipeline`), and Seurat-based QC through annotation
+      (`Xen_Seurat_Pipeline`).
+
+  - id: sw-cellquant
+    name: "CellQuant"
+    tags: [spatial, stats]
+    stack: "R"
+    url: ""
+    text: >-
+      Cell-composition modelling for spatial transcriptomics. Mixed-effects and
+      spatial (SPDE) models with niche-aware adjustment, for deciding whether a
+      cell type actually shifted between conditions.
+  - id: sw-pymfi
+    name: "pyMFI"
+    tags: [spatial, imaging]
+    stack: "Python"
+    url: ""
+    text: >-
+      Measures immunofluorescence intensity inside spatial-transcriptomics cell
+      segmentation boundaries, so protein signal and transcript profile can be
+      read off the same cell.
+
+# -----------------------------------------------------------------------------
+# Skills — grouped. Profiles may select which groups to show.
+# -----------------------------------------------------------------------------
+skills:
+  - id: sk-languages
+    group: "Languages & tools"
+    tags: [core]
+    items: [R (tidyverse), Python, Bash, Nextflow/Groovy, SQL, Git, Docker,
+            Quarto / R Markdown, Jupyter, Shiny]
+  - id: sk-spatial
+    group: "Spatial & imaging"
+    tags: [core, spatial]
+    items: ["10x Xenium", Cell segmentation (Baysor, Proseg, Segger),
+            Spatial statistics, Tissue microarrays, Immunofluorescence integration,
+            QuPath, ImageJ, OpenCV]
+  - id: sk-genomics
+    group: "Genomics"
+    tags: [core, genomics]
+    items: [Single-cell RNA-seq, Bulk RNA-seq, ATAC-seq, CITE-seq,
+            Seurat / Bioconductor / scverse, Differential expression (DESeq2),
+            Data integration, Gene regulatory networks, CRISPR guide design]
+  - id: sk-stats
+    group: "Statistics & ML"
+    tags: [core, stats]
+    items: [Statistical modeling and inference, Machine learning,
+            Experimental design, Monte Carlo simulation, Benchmarking,
+            Data visualization (ggplot2, seaborn)]
+  - id: sk-ai
+    group: "AI for bioinformatics"
+    tags: [core, ai]
+    items: [Agentic analysis workflows, LLM tool and skill development,
+            Reproducibility and audit frameworks, Evaluation of agent output]
+  - id: sk-infra
+    group: "Infrastructure"
+    tags: [infra]
+    items: [AWS, Multi-GPU workstation administration,
+            RStudio Server, Workflow automation]
+  - id: sk-domain
+    group: "Domain"
+    tags: [domain]
+    items: [Immunology (B and T cell), Epigenetics and gene regulation,
+            Autoimmunity, mRNA and nucleic acid delivery, Translational and
+            clinical data, GMP biologics development]
+
+# -----------------------------------------------------------------------------
+# Talks
+# -----------------------------------------------------------------------------
+talks:
+  - id: talk-lyon
+    year: 2026
+    date: "September 2026"
+    title: "Spatial transcriptomics quality control for a sepsis model study"
+    venue: "Invited seminar, collaborating research group"
+    location: "Emory University"
+    tags: [invited]
+  - id: talk-claudeclass
+    year: 2026
+    date: "February 2026"
+    title: "Hands-on workshop: AI coding agents for laboratory data analysis"
+    venue: "Santangelo Lab workshop"
+    location: "Emory University"
+    tags: [workshop, ai]
+  - id: talk-sponsor
+    year: 2026
+    date: "2025 – 2026"
+    title: "Spatial atlas of nucleic acid delivery: program technical reviews"
+    venue: "DARPA and ARPA-H program reviews"
+    location: ""
+    tags: [invited, sponsor]
+  - id: poster-gt25
+    year: 2025
+    date: "April 2025"
+    title: >-
+      Integrated spatial transcriptomics and imaging reveal cellular targets of
+      mRNA lung delivery
+    venue: "Georgia Tech research symposium"
+    location: "Atlanta, GA"
+    tags: [poster]
+  - id: talk-chromatin
+    year: 2023
+    date: "September 2023"
+    title: "Setting and re-setting chromatin accessibility in inactive SLE"
+    venue: "Emory Chromatin Club"
+    location: "Atlanta, GA"
+    tags: [invited]
+  - id: talk-aai23
+    year: 2023
+    date: "May 2023"
+    title: >-
+      Early peripheral B cells in inactive SLE are transcriptionally and
+      epigenetically primed for T-dependent activation
+    venue: "American Association of Immunologists Annual Meeting"
+    location: "Washington, DC"
+    tags: [conference]
+  - id: talk-aai22
+    year: 2022
+    date: "May 2022"
+    title: >-
+      Epigenome accessibility changes before and after activation reveal distinct
+      and progressive differentiation for human memory T cell subsets
+    venue: "American Association of Immunologists Annual Meeting"
+    location: "Portland, OR"
+    tags: [conference]
+
+# -----------------------------------------------------------------------------
+# Posters / published abstracts — CV only
+# -----------------------------------------------------------------------------
+posters:
+  - id: p-sle23
+    year: 2023
+    authors: >-
+      **Rose, J.R.**, Ishii, Y., Hicks, S.L., Scharer, C.D., Sanz, I. & Boss, J.M.
+    title: >-
+      Early peripheral B cells in inactive SLE are transcriptionally and
+      epigenetically primed for T-dependent activation
+    venue: "The Journal of Immunology"
+    detail: "210, 149.08"
+    tags: [firstauthor]
+  - id: p-metab23
+    year: 2023
+    authors: >-
+      Akdogan-Ozdilek, B., **Rose, J.R.**, Rahmberg, A.R., Scharer, C.D. & Boss, J.M.
+    title: "Human memory T cells show differential metabolic preferences"
+    venue: "The Journal of Immunology"
+    detail: "210, 87.05"
+    tags: [coauthor]
+  - id: p-ezh2
+    year: 2023
+    authors: >-
+      Wiggins, K.J., **Rose, J.R.**, Boss, J.M. & Scharer, C.D.
+    title: >-
+      Class switched memory B cell development and transcriptional programming is
+      regulated by EZH2
+    venue: "The Journal of Immunology"
+    detail: "210, 148.06"
+    tags: [coauthor]
+  - id: p-tfh23
+    year: 2023
+    authors: >-
+      Powell, M.D., **Rose, J.R.**, Gupta, M., Rahmberg, A.R., Scharer, C.D. & Boss, J.M.
+    title: >-
+      Tissue-specific heterogeneity of human T follicular helper cells marked by
+      unique transcriptomes and regulatory architecture
+    venue: "The Journal of Immunology"
+    detail: "210, 148.22"
+    tags: [coauthor]
+  - id: p-memt22
+    year: 2022
+    authors: >-
+      **Rose, J.R.**, Rahmberg, A.R., Powell, M.D., Scharer, C.D. & Boss, J.M.
+    title: >-
+      Epigenome accessibility changes before and after activation reveal distinct
+      and progressive differentiation for human memory T cell subsets
+    venue: "The Journal of Immunology"
+    detail: "208, 57.02"
+    tags: [firstauthor]
+  - id: p-pd1-22
+    year: 2022
+    authors: >-
+      Powell, M.D., **Rose, J.R.**, Neeld, D.K., Rahmberg, A.R., Scharer, C.D. & Boss, J.M.
+    title: >-
+      Defining the cis- and trans-regulatory architecture for human PD-1 in T
+      follicular helper cells
+    venue: "The Journal of Immunology"
+    detail: "208, 112.21"
+    tags: [coauthor]
+  - id: p-ar22
+    year: 2022
+    authors: >-
+      Ishii, Y., **Rose, J.R.**, Cashman, K., Hicks, S.L., Deguchi, T.,
+      Scharer, C.D., Jenks, S.A., Boss, J.M. & Sanz, I.
+    title: >-
+      Distinct transcriptomic and epigenetic profiles mediated by disease activity
+      in SLE
+    venue: "Arthritis & Rheumatology"
+    detail: "74, 22–23"
+    tags: [coauthor]
+  - id: p-memt21
+    year: 2021
+    authors: >-
+      **Rose, J.R.**, Rahmberg, A.R., Scharer, C.D. & Boss, J.M.
+    title: >-
+      Unique abilities of human memory T cell subsets are associated with both
+      specialized gene expression modules and epigenetic priming
+    venue: "The Journal of Immunology"
+    detail: "206, 98.28"
+    tags: [firstauthor]
+  - id: p-pd1-21
+    year: 2021
+    authors: >-
+      Powell, M.D., Neeld, D.K., **Rose, J.R.**, Scharer, C.D. & Boss, J.M.
+    title: >-
+      Exploring mechanisms of human PD-1 gene regulation in T follicular helper
+      cells
+    venue: "The Journal of Immunology"
+    detail: "206, 53.06"
+    tags: [coauthor]
+
+# -----------------------------------------------------------------------------
+# Teaching
+# -----------------------------------------------------------------------------
+teaching:
+  - id: t-ibs519
+    role: "Course Lecturer & Teaching Assistant"
+    course: "IBS 519: Statistical Rigor, Reproducibility, and Experimental Design"
+    org: "Emory University"
+    years: "Fall 2022, Fall 2023"
+    tags: [lecturer]
+    highlights:
+      - "Developed teaching materials for a revamped curriculum on quantitative data analysis."
+      - "Lectured on data visualization principles and ggplot2 for incoming graduate students."
+  - id: t-ibs500
+    role: "Teaching Assistant"
+    course: "IBS 500R: Introduction to Data Analysis Using R"
+    org: "Emory University"
+    years: "Fall 2020, Fall 2021"
+    tags: [ta]
+    highlights:
+      - "Taught introductory R programming to incoming biomedical graduate students."
+
+# -----------------------------------------------------------------------------
+# Awards & honors
+# -----------------------------------------------------------------------------
+awards:
+  - id: a-aai
+    year: "2022, 2023"
+    title: "Abstract Award"
+    org: "American Association of Immunologists Annual Meeting"
+    tags: [selected]
+  - id: a-inspirit
+    year: "2023"
+    title: "AI Innovation Fellowship"
+    org: "Inspirit Innovators"
+    tags: [selected, ai]
+  - id: a-eberly
+    year: "2013"
+    title: "Undergraduate Research Award"
+    org: "Eberly College of Science, Penn State"
+    tags: []
+  - id: a-pbk
+    year: "2013"
+    title: "Phi Beta Kappa"
+    org: "National Honors Society"
+    tags: []
+
+# -----------------------------------------------------------------------------
+# Service, leadership, outreach
+# -----------------------------------------------------------------------------
+service:
+  - id: s-fmf
+    years: "2025–present"
+    role: "President & Founding Board Member"
+    org: "[Friends of Mulberry Fields](https://www.friendsmulberryfields.org/), Atlanta GA"
+    detail: >-
+      Founded and incorporated a 501(c)(3) that stewards a 39-plot community
+      garden and greenspace. Drafted the bylaws, negotiated the land management
+      agreement with the land conservancy, secured the organization's insurance
+      and tax-exempt status, and chair the governance committee.
+    tags: [community, leadership]
+  - id: s-review
+    years: "2026"
+    role: "Peer reviewer"
+    org: "Scientific manuscript review"
+    detail: ""
+    tags: [academic]
+  - id: s-mentor
+    years: "2025–present"
+    role: "Research mentor"
+    org: "Santangelo Lab, Emory University"
+    detail: "Computational training for junior lab members"
+    tags: [academic, mentoring]
+  - id: s-teachseries
+    years: "2023"
+    role: "Co-organizer & instructor"
+    org: "Peer bioinformatics teaching series, Emory University"
+    detail: "Sessions on advanced ggplot2, control flow, and dimensionality reduction"
+    tags: [academic]
+  - id: s-gmb
+    years: "2021–2023"
+    role: "Student Representative"
+    org: "Genetics & Molecular Biology Graduate Program, Emory University"
+    detail: ""
+    tags: [academic]
+
+# -----------------------------------------------------------------------------
+# Optional free-text blocks a profile can pull in (e.g. a cover-letter-ish
+# "selected projects" section for a tailored resume).
+# -----------------------------------------------------------------------------
+projects: []

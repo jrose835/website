@@ -1,0 +1,35 @@
+{% import "sections.html.j2" as S %}<title>Jim Rose Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Commissioner:wght@300;400;500;600&display=swap">
+<style>{{ css }}</style>
+
+<div class="wrap">
+
+  <p class="review-note">Draft for review. Select any line to leave a comment.</p>
+
+  <header class="masthead">
+    <div class="mast-main">
+      <h1 class="name">{{ basics.name }}<span class="creds">, {{ basics.credentials }}</span></h1>
+      <p class="tagline">{{ basics.tagline }}</p>
+    </div>
+    <ul class="mast-contact">
+      <li>{{ basics.email }}</li>
+      <li>{{ basics.phone }}</li>
+      <li>{{ basics.location }}</li>
+      <li><a href="{{ basics.github_url }}">{{ basics.github }}</a></li>
+      <li><a href="{{ basics.scholar_url }}">{{ basics.scholar }}</a></li>
+    </ul>
+  </header>
+
+  {% if summary %}<p class="summary">{{ summary | md }}</p>{% endif %}
+
+  <main>
+    {% for sec in sections %}{{ S.section(sec) }}{% endfor %}
+  </main>
+
+  {% if basics.footer_note %}
+  <p class="colophon"><a href="{{ basics.website_url }}">{{ basics.footer_note }}</a></p>
+  {% endif %}
+
+</div>

@@ -1,0 +1,43 @@
+{% import "sections.html.j2" as S %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ basics.name }} — {{ profile.name }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>{{ css }}</style>
+</head>
+<body>
+<article class="page">
+
+  <header class="masthead">
+    <h1 class="name">{{ basics.name }}</h1>
+    <p class="subtitle">{{ basics.title }}{% if basics.credentials %}, {{ basics.credentials }}{% endif %}</p>
+    <p class="contact">
+      {{ basics.location }}
+      <span class="sep">·</span><a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
+      <span class="sep">·</span>{{ basics.phone }}
+      <br>
+      <a href="{{ basics.website_url }}">{{ basics.website }}</a>
+      <span class="sep">·</span><a href="{{ basics.github_url }}">{{ basics.github }}</a>
+      <span class="sep">·</span><a href="{{ basics.scholar_url }}">{{ basics.scholar }}</a>
+    </p>
+  </header>
+
+  {% if summary %}
+  <section class="sec sec-statement">
+    <h2 class="sec-title">Research statement</h2>
+    <p class="summary">{{ summary | md }}</p>
+  </section>
+  {% endif %}
+
+  <main>
+    {% for sec in sections %}{{ S.section(sec) }}{% endfor %}
+  </main>
+
+  <footer class="colophon">{{ basics.name }} &middot; curriculum vitae</footer>
+
+</article>
+</body>
+</html>

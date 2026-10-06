@@ -1,0 +1,165 @@
+{# ===========================================================================
+   Shared section markup. Every theme imports this and styles the classes.
+   Class names are stable: style them in each theme's style.css.
+   =========================================================================== #}
+
+{% macro entry_head(left, right, sub='', sub_right='') %}
+<div class="ent-head">
+  <div class="ent-l">{{ left }}</div>
+  {% if right %}<div class="ent-r">{{ right }}</div>{% endif %}
+</div>
+{% if sub or sub_right %}
+<div class="ent-sub">
+  <div class="ent-l">{{ sub }}</div>
+  {% if sub_right %}<div class="ent-r">{{ sub_right }}</div>{% endif %}
+</div>
+{% endif %}
+{% endmacro %}
+
+
+{% macro experience(items) %}
+{% for it in items %}
+<div class="entry exp">
+  {{ entry_head(it.role | md,
+                it.start | daterange(it.end),
+                (it.org ~ (', ' ~ it.org_detail if it.org_detail else '')) | md,
+                it.location) }}
+  {% if it.summary %}<p class="ent-summary">{{ it.summary | md }}</p>{% endif %}
+  {% if it.highlights %}
+  <ul class="bullets">
+    {% for h in it.highlights %}<li>{{ h.text | md }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+
+{% macro education(items) %}
+{% for it in items %}
+<div class="entry edu">
+  {{ entry_head(it.degree | md,
+                it.start ~ ' &ndash; ' ~ it.end if it.start else it.end,
+                it.org | md,
+                it.location) }}
+  {% if it.detail %}<p class="ent-note">{{ it.detail | md }}</p>{% endif %}
+  {% if it.thesis %}<p class="ent-note thesis"><span class="lbl">Thesis</span> {{ it.thesis | md }}</p>{% endif %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+
+{% macro pubs(items, numbered=false) %}
+<{{ 'ol' if numbered else 'ul' }} class="publist">
+{% for p in items %}
+  <li class="pub">
+    <span class="pub-authors">{{ p.authors | md }}</span>
+    {% if p.year %}<span class="pub-year">({{ p.year }})</span>{% endif %}
+    <span class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title | md }}</a>{% else %}{{ p.title | md }}{% endif %}.</span>
+    {% if p.venue %}<span class="pub-venue">{{ p.venue | md }}</span>{% endif %}
+    {% if p.detail %}<span class="pub-detail">{{ p.detail | md }}.</span>{% endif %}
+    {% if p.note %}<span class="tag tag-{{ p.status }}">{{ p.note }}</span>{% endif %}
+  </li>
+{% endfor %}
+</{{ 'ol' if numbered else 'ul' }}>
+{% endmacro %}
+
+
+{% macro software(items) %}
+{% for s in items %}
+<div class="entry sw">
+  {{ entry_head(('[' ~ s.name ~ '](' ~ s.url ~ ')') | md if s.url else s.name | md,
+                s.stack) }}
+  <p class="ent-summary">{{ s.text | md }}</p>
+</div>
+{% endfor %}
+{% endmacro %}
+
+
+{% macro skills(items, inline=false) %}
+<div class="skills {{ 'skills-inline' if inline else 'skills-grid' }}">
+{% for g in items %}
+  <div class="skill-group">
+    <div class="skill-label">{{ g.group }}</div>
+    <div class="skill-items">{{ g['items'] | join(' · ') }}</div>
+  </div>
+{% endfor %}
+</div>
+{% endmacro %}
+
+
+{% macro talks(items) %}
+<ul class="simple-list">
+{% for t in items %}
+  <li class="talk">
+    <span class="talk-title">{{ t.title | md }}</span>
+    <span class="talk-venue">{{ t.venue | md }}{% if t.location %}, {{ t.location }}{% endif %}.</span>
+    <span class="talk-date">{{ t.date or t.year }}</span>
+  </li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+
+{% macro teaching(items) %}
+{% for it in items %}
+<div class="entry teach">
+  {{ entry_head(it.role | md, it.years, it.course | md, it.org) }}
+  {% if it.highlights %}
+  <ul class="bullets">
+    {% for h in it.highlights %}<li>{{ h | md }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+
+{% macro awards(items) %}
+<ul class="simple-list two-col-list">
+{% for a in items %}
+  <li class="award">
+    <span class="aw-title">{{ a.title | md }}</span>
+    {% if a.org %}<span class="aw-org">{{ a.org | md }}</span>{% endif %}
+    {% if a.year %}<span class="aw-year">{{ a.year }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+
+{# Service entries use the same two-line head as experience, so the years sit
+   on their own right-aligned column instead of trailing a long sentence. #}
+{% macro service(items) %}
+{% for s in items %}
+<div class="entry svc-entry">
+  {{ entry_head(s.role | md, s.years, s.org | md) }}
+  {% if s.detail %}<p class="ent-summary">{{ s.detail | md }}</p>{% endif %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+
+{# ---- dispatcher: renders any section by its key ---- #}
+{% macro body(sec) %}
+{% if   sec.key == 'experience'   %}{{ experience(sec['items']) }}
+{% elif sec.key == 'education'    %}{{ education(sec['items']) }}
+{% elif sec.key == 'publications' %}{{ pubs(sec['items']) }}
+{% elif sec.key == 'posters'      %}{{ pubs(sec['items']) }}
+{% elif sec.key == 'software'     %}{{ software(sec['items']) }}
+{% elif sec.key == 'skills'       %}{{ skills(sec['items'], sec.style == 'inline') }}
+{% elif sec.key == 'talks'        %}{{ talks(sec['items']) }}
+{% elif sec.key == 'teaching'     %}{{ teaching(sec['items']) }}
+{% elif sec.key == 'awards'       %}{{ awards(sec['items']) }}
+{% elif sec.key == 'service'      %}{{ service(sec['items']) }}
+{% endif %}
+{% endmacro %}
+
+
+{% macro section(sec) %}
+<section class="sec sec-{{ sec.key }}">
+  <h2 class="sec-title">{{ sec.title }}</h2>
+  {% if sec.note %}<p class="sec-note">{{ sec.note | md }}</p>{% endif %}
+  {{ body(sec) }}
+</section>
+{% endmacro %}

@@ -1,0 +1,49 @@
+# ===========================================================================
+# COPY THIS when you have a job description to tailor toward.
+#
+#   cp cv/profiles/_template-tailored.yml cv/profiles/acme-scientist.yml
+#   # edit it, then:
+#   python3 cv/build.py --profile acme-scientist --theme slate
+#
+# Three levers, in order of usefulness:
+#   1. `summary:` — point at a key under `summaries:` in cv.yml. Add a new one
+#      there written for this role rather than reusing a generic line.
+#   2. section order — the order below is the order on the page. Lead with
+#      whatever the posting leads with.
+#   3. `include:` lists — ids from cv.yml, in the order you want them. Drop
+#      anything irrelevant. `highlights:` does the same per job entry.
+#
+# Omit `include:` entirely to take everything. Use `tags: [selected]` to pull
+# by keyword instead of by id. `limit: 4` caps a section.
+# ===========================================================================
+name: "Tailored — ROLE at COMPANY"
+summary: industry          # or: general / short / academic — or add your own
+themes: [slate]
+
+sections:
+  - key: experience
+    title: "Experience"
+    include: [santangelo, boss, janssen, biogen]
+    highlights:
+      # Reorder to put the most relevant bullet first; delete the rest.
+      santangelo: [crisp, xenium-pipelines, stringency, agent-tooling]
+      boss: [memory-t, sle]
+      janssen: [j-lead, j-spc]
+      biogen: [b-montecarlo]
+
+  - key: skills
+    title: "Skills"
+    include: [sk-languages, sk-spatial, sk-genomics, sk-stats, sk-ai]
+
+  - key: software
+    title: "Software"
+    include: [sw-crisp, sw-stringency]
+
+  - key: publications
+    title: "Selected publications"
+    tags: [selected]
+    limit: 4
+
+  - key: education
+    title: "Education"
+    include: [phd, ms, bs]
