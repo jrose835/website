@@ -33,23 +33,47 @@ only has to style stable class names.
 | `classic` | Garamond, centred, hanging-indent bibliography | academic CV, fellowships, faculty applications |
 | `compact` | dense, monospace metadata, section labels in a left spine | technical and computational roles, ATS-friendly |
 
-## Tailoring to a job description
+## Tailoring to a job posting
+
+Tailored resumes never touch the website. `--publish` is the only command that
+writes into `assets/`, and `publish.yml` names only the general resume, so a
+tailored build can land in `cv/build/` and nowhere else.
 
 ```bash
-cp cv/profiles/_template-tailored.yml cv/profiles/acme-scientist.yml
-# edit it
-python3 cv/build.py --profile acme-scientist --theme slate
+cp cv/profiles/_template-tailored.yml cv/profiles/acme-bio.yml
+# edit it, then:
+python3 cv/build.py --profile acme-bio --theme berry
 ```
 
-Three levers, in the order that matters:
+Three keys at the top of the profile control what comes out:
 
-1. **The summary.** Add a new entry under `summaries:` in `cv.yml` written for that
-   role and point the profile's `summary:` at it. This does more than anything else.
-2. **Section order.** The order in the profile is the order on the page. Lead with
-   whatever the posting leads with.
-3. **`include:` lists.** Ids from `cv.yml`, in the order you want. Drop what is
-   irrelevant. `highlights:` does the same thing per job. `tags: [selected]` pulls
-   by keyword instead, and `limit: 4` caps a section.
+| key | what it does |
+|---|---|
+| `name` | the PDF's document title, visible in the reader's viewer. Keep it "Resume"; never put the company here |
+| `label` | a private note shown by `--list`, so you can tell your profiles apart later |
+| `filename` | the file on disk, e.g. `JamesRose_Resume_AcmeBio` — this is what you attach |
+
+Then work the posting itself, in the order that matters:
+
+1. **Write a summary for the role.** Add a new entry under `summaries:` in
+   `cv.yml` and point the profile's `summary:` at it. Nothing else moves the
+   needle as much. Reusing `general` wastes the one paragraph everyone reads.
+2. **Reorder the sections.** The order in the profile is the order on the page.
+   If the posting opens with pipeline engineering, open with Software.
+3. **Cut and reorder the bullets.** `highlights:` under an experience entry takes
+   ids in the order you want them. Put the bullet that answers the posting first
+   and delete the ones that don't. Four strong bullets beat eight generic ones.
+4. **Trim the skills.** `include:` on the skills section. A skills list that
+   mirrors the posting's vocabulary reads as a match; one that lists everything
+   reads as a list.
+
+`tags: [selected]` pulls items by keyword instead of by id, and `limit: 4` caps a
+section. Omitting `include:` takes everything.
+
+Keep the profile after you apply. It is a record of what you sent, it costs
+nothing, and the next similar posting starts from it instead of from scratch.
+The built PDF lives in `cv/build/`, which is gitignored, so re-run the build if
+you need the file again.
 
 ## Publishing to the website
 

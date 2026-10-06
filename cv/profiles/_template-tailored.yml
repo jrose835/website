@@ -16,9 +16,19 @@
 # Omit `include:` entirely to take everything. Use `tags: [selected]` to pull
 # by keyword instead of by id. `limit: 4` caps a section.
 # ===========================================================================
-name: "Tailored — ROLE at COMPANY"
-summary: industry          # or: general / short / academic — or add your own
-themes: [slate]
+# `name` becomes the PDF's document title, which a reader sees in their viewer
+# and in the browser tab. Keep it "Resume" — never put the company in here.
+name: "Resume"
+
+# `label` is only for `--list`, so you can tell your tailored profiles apart.
+label: "Scientist at Acme Bio - applied 2026-10-15"
+
+# `filename` is the file on disk. This is what you attach, so give it a name
+# that makes sense in someone else's downloads folder.
+filename: "JamesRose_Resume_AcmeBio"
+
+summary: industry          # or: general / short / academic - or add your own
+themes: [berry]            # berry matches the website; slate reads more corporate
 
 sections:
   - key: experience

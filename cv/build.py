@@ -195,7 +195,9 @@ def build_one(data, profile_name, theme_name, make_pdf=True, outdir=OUT):
     )
 
     outdir.mkdir(parents=True, exist_ok=True)
-    stem = f"JamesRose_{profile_name}_{theme_name}"
+    # `filename:` lets a tailored profile name the file something a recruiter
+    # should see, e.g. JamesRose_Resume_Acme.pdf.
+    stem = profile.get("filename") or f"JamesRose_{profile_name}_{theme_name}"
     html_path = outdir / f"{stem}.html"
     html_path.write_text(html_out)
     print(f"  html  {html_path.relative_to(ROOT.parent)}")
@@ -252,7 +254,7 @@ def main():
         print("profiles:")
         for p in profiles:
             meta = yaml.safe_load((PROFILES / f"{p}.yml").read_text())
-            print(f"  {p:<10} {meta.get('name', '')}")
+            print(f"  {p:<18} {meta.get('label') or meta.get('name', '')}")
         return
 
     data = yaml.safe_load(DATA.read_text())
