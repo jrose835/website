@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Jim Rose</title>
+<link>https://jrose835.github.io/website/blog.html</link>
+<atom:link href="https://jrose835.github.io/website/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Jim Rose — computational biologist working on spatial transcriptomics and single-cell genomics.</description>
+<generator>quarto-1.10.19</generator>
+<lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>All scientists can run analysis pipelines now</title>
+  <link>https://jrose835.github.io/website/posts/enter-stringency/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>One thing that I have been a little bit excited about recently is a new tool I’m calling <a href="https://github.com/santangelo-lab/stringency">stringency</a>. It’s basically a belay device and top rope safety harness system for scientists using AI to automate their data analysis. I’m building it to help my lab members run the correct bioinformatic analysis on new data, where <em>correct</em> here implies that whatever the AI does is grounded in sound, commonly accepted analysis techniques and results in completely reproducible/traceable work, no matter who is running it.</p>
+<section id="lab-biologists-should-run-the-analysis" class="level2">
+<h2 data-anchor-id="lab-biologists-should-run-the-analysis">Lab biologists should run the analysis</h2>
+<p>The fact is with today’s leading AI models you can do most any bioinformatic work without knowing a single thing about writing code. This is not a bad thing! It’s only been in the last few decades as the sheer scale of genome-wide measurments began to require dedicated skillsets in running computers to analyze them that scientists (like me) began to specialize. A divide formed between “dry” and “wet” lab roles. Wet lab biologists spent their time optimizing lab protocols, or designing experiments to generate data. When they needed data analyzed that couldn’t fit in your typical excel spreadsheet they turned to their dry lab counterparts who trained in things like multiple testing correction and analysis pipeline engineering. Today, AI’s ability to write working code in seconds has handed wet lab scientists back all the tools they need to analyze their largeest, most complex datasets from the very start to finished product. Perhaps someday robotic lab equipment and automation will do the same for us dry lab folks…but that’s for another post.</p>
+<p>At the risk of alienating all my computational colleagues I’d argue that biologists thinking deeply about their scientific questions and collecting the data are in fact the best suited to be running the analysis through AI themselves. They have the deep domain knowledge that any generalist model will inevitably lack, and they can use it to cut through the professional-sounding noise that a model often produces when given an unfocused task or ill-formed question. Scientists are, in fact, speifically trained to ask strong, focused, and verifiable questions. Coincidentally, this is exactly what an AI needs to be given in order to help produce helpful results in the process of data analysis. What’s more, scientists know their data best. Giving them the tools to successfully analyze a dataset from start to finish avoids the dilution or “thrown over the wall” problem that plagues current collaborations where the norm is outsourcing this work to separate team members or worse…a core service group.</p>
+</section>
+<section id="ai-alone-is-a-poor-fit-for-science" class="level2">
+<h2 data-anchor-id="ai-alone-is-a-poor-fit-for-science">AI alone is a poor fit for science</h2>
+<p>But AI models with their stochastic, overly-confident nature and their transient lifespan can be unpredictable. They are by definition not reproducible which doesn’t sit well with how we do scientific work. Computational analysis, much like work in the lab, needs to be documented in a way that anyone could replicate it, it has to be reproducible. So what happens if your AI agent approaches a data anlysis problem you gave it in an unusual or unconventional way when faced with an initial roadblock, cutting a few corners but still producing something that looks and sounds like it could be correct? Or maybe an agent successfully processes your data, but then the session ends and all trace of how the outputs were generated is lost with the model’s death. Or worse, what if the agent asserts something about your data driven entirely by a hallucination and then builds off of that for the next few hours wasting everyone’s tokens, time, and grant money. You look at the spreadsheet it generated at the end and the numbers are completely wrong, or maybe you can’t even tell. At this point there is no way to answer the question: <em>how did you do this?</em> And without the knowledge of an experienced analyst it’s also very hard to answer the question <em>why did you do it this way?</em></p>
+<p>Scientists need a way to leverage the automation, the strong logical thinking and the significant programming ability AI brings to the table. But it needs to be in a way that is guided and constrained so that even those with no coding or technical knowledge of the underlying analysis work can drive the work forward in a responsible way.</p>
+</section>
+<section id="the-commandments-of-bioinformatic-agentic-pipelines" class="level2">
+<h2 data-anchor-id="the-commandments-of-bioinformatic-agentic-pipelines">The Commandments of Bioinformatic Agentic Pipelines</h2>
+<p>In the next few posts I’ll be introducing what I call the <strong>“Commandments of Bioinformatic Agentic Pipelines”</strong>. These are simple rules for how to use AI and autonomous agents in biological research and data analysis in a way that hopefully minimizes the risks I outlined above to reproducibility and reliability. My field is biology so I’ll be rooting things there, but much of what I’ll discuss is probably applicable to the wider research community.</p>
+<p><a href="https://github.com/santangelo-lab/stringency">Stringency</a> is what I’m calling the engine that I’m building to force LLM models to hold to these principles. It’s a little like the belay system used in top rope climbing. In this case the agent is doing all the climbing, and you’re the one on the ground responsible for making sure it doesn’t fall off and break anything. It’s pretty hard to do that without a pulley and some rope.</p>
+<p>We are all still learning how to use these new rapidly evolving tools, so stick around to hear more.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://jrose835.github.io/website/posts/enter-stringency/</guid>
+  <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://jrose835.github.io/website/assets/software/stringency-belay.png" medium="image" type="image/png" height="157" width="144"/>
+</item>
+<item>
+  <title>Hello again, internet</title>
+  <link>https://jrose835.github.io/website/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Welcome to the new site. The old one dated from early grad school and had started to feel like someone else’s homepage, so I rebuilt it from scratch — still <a href="https://quarto.org">Quarto</a>, now with a hand-rolled theme (thanks Claude!).</p>
+<p>This blog is where I put whatever I’m thinking about at the moment that I might want to share with the world. This post doesn’t really count, but stick around and hopefully I’ll post a thing or two soon.</p>
+<p>A few things I’m deep in at the moment:</p>
+<ul>
+<li><strong>AI agent tools for bioinformatics research</strong> We all are or should be using AI to write our analysis code these days, but the inherent randomness of LLMs makes it hard to achieve our goals of reliability and reproducibility in research. I’m trying to fix that with <a href="https://github.com/santangelo-lab/stringency">stringency</a>…more to come soon!</li>
+<li><strong>Segmentation benchmarking.</strong> Comparing cell segmentation algorithms for Xenium data across a multi-organ mouse atlas, and building <a href="../../software.html">CRISP</a> to measure segmentation purity without ground truth.</li>
+<li><strong>Spatial pipelines.</strong> Nextflow and Seurat workflows that take Xenium runs from raw output to annotated cells reproducibly.</li>
+</ul>
+<p>I don’t know what purpose blogs have anymore in this new AI-slop-soaked internet but if you’re human and reading this maybe we’ll find out.</p>
+
+
+
+ ]]></description>
+  <guid>https://jrose835.github.io/website/posts/welcome/</guid>
+  <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

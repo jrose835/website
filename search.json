@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and now AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or dysregulated in the case of autoimmunity.\nMost of my work from the last few years is in spatial transcriptomics: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also do odds and ends supporting our group’s work on delivery for mRNA-based therapeutics. This includes guide selection for Cas9 systems, single-cell, or bulk genomic datasets.\nNow I run all of my group’s computational functions. That means managing a few over-powered workstations, a team of over-eager AI agentic assistants, and developing Claude skills to enable our lab scientists to run their own pipelines to analyze their data directly."
+  },
+  {
+    "objectID": "about.html#what-i-work-on",
+    "href": "about.html#what-i-work-on",
+    "title": "About",
+    "section": "What I work on",
+    "text": "What I work on\n\nSpatial transcriptomics — end-to-end Xenium analysis: alternative segmentation, QC, tissue microarray processing, and downstream spatial statistics\nMethod development — CRISP, a software package for assessing cell segmentation quality using co-expression of mutually exclusive markers\nSingle-cell and bulk genomics — RNA-seq, ATAC-seq, integration, and gene regulatory network analysis\nReproducible pipelines — Nextflow and R-based workflows designed so the next person (often future me) can rerun them\nAI-based bioinformatics — learning how to use agents for data analysis in responsible and reproducible ways (see Stringency)"
+  },
+  {
+    "objectID": "about.html#outside-the-lab",
+    "href": "about.html#outside-the-lab",
+    "title": "About",
+    "section": "Outside the lab",
+    "text": "Outside the lab\nGirl Dad, science fiction, digital lore-keeper for my current DnD campaign\nYou might find me building community through gardening or fixing up my ebikes myself because the company I bought them from just sends parts and best wishes…\nTrying to figure out how to live a good life…\n\nWant the formal version? My resume is here."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research spans computational method development for spatial transcriptomics, genomics and epigenomics of immune regulation, and tools for making AI agent-driven bioinformatics more accessible and trustworthy.\n\nSpatial TranscriptomicsGenomics & EpigenomicsAI Bioinformatics Tools\n\n\n\n\nCell segmentation quality\nImaging-based spatial platforms like 10x Xenium assign millions of transcripts to individual cells — but every downstream conclusion depends on how well cell boundaries were drawn. I develop CRISP (Co-expression Rejection In Segmentation Purity), an open-source tool in R and Python that flags cells co-expressing mutually exclusive marker genes to quantify segmentation errors without ground-truth annotation.\nUsing CRISP, we benchmarked five segmentation algorithms — including the 10x segmentation kit, Baysor, Proseg, and Segger — across ten mouse organs with a 5,006-gene Xenium panel, revealing a tissue-dependent tradeoff between transcript capture and cell purity.\n\nPreprint\nRose, J.R., Rose, E.S., Assumpcao, J.A.F., Pathak, H., Peck, H.E., Sasser, L.E., Patel, C.J., Vanover, D. & Santangelo, P.J. CRISP enables comparisons of image-based spatial transcriptomic segmentation quality across ten organs. bioRxiv (2026). doi:10.64898/2026.04.16.718947\n\n\n\nXenium analysis pipelines\nAlongside the benchmarking work, I’ve built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the software page.\n\n\n\n\nDuring my PhD I used integrated RNA-seq and ATAC-seq to ask how transcriptional and epigenetic states encode immune cell identity — and what happens when that regulation goes wrong.\n\n\nEpigenetics of immune memory\nI studied how transcriptomic and epigenomic states define human memory T cell subsets. We identified chromatin regions whose accessibility before and after activation (poised accessible regions) distinguishes memory subsets and their activation potential.\n\nPublished\nRose, J.R., Akdogan-Ozdilek, B., Rahmberg, A.R., et al. Distinct transcriptomic and epigenomic modalities underpin human memory T cell subsets and their activation potential. Communications Biology 6, 363 (2023). Read the paper\n\n\n\nAutoimmunity\nI also investigated the dysregulation of B cells in lupus. We found that disease activity is reflected in the transcriptome — and written into the epigenome — of otherwise resting, naïve B cells in individuals with the disease.\n\nAccepted — J. Clin. Invest.\nRose, J.R., et al. Systemic lupus erythematosus signatures in resting naïve B cells differ by disease activity. Journal of Clinical Investigation (in press).\n\n\n\n\n\nAI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I’m working on Stringency, a framework that puts guardrails around agent-driven analysis: it checks that the analysis plan is grounded in best practices before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off. The goal is agent-run analyses that a reviewer — or your future self — can trust, reproduce, and audit.\nStringency on GitHub →\n\n\n\n\nFor the full publication list, see my Google Scholar profile."
+  },
+  {
+    "objectID": "posts/enter-stringency/index.html",
+    "href": "posts/enter-stringency/index.html",
+    "title": "All scientists can run analysis pipelines now",
+    "section": "",
+    "text": "One thing that I have been a little bit excited about recently is a new tool I’m calling stringency. It’s basically a belay device and top rope safety harness system for scientists using AI to automate their data analysis. I’m building it to help my lab members run the correct bioinformatic analysis on new data, where correct here implies that whatever the AI does is grounded in sound, commonly accepted analysis techniques and results in completely reproducible/traceable work, no matter who is running it."
+  },
+  {
+    "objectID": "posts/enter-stringency/index.html#lab-biologists-should-run-the-analysis",
+    "href": "posts/enter-stringency/index.html#lab-biologists-should-run-the-analysis",
+    "title": "All scientists can run analysis pipelines now",
+    "section": "Lab biologists should run the analysis",
+    "text": "Lab biologists should run the analysis\nThe fact is with today’s leading AI models you can do most any bioinformatic work without knowing a single thing about writing code. This is not a bad thing! It’s only been in the last few decades as the sheer scale of genome-wide measurments began to require dedicated skillsets in running computers to analyze them that scientists (like me) began to specialize. A divide formed between “dry” and “wet” lab roles. Wet lab biologists spent their time optimizing lab protocols, or designing experiments to generate data. When they needed data analyzed that couldn’t fit in your typical excel spreadsheet they turned to their dry lab counterparts who trained in things like multiple testing correction and analysis pipeline engineering. Today, AI’s ability to write working code in seconds has handed wet lab scientists back all the tools they need to analyze their largeest, most complex datasets from the very start to finished product. Perhaps someday robotic lab equipment and automation will do the same for us dry lab folks…but that’s for another post.\nAt the risk of alienating all my computational colleagues I’d argue that biologists thinking deeply about their scientific questions and collecting the data are in fact the best suited to be running the analysis through AI themselves. They have the deep domain knowledge that any generalist model will inevitably lack, and they can use it to cut through the professional-sounding noise that a model often produces when given an unfocused task or ill-formed question. Scientists are, in fact, speifically trained to ask strong, focused, and verifiable questions. Coincidentally, this is exactly what an AI needs to be given in order to help produce helpful results in the process of data analysis. What’s more, scientists know their data best. Giving them the tools to successfully analyze a dataset from start to finish avoids the dilution or “thrown over the wall” problem that plagues current collaborations where the norm is outsourcing this work to separate team members or worse…a core service group."
+  },
+  {
+    "objectID": "posts/enter-stringency/index.html#ai-alone-is-a-poor-fit-for-science",
+    "href": "posts/enter-stringency/index.html#ai-alone-is-a-poor-fit-for-science",
+    "title": "All scientists can run analysis pipelines now",
+    "section": "AI alone is a poor fit for science",
+    "text": "AI alone is a poor fit for science\nBut AI models with their stochastic, overly-confident nature and their transient lifespan can be unpredictable. They are by definition not reproducible which doesn’t sit well with how we do scientific work. Computational analysis, much like work in the lab, needs to be documented in a way that anyone could replicate it, it has to be reproducible. So what happens if your AI agent approaches a data anlysis problem you gave it in an unusual or unconventional way when faced with an initial roadblock, cutting a few corners but still producing something that looks and sounds like it could be correct? Or maybe an agent successfully processes your data, but then the session ends and all trace of how the outputs were generated is lost with the model’s death. Or worse, what if the agent asserts something about your data driven entirely by a hallucination and then builds off of that for the next few hours wasting everyone’s tokens, time, and grant money. You look at the spreadsheet it generated at the end and the numbers are completely wrong, or maybe you can’t even tell. At this point there is no way to answer the question: how did you do this? And without the knowledge of an experienced analyst it’s also very hard to answer the question why did you do it this way?\nScientists need a way to leverage the automation, the strong logical thinking and the significant programming ability AI brings to the table. But it needs to be in a way that is guided and constrained so that even those with no coding or technical knowledge of the underlying analysis work can drive the work forward in a responsible way."
+  },
+  {
+    "objectID": "posts/enter-stringency/index.html#the-commandments-of-bioinformatic-agentic-pipelines",
+    "href": "posts/enter-stringency/index.html#the-commandments-of-bioinformatic-agentic-pipelines",
+    "title": "All scientists can run analysis pipelines now",
+    "section": "The Commandments of Bioinformatic Agentic Pipelines",
+    "text": "The Commandments of Bioinformatic Agentic Pipelines\nIn the next few posts I’ll be introducing what I call the “Commandments of Bioinformatic Agentic Pipelines”. These are simple rules for how to use AI and autonomous agents in biological research and data analysis in a way that hopefully minimizes the risks I outlined above to reproducibility and reliability. My field is biology so I’ll be rooting things there, but much of what I’ll discuss is probably applicable to the wider research community.\nStringency is what I’m calling the engine that I’m building to force LLM models to hold to these principles. It’s a little like the belay system used in top rope climbing. In this case the agent is doing all the climbing, and you’re the one on the ground responsible for making sure it doesn’t fall off and break anything. It’s pretty hard to do that without a pulley and some rope.\nWe are all still learning how to use these new rapidly evolving tools, so stick around to hear more."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jim Rose",
+    "section": "",
+    "text": "Hi, I’m Jim. I’m a computational biologist working at the intersection of genomics, immunology, and mRNA therapeutics. I build methods and pipelines for spatial transcriptomics, AI-driven bioinformatics, and single-cell genomics.\nLearn more about me →\nBrowse my research and the software I’ve built, or read the occasional post on the blog. My resume is here."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download PDF"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Hello again, internet",
+    "section": "",
+    "text": "Welcome to the new site. The old one dated from early grad school and had started to feel like someone else’s homepage, so I rebuilt it from scratch — still Quarto, now with a hand-rolled theme (thanks Claude!).\nThis blog is where I put whatever I’m thinking about at the moment that I might want to share with the world. This post doesn’t really count, but stick around and hopefully I’ll post a thing or two soon.\nA few things I’m deep in at the moment:\n\nAI agent tools for bioinformatics research We all are or should be using AI to write our analysis code these days, but the inherent randomness of LLMs makes it hard to achieve our goals of reliability and reproducibility in research. I’m trying to fix that with stringency…more to come soon!\nSegmentation benchmarking. Comparing cell segmentation algorithms for Xenium data across a multi-organ mouse atlas, and building CRISP to measure segmentation purity without ground truth.\nSpatial pipelines. Nextflow and Seurat workflows that take Xenium runs from raw output to annotated cells reproducibly.\n\nI don’t know what purpose blogs have anymore in this new AI-slop-soaked internet but if you’re human and reading this maybe we’ll find out."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "The part of this site where I write stuff for humans, written by a human.\n\n\n\n\n\n\n\n\n\nAll scientists can run analysis pipelines now\n\n\nWhy biologists should drive AI-powered data analysis, why raw agents aren’t fit for science, and the tool I’m building to bridge the gap.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\nHello again, internet\n\n\nFor humans, written by a human\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Open-source tools I’ve built for spatial transcriptomics, single-cell analysis, and AI-driven bioinformatics — on my GitHub and the Santangelo Lab’s.\n\nCRISP\n\nR & Python · segmentation quality assessment\n\n Assesses cell segmentation quality in spatial transcriptomics data by identifying cells that co-express mutually exclusive marker genes. Produces negative-coexpression segmentation purity metrics and supports Xenium, Seurat, and SpatialExperiment objects. Described in our preprint.\n\n\nStringency\n\nPython · guardrails for AI-driven analysis\n\n Guardrails for AI agents that analyze biological data. Stringency checks that an analysis plan is statistically sound before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off — so you can trust, reproduce, and audit what the agent did.\n\n\nXenium analysis toolkit\n\nNextflow · R · Python · three pipelines covering raw Xenium output to annotated cells\n\n\n\nXen_Segmentation_NextFlow — Nextflow pipeline for generating alternative cell segmentations (nuclear expansion, Baysor, and others) for 10x Xenium in situ data.\n\n\nXen_TMA_pipeline — splits multi-punch tissue microarrays into per-sample datasets for downstream analysis.\n\n\nXen_Seurat_Pipeline — Seurat-based processing: QC, normalization, integration, clustering, and annotation in a reproducible workflow."
+  }
+]
