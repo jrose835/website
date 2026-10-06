@@ -100,9 +100,8 @@ experience:
         text: >-
           Built a multi-tissue spatial atlas of lipid nanoparticle delivery
           comparing injection routes across **2.8 million cells, 11 organs, and
-          104 tissue-microarray punches**. The two routes trigger different
-          immune responses and remodel splenic myeloid populations
-          differently.
+          104 tissue-microarray punches**. Route of delivery triggers distinct
+          immune responses and remodels splenic myeloid populations.
       - id: xenium-pipelines
         tags: [pipeline, spatial, nextflow, software]
         text: >-
