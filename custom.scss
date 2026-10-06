@@ -72,6 +72,13 @@ body:not(.floating) main.content {
       height: 44px;
       width: 44px;
       max-height: none;
+      // Bootstrap puts a right padding on the brand image. Inside a round
+      // border that shifts the artwork left of centre, so move the spacing
+      // out to a margin and keep the content box square.
+      padding: 0;
+      margin-right: 4px;
+      box-sizing: border-box;
+      object-fit: contain;
       border: 1.5px solid #2B2B2B;
       border-radius: 50%;
       transition: border-color 0.15s ease;
