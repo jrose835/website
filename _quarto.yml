@@ -1,10 +1,14 @@
 project:
   type: website
   output-dir: _site
+  # Quarto rebuilds the published branch on every deploy. Without this the
+  # CNAME file is wiped each time and GitHub silently drops the custom domain.
+  resources:
+    - CNAME
 
 website:
   title: "Jim Rose"
-  site-url: "https://jrose835.github.io/website"
+  site-url: "https://jamesrrose.com"
   description: "Jim Rose — computational biologist working on spatial transcriptomics and single-cell genomics."
   favicon: assets/headshot.png
   navbar:
