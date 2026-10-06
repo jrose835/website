@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Jim Rose</title>
-<link>https://jrose835.github.io/website/blog.html</link>
-<atom:link href="https://jrose835.github.io/website/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://jamesrrose.com/blog.html</link>
+<atom:link href="https://jamesrrose.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Jim Rose — computational biologist working on spatial transcriptomics and single-cell genomics.</description>
 <generator>quarto-1.10.19</generator>
 <lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>All scientists can run analysis pipelines now</title>
-  <link>https://jrose835.github.io/website/posts/enter-stringency/</link>
+  <link>https://jamesrrose.com/posts/enter-stringency/</link>
   <description><![CDATA[ 
 
 
@@ -40,13 +40,13 @@
 </section>
 
  ]]></description>
-  <guid>https://jrose835.github.io/website/posts/enter-stringency/</guid>
+  <guid>https://jamesrrose.com/posts/enter-stringency/</guid>
   <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://jrose835.github.io/website/assets/software/stringency-belay.png" medium="image" type="image/png" height="157" width="144"/>
+  <media:content url="https://jamesrrose.com/assets/software/stringency-belay.png" medium="image" type="image/png" height="157" width="144"/>
 </item>
 <item>
   <title>Hello again, internet</title>
-  <link>https://jrose835.github.io/website/posts/welcome/</link>
+  <link>https://jamesrrose.com/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -65,7 +65,7 @@
 
 
  ]]></description>
-  <guid>https://jrose835.github.io/website/posts/welcome/</guid>
+  <guid>https://jamesrrose.com/posts/welcome/</guid>
   <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
