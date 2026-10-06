@@ -1,6 +1,6 @@
 # General-purpose resume: ~2 pages, not tailored to any role.
 # This is the one linked from the website as "resume".
-name: "General resume"
+name: "Resume"
 summary: general
 themes: [berry, slate, classic, compact, web]
 

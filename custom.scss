@@ -493,10 +493,20 @@ div.quarto-post {
 // ---------- CV embed ----------
 .cv-frame {
   width: 100%;
-  height: 78vh;
+  height: 90vh;
+  min-height: 640px;
   border: 1px solid $hairline;
   border-radius: 6px;
   margin-top: 1.5rem;
+}
+
+// The resume page is a document viewer, not running text. Its grid item is
+// shrink-to-fit, so a percentage-width iframe collapses to the 300px intrinsic
+// width of an iframe. Stretch the item, then give the embed a wider measure
+// than the article column.
+main.content:has(.cv-frame) {
+  width: 100%;
+  max-width: 1150px;
 }
 
 .btn-cv {

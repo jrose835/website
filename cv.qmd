@@ -1,7 +1,9 @@
 ---
 title: "Resume"
+page-layout: full
+toc: false
 ---
 
 <a class="btn-cv" href="assets/resume.pdf" target="_blank">Download PDF</a>
 
-<iframe class="cv-frame" src="assets/resume.pdf" title="Jim Rose's resume"></iframe>
+<iframe class="cv-frame" src="assets/resume.pdf#view=FitH" title="Jim Rose's resume"></iframe>
