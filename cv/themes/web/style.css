@@ -325,3 +325,10 @@ code {
   text-align: center;
 }
 .colophon a { color: var(--accent); border-bottom-color: var(--rule); }
+
+/* Brand marks in the contact block, in place of spelled-out URLs. */
+.mast-icons { display: flex; gap: 0.6rem; margin-top: 0.3rem; justify-content: flex-end; }
+.mast-icons a { display: inline-flex; border-bottom: 0; }
+.mast-icons a:hover .icn { color: var(--accent-2); }
+.mast-icons .icn { width: 20px; height: 20px; color: var(--accent); display: block; }
+@media (max-width: 34rem) { .mast-icons { justify-content: flex-start; } }

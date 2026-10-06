@@ -17,8 +17,10 @@
       <li>{{ basics.email }}</li>
       <li>{{ basics.phone }}</li>
       <li>{{ basics.location }}</li>
-      <li><a href="{{ basics.github_url }}">{{ basics.github }}</a></li>
-      <li><a href="{{ basics.scholar_url }}">{{ basics.scholar }}</a></li>
+      <li class="mast-icons">
+        <a href="{{ basics.github_url }}" aria-label="GitHub">{{ S.icon('github') }}</a>
+        <a href="{{ basics.scholar_url }}" aria-label="Google Scholar">{{ S.icon('scholar') }}</a>
+      </li>
     </ul>
   </header>
 

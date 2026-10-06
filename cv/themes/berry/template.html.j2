@@ -20,8 +20,10 @@
       <div><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></div>
       <div>{{ basics.phone }}</div>
       <div>{{ basics.location }}</div>
-      <div><a href="{{ basics.github_url }}">{{ basics.github }}</a></div>
-      <div><a href="{{ basics.scholar_url }}">{{ basics.scholar }}</a></div>
+      <div class="mast-icons">
+        <a href="{{ basics.github_url }}" aria-label="GitHub">{{ S.icon('github') }}</a>
+        <a href="{{ basics.scholar_url }}" aria-label="Google Scholar">{{ S.icon('scholar') }}</a>
+      </div>
     </div>
   </header>
 

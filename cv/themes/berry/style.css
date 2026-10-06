@@ -253,3 +253,8 @@ code { font-family: "SFMono-Regular", Menlo, monospace; font-size: 0.88em; color
   break-inside: avoid;
 }
 .colophon a { color: var(--accent); }
+
+/* Brand marks in the contact block, in place of spelled-out URLs. */
+.mast-icons { display: flex; justify-content: flex-end; gap: 0.48rem; margin-top: 0.3rem; margin-bottom: 0.1rem; }
+.mast-icons a { display: inline-flex; border: 0; }
+.mast-icons .icn { width: 13px; height: 13px; color: var(--accent); display: block; }

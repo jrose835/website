@@ -32,7 +32,7 @@ basics:
   photo: "../assets/headshot.png"
   # Rendered as a single line at the foot of the page, so the contact block
   # at the top stays short.
-  footer_note: "Publications, software and project write-ups: jrose835.github.io/website"
+  footer_note: "jrose835.github.io/website  ·  github.com/jrose835"
 
 # -----------------------------------------------------------------------------
 # Summary variants. Profiles pick one by key. Add a new key when tailoring.
