@@ -61,6 +61,14 @@ The full academic CV still builds with `--all` into `cv/build/`. It is just not
 published to the site. If a fellowship or faculty application wants it, add it
 back to `publish.yml` or send the built PDF directly.
 
+## A note on rebuilds
+
+Chrome stamps a creation time into every PDF it writes, so rebuilding produces a
+byte-different file even when nothing in `cv.yml` changed. Git will show
+`assets/resume.pdf` as modified after any build. If you did not change content,
+`git checkout -- assets/resume.pdf` discards the churn. Only commit the PDF when
+the content actually changed.
+
 ## Keeping it current
 
 When a paper moves from under review to published, edit its entry in `cv.yml`:
