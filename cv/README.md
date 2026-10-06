@@ -53,8 +53,13 @@ Three levers, in the order that matters:
 
 ## Publishing to the website
 
-`publish.yml` maps a profile and theme onto `assets/resume.pdf` and `assets/cv.pdf`,
-which is what `cv.qmd` serves. Change a theme there and run `--publish`.
+The site offers one document: `assets/resume.pdf`, built from the `resume` profile
+in the `berry` theme and served by `cv.qmd`. `publish.yml` controls that mapping;
+change the theme there and run `--publish`.
+
+The full academic CV still builds with `--all` into `cv/build/`. It is just not
+published to the site. If a fellowship or faculty application wants it, add it
+back to `publish.yml` or send the built PDF directly.
 
 ## Keeping it current
 

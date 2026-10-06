@@ -29,5 +29,5 @@ Hi, I'm Jim. I'm a computational biologist working at the intersection of genomi
 
 Learn more [about me →](about.qmd)
 
-Browse [my research](research.qmd) and the [software I've built](software.qmd), or read the occasional post on the [blog](blog.qmd). My resume and CV are [here](cv.qmd).
+Browse [my research](research.qmd) and the [software I've built](software.qmd), or read the occasional post on the [blog](blog.qmd). My resume is [here](cv.qmd).
 :::

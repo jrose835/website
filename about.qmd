@@ -46,4 +46,4 @@ Trying to figure out how to live a good life...
 
 ---
 
-Want the formal version? [Resume and CV are here](cv.qmd).
+Want the formal version? [My resume is here](cv.qmd).

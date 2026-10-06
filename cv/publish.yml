@@ -1,9 +1,8 @@
 # Which built document becomes which file in assets/ (what the website serves).
-# Change a theme here and run:  python3 cv/build.py --publish
+# The site offers one document. The full academic CV profile still builds with
+# `--all` into cv/build/ for when a fellowship or faculty application wants it;
+# it is simply not published to the site.
 publish:
   - profile: resume
     theme: berry
     as: ../assets/resume.pdf
-  - profile: cv
-    theme: classic
-    as: ../assets/cv.pdf

@@ -1,10 +1,7 @@
 ---
-title: "CV & Resume"
+title: "Resume"
 ---
 
-Two flavors, depending on what you're here for:
-
-<a class="btn-cv" href="assets/resume.pdf" target="_blank">Download resume</a>
-<a class="btn-cv" href="assets/cv.pdf" target="_blank">Download full CV</a>
+<a class="btn-cv" href="assets/resume.pdf" target="_blank">Download PDF</a>
 
 <iframe class="cv-frame" src="assets/resume.pdf" title="Jim Rose's resume"></iframe>
