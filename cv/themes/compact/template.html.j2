@@ -18,7 +18,7 @@
     </div>
     <ul class="mast-r">
       <li><span class="k">e</span><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></li>
-      <li><span class="k">p</span>{{ basics.phone }}</li>
+      {% if basics.phone %}<li><span class="k">p</span>{{ basics.phone }}</li>{% endif %}
       <li><span class="k">w</span><a href="{{ basics.website_url }}">{{ basics.website }}</a></li>
       <li><span class="k">g</span><a href="{{ basics.github_url }}">{{ basics.github }}</a></li>
     </ul>

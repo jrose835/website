@@ -18,7 +18,8 @@ basics:
   tagline: "Spatial transcriptomics · single-cell genomics · AI-driven bioinformatics"
   location: "Atlanta, GA"
   email: "jrose835@gmail.com"
-  phone: "412-445-8323"
+  phone: ""            # deliberately blank: the site is public. Put it back
+                       # in a tailored profile if an application wants it.
   website: "jrose835.github.io/website"
   website_url: "https://jrose835.github.io/website"
   github: "github.com/jrose835"

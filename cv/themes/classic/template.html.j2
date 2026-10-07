@@ -17,7 +17,7 @@
     <p class="contact">
       {{ basics.location }}
       <span class="sep">·</span><a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
-      <span class="sep">·</span>{{ basics.phone }}
+      {% if basics.phone %}<span class="sep">·</span>{{ basics.phone }}{% endif %}
       <br>
       <a href="{{ basics.website_url }}">{{ basics.website }}</a>
       <span class="sep">·</span><a href="{{ basics.github_url }}">{{ basics.github }}</a>

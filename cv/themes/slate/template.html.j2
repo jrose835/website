@@ -16,7 +16,7 @@
     <p class="tagline">{{ basics.tagline }}</p>
     <ul class="band-contact">
       <li><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></li>
-      <li>{{ basics.phone }}</li>
+      {% if basics.phone %}<li>{{ basics.phone }}</li>{% endif %}
       <li>{{ basics.location }}</li>
       <li><a href="{{ basics.website_url }}">{{ basics.website }}</a></li>
       <li><a href="{{ basics.github_url }}">{{ basics.github }}</a></li>

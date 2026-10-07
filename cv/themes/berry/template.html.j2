@@ -18,7 +18,7 @@
     </div>
     <div class="mast-contact">
       <div><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></div>
-      <div>{{ basics.phone }}</div>
+      {% if basics.phone %}<div>{{ basics.phone }}</div>{% endif %}
       <div>{{ basics.location }}</div>
       <div class="mast-icons">
         <a href="{{ basics.website_url }}" aria-label="Website">{{ S.icon('website') }}</a>
