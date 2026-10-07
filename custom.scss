@@ -262,6 +262,52 @@ div.quarto-about-trestles {
   }
 }
 
+// ---------- Mobile: fix Quarto's about templates ----------
+// Below 768px Quarto stacks the social links into a vertical column, keeps the
+// hero image at its desktop size, and centres the page title while the
+// decorative rule under it stays pinned to the left edge of a now full-width
+// heading. All three read badly on a phone.
+@media (max-width: 767px) {
+  .about-links {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    padding: 0.7em 0 !important;
+  }
+
+  // Centre the rule under a centred title instead of leaving it at the left.
+  div.quarto-about-solana h1.title::after,
+  div.quarto-about-trestles h1.title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  div.quarto-about-solana {
+    h1.title { font-size: 2rem; }
+
+    img.about-image {
+      width: 11em !important;
+      max-width: 52vw !important;
+      height: auto !important;
+      // Quarto leaves it display:block with no side margins, so it hugs the
+      // left edge even though the column is text-align:center.
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    #hero-heading p { font-size: 1rem; }
+  }
+
+  div.quarto-about-trestles img.about-image {
+    width: 8em !important;
+    max-width: 42vw !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 // ---------- Footer: dark plum band ----------
 .nav-footer {
   background: $plum-dark;
