@@ -198,7 +198,7 @@ experience:
         text: >-
           Showed that lupus disease activity leaves a signature in both the
           transcriptome and the epigenome of otherwise resting naïve B cells, in
-          a collaboration with Emory rheumatology. Accepted at the *Journal of
+          a collaboration with Emory rheumatology. Published in the *Journal of
           Clinical Investigation*.
       - id: sle-atlas
         tags: [singlecell, ml, integration]
@@ -322,19 +322,19 @@ publications:
     note: "Preprint"
 
   - id: jci-sle
-    status: inpress
+    status: published
     year: 2026
     tags: [autoimmunity, firstauthor, selected]
     authors: >-
-      **Rose, J.R.**, Ishii, Y., Hicks, S.L., Scharer, C.D., Jenks, S.A.,
-      Sanz, I. & Boss, J.M.
+      **Rose, J.R.**, Ishii, Y., Khosroshahi, A., Hicks, S.L., Jenks, S.A.,
+      Scharer, C.D., Sanz, I. & Boss, J.M.
     title: >-
-      Systemic lupus erythematosus signatures in resting naïve B cells differ by
-      disease activity
+      Identification of a systemic lupus erythematosus disease signature in
+      resting naive B cells
     venue: "Journal of Clinical Investigation"
-    detail: ""
-    url: ""
-    note: "Accepted"
+    detail: "136, e199528"
+    url: "https://doi.org/10.1172/JCI199528"
+    note: ""
 
   - id: advmat-polymer
     status: review

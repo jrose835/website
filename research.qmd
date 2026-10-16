@@ -53,9 +53,9 @@ I studied how transcriptomic and epigenomic states define human memory T cell su
 I also investigated the dysregulation of B cells in lupus. We found that disease activity is reflected in the transcriptome — and written into the epigenome — of otherwise resting, naïve B cells in individuals with the disease.
 
 ::: {.pub}
-[Accepted — J. Clin. Invest.]{.pub-tag}
+[Published]{.pub-tag}
 
-**Rose, J.R.**, *et al.* Systemic lupus erythematosus signatures in resting naïve B cells differ by disease activity. *Journal of Clinical Investigation* (in press).
+**Rose, J.R.**, Ishii, Y., Khosroshahi, A., *et al.* Identification of a systemic lupus erythematosus disease signature in resting naive B cells. *Journal of Clinical Investigation* **136**, e199528 (2026). [Read the paper](https://doi.org/10.1172/JCI199528)
 :::
 :::
 :::
