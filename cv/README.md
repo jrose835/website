@@ -7,6 +7,10 @@ python3 cv/build.py --list                        # what exists
 python3 cv/build.py --all                         # build everything into cv/build/
 python3 cv/build.py --profile resume --theme slate
 python3 cv/build.py --publish                     # rebuild + copy into assets/ for the site
+
+python3 cv/apply.py list                          # every job application and its status
+python3 cv/apply.py new acme-bio                  # start a tailored application
+python3 cv/apply.py build acme                    # its resume and cover letter
 ```
 
 Needs `pyyaml` and `jinja2` (`pip3 install --user pyyaml jinja2`). PDFs are rendered
@@ -20,7 +24,9 @@ here and every document picks it up. Every item has a stable `id` and some `tags
 
 **`profiles/*.yml`** decide what appears, in what order, for one kind of document.
 `resume.yml` is the general two-to-three page version; `cv.yml` is the full
-academic record including posters, talks, teaching, and service.
+academic record including posters, talks, teaching, and service. A profile
+tailored to one job posting does not live here; it lives with that
+application, under `cv/applications/`.
 
 **`themes/*/`** decide how it looks. Each is a Jinja template plus a stylesheet.
 The shared section markup lives in `themes/_shared/sections.html.j2`, so a theme
@@ -33,47 +39,63 @@ only has to style stable class names.
 | `classic` | Garamond, centred, hanging-indent bibliography | academic CV, fellowships, faculty applications |
 | `compact` | dense, monospace metadata, section labels in a left spine | technical and computational roles, ATS-friendly |
 
-## Tailoring to a job posting
+## Applying to a job
 
-Tailored resumes never touch the website. `--publish` is the only command that
-writes into `assets/`, and `publish.yml` names only the general resume, so a
-tailored build can land in `cv/build/` and nowhere else.
+One application, one folder. `cv/applications/<date>-<company>/` holds the
+posting, the tailored resume profile and the cover letter together, so the
+folder name alone tells you what the documents were for.
 
 ```bash
-cp cv/profiles/_template-tailored.yml cv/profiles/acme-bio.yml
-# edit it, then:
-python3 cv/build.py --profile acme-bio --theme berry
+python3 cv/apply.py new acme-bio        # scaffold today's application
+python3 cv/apply.py list                # what went where, and when
+python3 cv/apply.py build acme          # resume + cover letter
+python3 cv/apply.py status acme interview
 ```
 
-Three keys at the top of the profile control what comes out:
+`build` and `status` take the folder name or any unambiguous part of it, so
+`acme` is enough. Built documents land in `cv/build/<folder-name>/`, which
+keeps a dozen applications sorted by application rather than by filename.
 
-| key | what it does |
+Three files per folder:
+
+| file | holds |
 |---|---|
-| `name` | the PDF's document title, visible in the reader's viewer. Keep it "Resume"; never put the company here |
-| `label` | a private note shown by `--list`, so you can tell your profiles apart later |
-| `filename` | the file on disk, e.g. `JamesRose_Resume_AcmeBio` — this is what you attach |
+| `application.yml` | the company, role, posting URL, dates, status, output filenames, and why the documents look the way they do |
+| `profile.yml` | which `cv.yml` content the resume shows, in what order |
+| `letter.md` | the cover letter, salutation onward |
 
-Then work the posting itself, in the order that matters:
+`application.yml` is the only place the company and role are written down.
+`profile.yml` never repeats them, and `letter.md` has no letterhead, date or
+subject line: those are generated from `basics` in `cv.yml` and the
+application's `applied:` date. Change your email once and every future letter
+has it right.
 
-1. **Write a summary for the role.** Add a new entry under `summaries:` in
-   `cv.yml` and point the profile's `summary:` at it. Nothing else moves the
+Work the posting in this order, which is where the leverage is:
+
+1. **Write a summary for the role.** Add an entry under `summaries:` in
+   `cv.yml` and point `profile.yml`'s `summary:` at it. Nothing else moves the
    needle as much. Reusing `general` wastes the one paragraph everyone reads.
-2. **Reorder the sections.** The order in the profile is the order on the page.
-   If the posting opens with pipeline engineering, open with Software.
-3. **Cut and reorder the bullets.** `highlights:` under an experience entry takes
-   ids in the order you want them. Put the bullet that answers the posting first
-   and delete the ones that don't. Four strong bullets beat eight generic ones.
-4. **Trim the skills.** `include:` on the skills section. A skills list that
-   mirrors the posting's vocabulary reads as a match; one that lists everything
-   reads as a list.
+2. **Reorder the sections.** The order in `profile.yml` is the order on the
+   page. If the posting opens with pipeline engineering, open with Software.
+3. **Cut and reorder the bullets.** `highlights:` takes ids in the order you
+   want them. Four strong bullets beat eight generic ones.
+4. **Trim the skills.** A skills list that mirrors the posting's vocabulary
+   reads as a match; one that lists everything reads as a list.
 
-`tags: [selected]` pulls items by keyword instead of by id, and `limit: 4` caps a
-section. Omitting `include:` takes everything.
+Two traps worth knowing. An empty include list is **not** "none": `biogen: []`
+falls through to every bullet, so name the one you want. And the Education
+section will not split across a page break, so it jumps whole to the next
+sheet; if you land on a third page holding nothing but a footer, cut three or
+four lines rather than hunting for one.
 
-Keep the profile after you apply. It is a record of what you sent, it costs
+Keep the folder after you apply. It is the record of what you sent, it costs
 nothing, and the next similar posting starts from it instead of from scratch.
-The built PDF lives in `cv/build/`, which is gitignored, so re-run the build if
-you need the file again.
+
+`cv/applications/` is gitignored, because this repository is public and the
+folder records where you have applied. The scaffold `apply.py new` copies from
+lives in `cv/templates/application/`, which is tracked, so a fresh clone can
+still start one. If you want version history for applications too, a separate
+private repository is the way, not making this one private.
 
 ## Publishing to the website
 

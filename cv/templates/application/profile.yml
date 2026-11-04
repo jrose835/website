@@ -1,0 +1,40 @@
+# Which cv.yml content this resume shows, in what order. Everything else about
+# the document (filename, theme, who it is for) lives in application.yml.
+#
+# Three levers, in order of how much they matter:
+#   1. `summary:` points at an entry under `summaries:` in cv.yml. Write a new
+#      one for this role. Reusing `general` wastes the paragraph everyone reads.
+#   2. Section order below is the order on the page. Lead with what the posting
+#      leads with.
+#   3. `include:` lists take ids from cv.yml in the order you want them. Drop
+#      what does not answer the posting. Four strong bullets beat eight generic.
+#
+# Omit `include:` to take everything. `tags: [selected]` pulls by keyword.
+# `limit: 4` caps a section. An empty list is NOT "none": it falls through to
+# everything, so name the one bullet you want.
+
+# tagline: ""           # optional: overrides the header line under your name
+summary: general
+
+sections:
+  - key: experience
+    title: "Experience"
+    include: [santangelo, boss, janssen, biogen]
+    highlights:
+      santangelo: []
+      boss: []
+      janssen: []
+      biogen: []
+
+  - key: skills
+    title: "Skills"
+    include: [sk-languages, sk-genomics, sk-stats, sk-ai]
+
+  - key: publications
+    title: "Selected publications"
+    tags: [selected]
+    limit: 4
+
+  - key: education
+    title: "Education"
+    include: [phd, ms, bs]

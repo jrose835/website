@@ -164,10 +164,19 @@ def env_for(theme_dir: Path) -> Environment:
     return env
 
 
-def build_one(data, profile_name, theme_name, make_pdf=True, outdir=OUT):
-    profile_path = PROFILES / f"{profile_name}.yml"
-    if not profile_path.exists():
-        sys.exit(f"No such profile: {profile_path}")
+def build_one(data, profile_name, theme_name, make_pdf=True, outdir=OUT,
+              profile=None):
+    """Render one document.
+
+    `profile` is normally loaded from cv/profiles/<profile_name>.yml. Pass a
+    dict instead to build a profile that lives somewhere else, which is how
+    apply.py builds the resume for a job application.
+    """
+    if profile is None:
+        profile_path = PROFILES / f"{profile_name}.yml"
+        if not profile_path.exists():
+            sys.exit(f"No such profile: {profile_path}")
+        profile = yaml.safe_load(profile_path.read_text())
     theme_dir = THEMES / theme_name
     if not (theme_dir / "template.html.j2").exists():
         sys.exit(f"No such theme: {theme_dir}")
@@ -179,14 +188,19 @@ def build_one(data, profile_name, theme_name, make_pdf=True, outdir=OUT):
     if tcfg.get("pdf") is False:
         make_pdf = False
 
-    profile = yaml.safe_load(profile_path.read_text())
     sections = resolve(data, profile)
 
     css = (theme_dir / "style.css").read_text()
     env = env_for(theme_dir)
     tmpl = env.get_template("template.html.j2")
+    # A tailored profile may override the header tagline, which is the first
+    # line a reader sees. Everything else about `basics` stays shared.
+    basics = dict(data["basics"])
+    if profile.get("tagline"):
+        basics["tagline"] = profile["tagline"]
+
     html_out = tmpl.render(
-        basics=data["basics"],
+        basics=basics,
         summary=data["summaries"].get(profile.get("summary", "general"), ""),
         sections=sections,
         profile=profile,

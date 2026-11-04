@@ -1,0 +1,26 @@
+# One job application. This file is the only place the company, the role, the
+# posting and the output filenames are written down; profile.yml and letter.md
+# read them from here.
+
+company:  # e.g. Acme Bio
+role:     # the exact title from the posting
+posting:  # URL
+location: # e.g. Remote (US), or Boston, MA
+salary:   # whatever the posting says, in quotes
+
+created:  2000-01-01   # the day you started drafting
+applied:  # YYYY-MM-DD, the day you sent it
+
+# drafting | applied | screen | interview | offer | rejected | withdrawn
+status:   drafting
+
+# Why this application looks the way it does. Write it for yourself in six
+# months, when the next similar posting arrives and you start from this folder.
+notes: >-
+
+documents:
+  resume:
+    theme: berry          # berry matches the website; slate reads corporate
+    filename:             # defaults to JamesRose_Resume_<Company>
+  letter:
+    filename:             # defaults to JamesRose_CoverLetter_<Company>

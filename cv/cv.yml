@@ -20,8 +20,8 @@ basics:
   email: "jrose835@gmail.com"
   phone: ""            # deliberately blank: the site is public. Put it back
                        # in a tailored profile if an application wants it.
-  website: "jrose835.github.io/website"
-  website_url: "https://jrose835.github.io/website"
+  website: "jamesrrose.com"
+  website_url: "https://jamesrrose.com"
   github: "github.com/jrose835"
   github_url: "https://github.com/jrose835"
   linkedin: "linkedin.com/in/james-r-rose"
@@ -33,7 +33,7 @@ basics:
   photo: "../assets/headshot.png"
   # Rendered as a single line at the foot of the page, so the contact block
   # at the top stays short.
-  footer_note: "jrose835.github.io/website  ·  github.com/jrose835"
+  footer_note: "jamesrrose.com  ·  github.com/jrose835"
 
 # -----------------------------------------------------------------------------
 # Summary variants. Profiles pick one by key. Add a new key when tailoring.
@@ -62,6 +62,17 @@ summaries:
     academic research. I analyze large multi-omic and imaging datasets, build
     the reproducible pipelines that produce them, and have taken monoclonal
     antibody products through GMP manufacturing and regulatory filing.
+
+  ai-systems: >-
+    Computational biologist (PhD) who builds AI systems that do scientific work
+    and makes their output checkable. I write
+    **[Stringency](https://github.com/santangelo-lab/stringency)**, an
+    open-source engine that runs multi-agent analysis pipelines under declared rules: it
+    validates a plan before any code runs, replicates every model judgment
+    instead of trusting it once, refuses a conclusion whose numbers are not in
+    a cited table, and leaves an append-only record of what ran and why.
+    Before that, human cohort genomics, target validation, and six years of
+    GMP biologics development through BLA filing.
 
 # -----------------------------------------------------------------------------
 # Experience
@@ -134,10 +145,11 @@ experience:
       - id: crispra
         tags: [crispr, genomics, translational]
         text: >-
-          Lead guide design for a CRISPR-activation therapeutic program. I scored
-          and ranked a 552-guide activity screen, then checked the candidates for
-          cross-species conservation and against gnomAD and *All of Us*
-          population variants.
+          Lead guide design for a CRISPR-activation therapeutic program heading
+          for an IND. I scored and ranked a 552-guide activity screen, then
+          characterized off-target risk for the lead candidates, checking
+          cross-species conservation and screening against gnomAD and *All of
+          Us* population variants.
       - id: stringency
         tags: [ai, software, reproducibility]
         text: >-
@@ -145,6 +157,44 @@ experience:
           it validates the analysis plan against best practice before any code
           runs, keeps a tamper-proof provenance log, and pauses at key decisions
           until a person signs off.
+      - id: tma-pipelines
+        tags: [spatial, software, pipelines]
+        text: >-
+          Built the lab's spatial transcriptomics analysis pipelines for
+          large-scale tissue microarray work, taking raw instrument output
+          through QC to annotated cells and splitting multi-punch arrays into
+          per-sample datasets.
+      - id: stringency-system
+        tags: [ai, software, agents]
+        text: >-
+          Built **[Stringency](https://github.com/santangelo-lab/stringency)**,
+          an open-source engine (MIT) that runs multi-agent analysis pipelines
+          under constraints declared up front. An operator agent proposes and
+          executes each step, independent judgment agents answer the calls
+          that need a model, and the engine checks every step against
+          versioned, pure-function rules before anything runs, stopping for a
+          named human when the decision belongs to a person. Now in daily use
+          for the lab's spatial transcriptomics work.
+      - id: stringency-eval
+        tags: [ai, evaluation, agents]
+        text: >-
+          Built the layer that catches an agent's mistakes before they reach
+          a result. Calls that need a model are repeated independently, and
+          disagreement or low confidence stops for a person rather than being
+          averaged away. Automated checks compare what an agent claims against
+          the evidence it cited, so a number that appears in no cited table is
+          refused.
+      - id: stringency-trace
+        tags: [ai, provenance, software]
+        text: >-
+          Made the audit trail the product: an append-only SQLite trace,
+          enforced by database triggers, holding every action proposed, every
+          rule verdict with the evidence it inspected, every model call with
+          its cost, and every human sign-off. Runs pin a tagged method
+          repository against hashed inputs and recorded environments, and
+          deliver a bundle whose methods and coverage are written from the
+          trace. Maintained as production software: ~18,000 lines of tests,
+          CI running pytest, ruff, and mypy on Linux and macOS.
       - id: agent-tooling
         tags: [ai, enablement, leadership]
         text: >-
@@ -229,8 +279,8 @@ experience:
         text: >-
           Led a team of development researchers on monoclonal antibody
           manufacturing process development, new technology implementation, and
-          regulatory submissions for a therapeutic product worth $6B in annual
-          sales.
+          regulatory submissions for a therapeutic product with over $1B in
+          annual sales.
       - id: j-spc
         tags: [statistics, industry]
         text: >-
@@ -466,6 +516,27 @@ skills:
     tags: [core, ai]
     items: [Agentic analysis workflows, LLM tool and skill development,
             Reproducibility and audit frameworks, Evaluation of agent output]
+  - id: sk-ai-eng
+    group: "AI systems"
+    tags: [ai, engineering]
+    items: [LLM agent orchestration, Multi-agent judgment and adjudication,
+            Tool use and structured outputs, Retrieval over structured and
+            unstructured evidence, Provenance and citation checking,
+            Evaluation harnesses and reference sets]
+  - id: sk-sweng
+    group: "Software engineering"
+    tags: [engineering, infra]
+    items: [Python (typed, pytest, uv), R, SQL and SQLite, Nextflow,
+            Docker and Apptainer, Git and GitHub Actions CI,
+            ruff / mypy / pre-commit, API and schema design, AWS,
+            Linux administration]
+  - id: sk-data
+    group: "Data & methods"
+    tags: [data]
+    items: [Single-cell RNA-seq, Bulk RNA-seq, ATAC-seq, Spatial
+            transcriptomics (10x Xenium), Multi-omic and imaging integration,
+            Statistical modeling, Machine learning, Experimental design,
+            Benchmarking, CRISPR guide design]
   - id: sk-infra
     group: "Infrastructure"
     tags: [infra]

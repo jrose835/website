@@ -9,3 +9,9 @@ _site/
 
 # Generated resume/CV output (assets/*.pdf are the published copies)
 cv/build/
+
+# Job applications: one folder per application, holding the posting, the
+# tailored profile and the cover letter. Kept out of git because this repo is
+# public and the folder records where you have applied. cv/templates/ has the
+# scaffold a fresh clone needs.
+cv/applications/

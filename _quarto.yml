@@ -1,6 +1,17 @@
 project:
   type: website
   output-dir: _site
+  # Only these become pages. Without an explicit list, Quarto renders every
+  # Markdown file it finds in the project, which would publish working notes
+  # under cv/ to the live site. Add a page here when you add one.
+  render:
+    - index.qmd
+    - about.qmd
+    - research.qmd
+    - software.qmd
+    - blog.qmd
+    - cv.qmd
+    - posts/
   # Quarto rebuilds the published branch on every deploy. Without this the
   # CNAME file is wiped each time and GitHub silently drops the custom domain.
   resources:
