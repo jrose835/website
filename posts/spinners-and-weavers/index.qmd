@@ -19,7 +19,7 @@ Spinning is a lot like the quality control, upstream processing, and basic data 
 
 From 1765 to 1779, three new technological inventions (the spinning jenny, the water frame, and the spinning mule) made spinning dramatically more efficient and automated. This did two things: 1) over the next few decades the number of cottage spinners declined rapidly,[^spinners] putting hand spinners out of work almost entirely by the 1830s, and 2) it led to a massive amount of cheap yarn available for weaving. This, in turn, created a brief "golden age" for the hand weavers, with their numbers peaking in 1820 before the powerloom ultimately put them all out of work by the 1860s.
 
-[^spinners]: Benjamin Schneider, ["A historical episode of job-destroying technology: technological unemployment in the British Industrial Revolution"](https://pastandpresent.org.uk/a-historical-episode-of-job-destroying-technology-technological-unemployment-in-the-british-industrial-revolution/), *Past & Present*.
+[^spinners]: Benjamin Schneider, ["Technological Unemployment in the British Industrial Revolution: The Destruction of Hand-Spinning"](https://doi.org/10.1093/pastj/gtae049), *Past & Present* 270 (2026).
 
 ![Each invention sped up one step of cloth-making and pushed the bottleneck, and the job losses, onto the next.](../../assets/blog/spinners-weavers-timeline.png){fig-alt="Timeline from 1730 to 1870 showing spinning inventions in the 1760s and 1770s displacing roughly 700,000 hand spinners by the 1830s, while hand weaving enjoyed a golden age that peaked at about 240,000 weavers in 1820 before declining to nothing by the 1860s."}
 
