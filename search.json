@@ -7,62 +7,6 @@
     "text": "Welcome to the new site. The old one dated from early grad school and had started to feel like someone else’s homepage, so I rebuilt it from scratch — still Quarto, now with a hand-rolled theme (thanks Claude!).\nThis blog is where I put whatever I’m thinking about at the moment that I might want to share with the world. This post doesn’t really count, but stick around and hopefully I’ll post a thing or two soon.\nA few things I’m deep in at the moment:\n\nAI agent tools for bioinformatics research We all are or should be using AI to write our analysis code these days, but the inherent randomness of LLMs makes it hard to achieve our goals of reliability and reproducibility in research. I’m trying to fix that with stringency…more to come soon!\nSegmentation benchmarking. Comparing cell segmentation algorithms for Xenium data across a multi-organ mouse atlas, and building CRISP to measure segmentation purity without ground truth.\nSpatial pipelines. Nextflow and Seurat workflows that take Xenium runs from raw output to annotated cells reproducibly.\n\nI don’t know what purpose blogs have anymore in this new AI-slop-soaked internet but if you’re human and reading this maybe we’ll find out."
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Resume",
-    "section": "",
-    "text": "Download PDF"
-  },
-  {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software",
-    "section": "",
-    "text": "Open-source tools I’ve built for spatial transcriptomics, single-cell analysis, and AI-driven bioinformatics — on my GitHub and the Santangelo Lab’s.\n\nCRISP\n\nR & Python · segmentation quality assessment\n\n Assesses cell segmentation quality in spatial transcriptomics data by identifying cells that co-express mutually exclusive marker genes. Produces negative-coexpression segmentation purity metrics and supports Xenium, Seurat, and SpatialExperiment objects. Described in our preprint.\n\n\nStringency\n\nPython · guardrails for AI-driven analysis\n\n Guardrails for AI agents that analyze biological data. Stringency checks that an analysis plan is statistically sound before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off — so you can trust, reproduce, and audit what the agent did.\n\n\nXenium analysis toolkit\n\nNextflow · R · Python · three pipelines covering raw Xenium output to annotated cells\n\n\n\nXen_Segmentation_NextFlow — Nextflow pipeline for generating alternative cell segmentations (nuclear expansion, Baysor, and others) for 10x Xenium in situ data.\n\n\nXen_TMA_pipeline — splits multi-punch tissue microarrays into per-sample datasets for downstream analysis.\n\n\nXen_Seurat_Pipeline — Seurat-based processing: QC, normalization, integration, clustering, and annotation in a reproducible workflow."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I’m a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and now AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or dysregulated in the case of autoimmunity.\nMost of my work from the last few years is in spatial transcriptomics: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also do odds and ends supporting our group’s work on delivery for mRNA-based therapeutics. This includes guide selection for Cas9 systems, single-cell, or bulk genomic datasets.\nNow I run all of my group’s computational functions. That means managing a few over-powered workstations, a team of over-eager AI agentic assistants, and developing Claude skills to enable our lab scientists to run their own pipelines to analyze their data directly."
-  },
-  {
-    "objectID": "about.html#what-i-work-on",
-    "href": "about.html#what-i-work-on",
-    "title": "About",
-    "section": "What I work on",
-    "text": "What I work on\n\nSpatial transcriptomics — end-to-end Xenium analysis: alternative segmentation, QC, tissue microarray processing, and downstream spatial statistics\nMethod development — CRISP, a software package for assessing cell segmentation quality using co-expression of mutually exclusive markers\nSingle-cell and bulk genomics — RNA-seq, ATAC-seq, integration, and gene regulatory network analysis\nReproducible pipelines — Nextflow and R-based workflows designed so the next person (often future me) can rerun them\nAI-based bioinformatics — learning how to use agents for data analysis in responsible and reproducible ways (see Stringency)"
-  },
-  {
-    "objectID": "about.html#outside-the-lab",
-    "href": "about.html#outside-the-lab",
-    "title": "About",
-    "section": "Outside the lab",
-    "text": "Outside the lab\nGirl Dad, science fiction, digital lore-keeper for my current DnD campaign\nYou might find me building community through gardening or fixing up my ebikes myself because the company I bought them from just sends parts and best wishes…\nTrying to figure out how to live a good life…\n\nWant the formal version? My resume is here."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jim Rose",
-    "section": "",
-    "text": "Hi, I’m Jim. I’m a computational biologist working at the intersection of genomics, immunology, and mRNA therapeutics. I build methods and pipelines for spatial transcriptomics, AI-driven bioinformatics, and single-cell genomics.\nLearn more about me →\nBrowse my research and the software I’ve built, or read the occasional post on the blog. My resume is here."
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "My research spans computational method development for spatial transcriptomics, genomics and epigenomics of immune regulation, and tools for making AI agent-driven bioinformatics more accessible and trustworthy.\n\nSpatial TranscriptomicsGenomics & EpigenomicsAI Bioinformatics Tools\n\n\n\n\nCell segmentation quality\nImaging-based spatial platforms like 10x Xenium assign millions of transcripts to individual cells — but every downstream conclusion depends on how well cell boundaries were drawn. I develop CRISP (Co-expression Rejection In Segmentation Purity), an open-source tool in R and Python that flags cells co-expressing mutually exclusive marker genes to quantify segmentation errors without ground-truth annotation.\nUsing CRISP, we benchmarked five segmentation algorithms — including the 10x segmentation kit, Baysor, Proseg, and Segger — across ten mouse organs with a 5,006-gene Xenium panel, revealing a tissue-dependent tradeoff between transcript capture and cell purity.\n\nPreprint\nRose, J.R., Rose, E.S., Assumpcao, J.A.F., Pathak, H., Peck, H.E., Sasser, L.E., Patel, C.J., Vanover, D. & Santangelo, P.J. CRISP enables comparisons of image-based spatial transcriptomic segmentation quality across ten organs. bioRxiv (2026). doi:10.64898/2026.04.16.718947\n\n\n\nXenium analysis pipelines\nAlongside the benchmarking work, I’ve built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the software page.\n\n\n\n\nDuring my PhD I used integrated RNA-seq and ATAC-seq to ask how transcriptional and epigenetic states encode immune cell identity — and what happens when that regulation goes wrong.\n\n\nEpigenetics of immune memory\nI studied how transcriptomic and epigenomic states define human memory T cell subsets. We identified chromatin regions whose accessibility before and after activation (poised accessible regions) distinguishes memory subsets and their activation potential.\n\nPublished\nRose, J.R., Akdogan-Ozdilek, B., Rahmberg, A.R., et al. Distinct transcriptomic and epigenomic modalities underpin human memory T cell subsets and their activation potential. Communications Biology 6, 363 (2023). Read the paper\n\n\n\nAutoimmunity\nI also investigated the dysregulation of B cells in lupus. We found that disease activity is reflected in the transcriptome — and written into the epigenome — of otherwise resting, naïve B cells in individuals with the disease.\n\nPublished\nRose, J.R., Ishii, Y., Khosroshahi, A., et al. Identification of a systemic lupus erythematosus disease signature in resting naive B cells. Journal of Clinical Investigation 136, e199528 (2026). Read the paper\n\n\n\n\n\nAI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I’m working on Stringency, a framework that puts guardrails around agent-driven analysis: it checks that the analysis plan is grounded in best practices before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off. The goal is agent-run analyses that a reviewer — or your future self — can trust, reproduce, and audit.\nStringency on GitHub →\n\n\n\n\nFor the full publication list, see my Google Scholar profile."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "The part of this site where I write stuff for humans, written by a human.\n\n\n\n\n\n\n\n\n\nAll scientists can run analysis pipelines now\n\n\n\nWhy biologists should drive AI-powered data analysis, why raw agents aren’t fit for science, and the tool I’m building to bridge the gap.\n\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\nHello again, internet\n\n\n\nFor humans, written by a human\n\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/enter-stringency/index.html",
     "href": "posts/enter-stringency/index.html",
     "title": "All scientists can run analysis pipelines now",
@@ -89,5 +33,96 @@
     "title": "All scientists can run analysis pipelines now",
     "section": "The Commandments of Bioinformatic Agentic Pipelines",
     "text": "The Commandments of Bioinformatic Agentic Pipelines\nIn the next few posts I’ll be introducing what I call the “Commandments of Bioinformatic Agentic Pipelines”. These are simple rules for how to use AI and autonomous agents in biological research and data analysis in a way that hopefully minimizes the risks I outlined above to reproducibility and reliability. My field is biology so I’ll be rooting things there, but much of what I’ll discuss is probably applicable to the wider research community.\nStringency is what I’m calling the engine that I’m building to force LLM models to hold to these principles. It’s a little like the belay system used in top rope climbing. In this case the agent is doing all the climbing, and you’re the one on the ground responsible for making sure it doesn’t fall off and break anything. It’s pretty hard to do that without a pulley and some rope.\nWe are all still learning how to use these new rapidly evolving tools, so stick around to hear more."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "The part of this site where I write stuff for humans, written by a human.\n\n\n\n\n\n\n\n\n\nSpinners, weavers, and the future of data work\n\n\n\nData mining was never like digging for oil. A better analogy comes from the British textile industry, where automation hit the spinners first and the weavers second.\n\n\n\n\n\n\nNov 4, 2026\n\n\n\n\n\n\n\nAll scientists can run analysis pipelines now\n\n\n\nWhy biologists should drive AI-powered data analysis, why raw agents aren’t fit for science, and the tool I’m building to bridge the gap.\n\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\nHello again, internet\n\n\n\nFor humans, written by a human\n\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research spans computational method development for spatial transcriptomics, genomics and epigenomics of immune regulation, and tools for making AI agent-driven bioinformatics more accessible and trustworthy.\n\nSpatial TranscriptomicsGenomics & EpigenomicsAI Bioinformatics Tools\n\n\n\n\nCell segmentation quality\nImaging-based spatial platforms like 10x Xenium assign millions of transcripts to individual cells — but every downstream conclusion depends on how well cell boundaries were drawn. I develop CRISP (Co-expression Rejection In Segmentation Purity), an open-source tool in R and Python that flags cells co-expressing mutually exclusive marker genes to quantify segmentation errors without ground-truth annotation.\nUsing CRISP, we benchmarked five segmentation algorithms — including the 10x segmentation kit, Baysor, Proseg, and Segger — across ten mouse organs with a 5,006-gene Xenium panel, revealing a tissue-dependent tradeoff between transcript capture and cell purity.\n\nPreprint\nRose, J.R., Rose, E.S., Assumpcao, J.A.F., Pathak, H., Peck, H.E., Sasser, L.E., Patel, C.J., Vanover, D. & Santangelo, P.J. CRISP enables comparisons of image-based spatial transcriptomic segmentation quality across ten organs. bioRxiv (2026). doi:10.64898/2026.04.16.718947\n\n\n\nXenium analysis pipelines\nAlongside the benchmarking work, I’ve built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the software page.\n\n\n\n\nDuring my PhD I used integrated RNA-seq and ATAC-seq to ask how transcriptional and epigenetic states encode immune cell identity — and what happens when that regulation goes wrong.\n\n\nEpigenetics of immune memory\nI studied how transcriptomic and epigenomic states define human memory T cell subsets. We identified chromatin regions whose accessibility before and after activation (poised accessible regions) distinguishes memory subsets and their activation potential.\n\nPublished\nRose, J.R., Akdogan-Ozdilek, B., Rahmberg, A.R., et al. Distinct transcriptomic and epigenomic modalities underpin human memory T cell subsets and their activation potential. Communications Biology 6, 363 (2023). Read the paper\n\n\n\nAutoimmunity\nI also investigated the dysregulation of B cells in lupus. We found that disease activity is reflected in the transcriptome — and written into the epigenome — of otherwise resting, naïve B cells in individuals with the disease.\n\nPublished\nRose, J.R., Ishii, Y., Khosroshahi, A., et al. Identification of a systemic lupus erythematosus disease signature in resting naive B cells. Journal of Clinical Investigation 136, e199528 (2026). Read the paper\n\n\n\n\n\nAI agents are increasingly capable of running bioinformatic analyses end to end — the hard part is trusting the result. I’m working on Stringency, a framework that puts guardrails around agent-driven analysis: it checks that the analysis plan is grounded in best practices before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off. The goal is agent-run analyses that a reviewer — or your future self — can trust, reproduce, and audit.\nStringency on GitHub →\n\n\n\n\nFor the full publication list, see my Google Scholar profile."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jim Rose",
+    "section": "",
+    "text": "Hi, I’m Jim. I’m a computational biologist working at the intersection of genomics, immunology, and mRNA therapeutics. I build methods and pipelines for spatial transcriptomics, AI-driven bioinformatics, and single-cell genomics.\nLearn more about me →\nBrowse my research and the software I’ve built, or read the occasional post on the blog. My resume is here."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a computational biologist with a PhD in Genetics & Molecular Biology from Emory University. I came to coding as a biologist first — self-taught, R-native, Python when the job calls for it — and now AI I suppose. I spent my graduate work turning large, multi-omic sequencing datasets into answers about how the adaptive immune system is regulated transcriptionally and epigenetically, or dysregulated in the case of autoimmunity.\nMost of my work from the last few years is in spatial transcriptomics: building analysis pipelines for imaging-based platforms like 10x Xenium, benchmarking cell segmentation algorithms, and developing methods to measure when segmentation gets it wrong. I also do odds and ends supporting our group’s work on delivery for mRNA-based therapeutics. This includes guide selection for Cas9 systems, single-cell, or bulk genomic datasets.\nNow I run all of my group’s computational functions. That means managing a few over-powered workstations, a team of over-eager AI agentic assistants, and developing Claude skills to enable our lab scientists to run their own pipelines to analyze their data directly."
+  },
+  {
+    "objectID": "about.html#what-i-work-on",
+    "href": "about.html#what-i-work-on",
+    "title": "About",
+    "section": "What I work on",
+    "text": "What I work on\n\nSpatial transcriptomics — end-to-end Xenium analysis: alternative segmentation, QC, tissue microarray processing, and downstream spatial statistics\nMethod development — CRISP, a software package for assessing cell segmentation quality using co-expression of mutually exclusive markers\nSingle-cell and bulk genomics — RNA-seq, ATAC-seq, integration, and gene regulatory network analysis\nReproducible pipelines — Nextflow and R-based workflows designed so the next person (often future me) can rerun them\nAI-based bioinformatics — learning how to use agents for data analysis in responsible and reproducible ways (see Stringency)"
+  },
+  {
+    "objectID": "about.html#outside-the-lab",
+    "href": "about.html#outside-the-lab",
+    "title": "About",
+    "section": "Outside the lab",
+    "text": "Outside the lab\nGirl Dad, science fiction, digital lore-keeper for my current DnD campaign\nYou might find me building community through gardening or fixing up my ebikes myself because the company I bought them from just sends parts and best wishes…\nTrying to figure out how to live a good life…\n\nWant the formal version? My resume is here."
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Open-source tools I’ve built for spatial transcriptomics, single-cell analysis, and AI-driven bioinformatics — on my GitHub and the Santangelo Lab’s.\n\nCRISP\n\nR & Python · segmentation quality assessment\n\n Assesses cell segmentation quality in spatial transcriptomics data by identifying cells that co-express mutually exclusive marker genes. Produces negative-coexpression segmentation purity metrics and supports Xenium, Seurat, and SpatialExperiment objects. Described in our preprint.\n\n\nStringency\n\nPython · guardrails for AI-driven analysis\n\n Guardrails for AI agents that analyze biological data. Stringency checks that an analysis plan is statistically sound before any code runs, keeps a tamper-proof log of every step the agent takes, and pauses at key decisions until a person signs off — so you can trust, reproduce, and audit what the agent did.\n\n\nXenium analysis toolkit\n\nNextflow · R · Python · three pipelines covering raw Xenium output to annotated cells\n\n\n\nXen_Segmentation_NextFlow — Nextflow pipeline for generating alternative cell segmentations (nuclear expansion, Baysor, and others) for 10x Xenium in situ data.\n\n\nXen_TMA_pipeline — splits multi-punch tissue microarrays into per-sample datasets for downstream analysis.\n\n\nXen_Seurat_Pipeline — Seurat-based processing: QC, normalization, integration, clustering, and annotation in a reproducible workflow."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download PDF"
+  },
+  {
+    "objectID": "posts/spinners-and-weavers/index.html",
+    "href": "posts/spinners-and-weavers/index.html",
+    "title": "Spinners, weavers, and the future of data work",
+    "section": "",
+    "text": "When I first started working with big data sets in the 2010s, the analogy being thrown around was that data mining was like digging for oil. Around that time large organizations (and biological scientists using cheap next-generation sequencing) had figured out that having immense amounts of data was valuable, but they needed someone to turn that raw data into value, competitive advantage, insights, or answers to questions, etc.\nWhat this analogy misses is that there are two distinct steps to the production pipeline going from crude oil (data) to the fully refined product (insights). I thought it might be better served by another analogy paired with a historical example, one that can provide clues for predicting the shape of data work in this new age of AI."
+  },
+  {
+    "objectID": "posts/spinners-and-weavers/index.html#the-spinners-and-the-weavers-of-the-industrial-revolution",
+    "href": "posts/spinners-and-weavers/index.html#the-spinners-and-the-weavers-of-the-industrial-revolution",
+    "title": "Spinners, weavers, and the future of data work",
+    "section": "The spinners and the weavers of the industrial revolution",
+    "text": "The spinners and the weavers of the industrial revolution\nFor those who aren’t all that crafty (like myself), here’s a history lesson and some background on how you make cloth. The British textile industry of the 1700s involved the prototypical “cottage industry,” with a workforce made up mostly of women serving in two different roles along the path from raw cotton to finished cloth. First, the cotton fibers had to be spun into yarn. This was done by the spinners, who for centuries were women who worked from home in their spare time. This yarn was the raw material, the thread, that then could be used by hand weavers on a loom to create full pieces of cloth. It’s the weavers who are most often cited in technological automation stories told by historians, as their roles were automated out of existence by the powerlooms of large factories, but the replacement of the spinners actually occurred first. It was just not studied, because it primarily affected women."
+  },
+  {
+    "objectID": "posts/spinners-and-weavers/index.html#okay-cool-history-but-what-does-this-all-have-to-do-with-data",
+    "href": "posts/spinners-and-weavers/index.html#okay-cool-history-but-what-does-this-all-have-to-do-with-data",
+    "title": "Spinners, weavers, and the future of data work",
+    "section": "Okay, cool history, but what does this all have to do with data?",
+    "text": "Okay, cool history, but what does this all have to do with data?\nSpinning is a lot like the quality control, upstream processing, and basic data cleaning that has to happen at the start of any data project. It results in the processed data products that can be used, woven if you will, into helpful insights. Around the 18th and 19th centuries both the spinners and the weavers endured a period of intense technological change. New technologies fundamentally changed or disrupted their profession, much like the effects being experienced right now by those working with data, coding, and AI.\nFrom 1765 to 1779, three new technological inventions (the spinning jenny, the water frame, and the spinning mule) made spinning dramatically more efficient and automated. This did two things: 1) over the next few decades the number of cottage spinners declined rapidly,1 putting hand spinners out of work almost entirely by the 1830s, and 2) it led to a massive amount of cheap yarn available for weaving. This, in turn, created a brief “golden age” for the hand weavers, with their numbers peaking in 1820 before the powerloom ultimately put them all out of work by the 1860s.\n\n\n\nEach invention sped up one step of cloth-making and pushed the bottleneck, and the job losses, onto the next.\n\n\nA thoroughly depressing story in today’s context, isn’t it? So what can we learn from it?"
+  },
+  {
+    "objectID": "posts/spinners-and-weavers/index.html#theres-still-time-to-be-a-weaver",
+    "href": "posts/spinners-and-weavers/index.html#theres-still-time-to-be-a-weaver",
+    "title": "Spinners, weavers, and the future of data work",
+    "section": "There’s still time to be a weaver",
+    "text": "There’s still time to be a weaver\nYou’ll notice that in the case of the textile industry the technology started upstream and then gradually moved the bottleneck further down the path, from the spinners and then to the weavers. The glut of cheap yarn even encouraged the growth of the weaving industry for many years before it too succumbed to automation.\nMany of us in the data business have had to play both of these roles at one time or another: cleaning data, constructing pipelines, and running analyses, but also asking questions of them to derive insights, constructing narratives from the data, and conveying them to stakeholders (or in research papers in academia). There’s no question that today’s AI, as of this moment, is capable of massively automating and expediting the first set, the spinning. But it’s less clear that our current AI models can handle the more nebulous problems associated with data weaving. In fact, recent highly specialized benchmarks in the biology field suggest that even the leading models get to the correct answer on complex “omics” problems less than 45% of the time.2 Superintelligent AI might eventually be able to take the place of the powerloom and automate humans out of the entire workflow, but until then there is still time to be a good weaver. In the case of Britain it actually took a few business cycles of boom and bust to send off the weavers for good.3\nOne could argue that it might be the best time ever to be a data weaver, given how much of the tedious work that once fell on our plate can now be automated. We’ll all soon be drowning in yarn! The trick will be learning to work with and assess the quality of the new raw materials generated by our AI counterparts. Knowing your domain (the biology in computational bio) was always part of the weaving process, but now it’s more important than ever. As it stands right now, I still believe that human expertise can help fill the gap in the benchmarks for both spinning and weaving tasks. This could happen in a few different ways: at small scale there are human-in-the-loop checks, but I think there’s also a place for human-designed pipelines directing (constraining?) the randomness of AIs to the “correct” path set down by a real expert. These new “AI pipelines” can scale no matter how much data you have.\nI’m building all of these ideas into a special kind of AI harness I’m calling Stringency. The idea is that the right pulls of human attention into the loop, along with automated controls of important data processing steps, paired with the fast, flexible research and coding expertise of AI, can lead to more (and more reproducible) science for all of us.\nNext up… the commandments I promised last post…"
+  },
+  {
+    "objectID": "posts/spinners-and-weavers/index.html#footnotes",
+    "href": "posts/spinners-and-weavers/index.html#footnotes",
+    "title": "Spinners, weavers, and the future of data work",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBenjamin Schneider, “A historical episode of job-destroying technology: technological unemployment in the British Industrial Revolution”, Past & Present.↩︎\n“OmicsBench v1: a Latch meta-benchmark”, Latch Bio.↩︎\nClark Nardinelli, “Technology and Unemployment: The Case of the Handloom Weavers”, Southern Economic Journal 53 (1986).↩︎"
   }
 ]
