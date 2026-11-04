@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jamesrrose.com/about.html</loc>
-    <lastmod>2026-10-16T15:27:16.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jamesrrose.com/research.html</loc>
-    <lastmod>2026-10-16T15:27:16.844Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jamesrrose.com/posts/enter-stringency/index.html</loc>
-    <lastmod>2026-10-16T15:27:16.844Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jamesrrose.com/index.html</loc>
-    <lastmod>2026-10-16T15:27:16.844Z</lastmod>
+    <loc>https://jamesrrose.com/posts/welcome/index.html</loc>
+    <lastmod>2026-11-04T19:41:00.500Z</lastmod>
   </url>
   <url>
     <loc>https://jamesrrose.com/cv.html</loc>
-    <lastmod>2026-10-16T15:27:16.842Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jamesrrose.com/posts/welcome/index.html</loc>
-    <lastmod>2026-10-16T15:27:16.844Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jamesrrose.com/blog.html</loc>
-    <lastmod>2026-10-16T15:27:16.842Z</lastmod>
+    <lastmod>2026-11-04T19:41:00.497Z</lastmod>
   </url>
   <url>
     <loc>https://jamesrrose.com/software.html</loc>
-    <lastmod>2026-10-16T15:27:16.844Z</lastmod>
+    <lastmod>2026-11-04T19:41:00.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesrrose.com/about.html</loc>
+    <lastmod>2026-11-04T19:41:00.493Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesrrose.com/index.html</loc>
+    <lastmod>2026-11-04T19:41:00.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesrrose.com/research.html</loc>
+    <lastmod>2026-11-04T19:41:00.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesrrose.com/blog.html</loc>
+    <lastmod>2026-11-04T19:41:00.497Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesrrose.com/posts/enter-stringency/index.html</loc>
+    <lastmod>2026-11-04T19:41:00.500Z</lastmod>
   </url>
 </urlset>

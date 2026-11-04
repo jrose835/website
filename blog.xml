@@ -9,7 +9,7 @@
 <link>https://jamesrrose.com/blog.html</link>
 <atom:link href="https://jamesrrose.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Jim Rose — computational biologist working on spatial transcriptomics and single-cell genomics.</description>
-<generator>quarto-1.10.19</generator>
+<generator>quarto-1.11.9</generator>
 <lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>All scientists can run analysis pipelines now</title>
