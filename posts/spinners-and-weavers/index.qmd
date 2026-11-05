@@ -1,6 +1,6 @@
 ---
-title: "Spinners, weavers, and the future of data work"
-description: "Data mining was never like digging for oil. A better analogy comes from the British textile industry, where automation hit the spinners first and the weavers second."
+title: "The spinners and the weavers"
+description: "AI automation insights from the British textile industry, where automation hit the spinners first and the weavers second."
 date: 2026-11-04
 image: ../../assets/blog/spinners-weavers-timeline.png
 ---
