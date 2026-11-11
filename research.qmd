@@ -28,6 +28,20 @@ Using CRISP, we benchmarked five segmentation algorithms — including the 10x s
 
 Alongside the benchmarking work, I've built an open-source toolchain for Xenium experiments: Nextflow pipelines for generating alternative segmentations, Seurat-based workflows for QC through annotation, and utilities for splitting and processing tissue microarrays. These are described on the [software page](software.qmd).
 :::
+
+::: {.research-card}
+### Mapping mRNA delivery
+
+Spatial transcriptomics can show not just how much of a delivered mRNA reaches a tissue, but which cells take it up. I map delivery tropism across tissues and species for the lab's mRNA therapeutics work, including a method that measures immunofluorescence intensity inside Xenium cell boundaries to tie transcript delivery to the protein actually produced.
+
+That analysis underpins a study of an engineered thio-amino polymer that delivers mRNA broadly across lung cell types.
+
+::: {.pub}
+[Published]{.pub-tag}
+
+Pramod Kumar, E.K., Jung, Y., Rose, E.S., Joo, J.Y., **Rose, J.R.**, *et al.* An engineered thio-amino polymer achieves potent, safe, and broad cell type delivery in the lung mapped by spatial transcriptomics. *Advanced Materials* e75699 (2026). [Read the paper](https://doi.org/10.1002/adma.75699)
+:::
+:::
 :::
 
 ## Genomics & Epigenomics

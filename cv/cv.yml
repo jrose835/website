@@ -134,8 +134,8 @@ experience:
           Map mRNA delivery tropism across tissues and species, including a custom
           method that measures immunofluorescence intensity inside Xenium cell
           boundaries to tie transcript delivery to protein production. This is the
-          spatial analysis behind a polymer lung-delivery manuscript under review
-          at *Advanced Materials*.
+          spatial analysis behind a polymer lung-delivery paper published in
+          *Advanced Materials*.
       - id: panel-design
         tags: [spatial, assay]
         text: >-
@@ -387,19 +387,19 @@ publications:
     note: ""
 
   - id: advmat-polymer
-    status: review
+    status: published
     year: 2026
     tags: [spatial, delivery, selected]
     authors: >-
-      Pramod Kumar, E.K., Jung, Y., Joo, J.Y., Rose, E.S., **Rose, J.R.**,
+      Pramod Kumar, E.K., Jung, Y., Rose, E.S., Joo, J.Y., **Rose, J.R.**,
       et al. & Santangelo, P.J.
     title: >-
-      An engineered thio-amino polymer achieves potent, safe and broad cell type
+      An engineered thio-amino polymer achieves potent, safe, and broad cell type
       delivery in the lung mapped by spatial transcriptomics
     venue: "Advanced Materials"
-    detail: ""
-    url: ""
-    note: "Under review"
+    detail: "e75699"
+    url: "https://doi.org/10.1002/adma.75699"
+    note: ""
 
   - id: commbio-memt
     status: published
